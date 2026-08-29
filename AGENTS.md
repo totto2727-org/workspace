@@ -26,7 +26,6 @@ AI向けpluginやmarketplaceなど、`app`や`package`へ分類することが�
 | e2e | https://github.com/totto2727-org/e2e.git | `package/e2e/` |
 | geo | https://github.com/totto2727-org/geo.git | `package/geo/` |
 | lens | https://github.com/totto2727-org/lens.git | `package/lens/` |
-| tui.mbt | https://github.com/totto2727/tui.mbt.git | `package/tui.mbt/` |
 | workgraph | https://github.com/totto2727-org/workgraph.git | `package/workgraph/` |
 | x | https://github.com/totto2727-org/x.git | `package/x/` |
 | template-go-simple | https://github.com/totto2727-org/template-go-simple.git | `template/go-simple/` |
