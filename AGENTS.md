@@ -4,6 +4,7 @@
 
 This repository is a virtual monorepo that places multiple independent Git repositories in one workspace.
 Each mapped directory keeps its own `.git` directory, history, branches, and release process. The workspace root is not intended to be built or deployed as a single unit.
+The workspace intentionally does not use Git submodules or pin child repositories to exact commit hashes.
 Repositories are organized by role rather than programming language. Executable applications belong under `app/`, reusable libraries belong under `package/`, and related package families belong under `package/<domain>/`.
 Repositories that do not naturally fit under `app/` or `package/`, such as AI agent plugins and marketplaces, may be placed at the workspace root or another role-appropriate path.
 
@@ -57,6 +58,7 @@ git clone https://github.com/totto2727-org/agent-sdk.git package/agent-sdk/agent
 
 ## Working Guidelines
 
+- At the start of work, run `git pull --ff-only` in each initialized child repository before making changes. Resolve any dirty or diverged state within that child repository first.
 - Run Git operations, commits, branches, tags, releases, and pull requests within each independent child repository.
 - For cross-repository changes, modify and validate each repository independently and create separate commits in each repository.
 - When a child repository contains its own `AGENTS.md`, follow that file for work inside the child repository.
