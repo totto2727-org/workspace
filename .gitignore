@@ -1,9 +1,9 @@
 # Independent repositories in this virtual monorepo
-/agent/app/marketplace/
-/agent/package/agent-core-sdk/
-/agent/package/agent-sdk/
-/agent/package/codex-sdk/
-/agent/package/opencode-sdk/
+/agent/
+/package/agent-sdk/agent-core-sdk/
+/package/agent-sdk/agent-sdk/
+/package/agent-sdk/codex-sdk/
+/package/agent-sdk/opencode-sdk/
 /app/atlas-to-kysely/
 /app/bw/
 /app/flowdeck/
@@ -20,7 +20,7 @@
 /template/moonbit-simple/
 /template/rust-simple/
 /toolchain/moonbit-overlay/
-/workgraph/
+/package/workgraph/
 
 # Local temporary files and linked worktrees
 /tmp/

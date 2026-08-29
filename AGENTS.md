@@ -4,18 +4,18 @@
 
 本リポジトリは、複数の独立したGitリポジトリを一つの作業空間へ配置するvirtual monorepoです。
 各配置先は固有の`.git`、履歴、ブランチ、リリース手順を維持し、このルート自体を一括ビルドまたはデプロイすることは想定しません。
-リポジトリは使用言語では分割せず、実行可能なアプリケーションを`app/`、汎用ライブラリを`package/`、関連する複数のアプリケーションとパッケージを`<領域>/{app,package}/`へ配置します。
-リポジトリ内部ですでに複数のアプリケーションまたはパッケージを管理している場合や、役割が明確に異なる場合は、無理にこの分類へ合わせません。
+リポジトリは使用言語では分割せず、実行可能なアプリケーションを`app/`、汎用ライブラリを`package/`、関連するパッケージ群を`package/<領域>/`へ配置します。
+AI向けpluginやmarketplaceなど、`app`や`package`へ分類することが不自然なリポジトリは、ルート直下など役割に合う場所へ配置します。
 
 ## リポジトリ一覧
 
 | リポジトリ名 | リポジトリURL | 配置パス |
 | --- | --- | --- |
-| agent | https://github.com/totto2727-org/agent.git | `agent/app/marketplace/` |
-| agent-core-sdk | https://github.com/totto2727-org/agent-core-sdk.git | `agent/package/agent-core-sdk/` |
-| agent-sdk | https://github.com/totto2727-org/agent-sdk.git | `agent/package/agent-sdk/` |
-| codex-sdk | https://github.com/totto2727-org/codex-sdk.git | `agent/package/codex-sdk/` |
-| opencode-sdk | https://github.com/totto2727-org/opencode-sdk.git | `agent/package/opencode-sdk/` |
+| agent | https://github.com/totto2727-org/agent.git | `agent/` |
+| agent-core-sdk | https://github.com/totto2727-org/agent-core-sdk.git | `package/agent-sdk/agent-core-sdk/` |
+| agent-sdk | https://github.com/totto2727-org/agent-sdk.git | `package/agent-sdk/agent-sdk/` |
+| codex-sdk | https://github.com/totto2727-org/codex-sdk.git | `package/agent-sdk/codex-sdk/` |
+| opencode-sdk | https://github.com/totto2727-org/opencode-sdk.git | `package/agent-sdk/opencode-sdk/` |
 | atlas-to-kysely | https://github.com/totto2727-org/atlas-to-kysely.git | `app/atlas-to-kysely/` |
 | bw | https://github.com/totto2727-org/bw.git | `app/bw/` |
 | flowdeck | https://github.com/totto2727-org/flowdeck.git | `app/flowdeck/` |
@@ -32,7 +32,7 @@
 | template-moonbit-simple | https://github.com/totto2727-org/template-moonbit-simple.git | `template/moonbit-simple/` |
 | template-rust-simple | https://github.com/totto2727-org/template-rust-simple.git | `template/rust-simple/` |
 | moonbit-overlay | https://github.com/totto2727-org/moonbit-overlay.git | `toolchain/moonbit-overlay/` |
-| workgraph | https://github.com/totto2727-org/workgraph.git | `workgraph/` |
+| workgraph | https://github.com/totto2727-org/workgraph.git | `package/workgraph/` |
 
 ## 初期化方法
 
@@ -41,8 +41,8 @@
 例えば`agent-sdk`は次のように初期化します。
 
 ```bash
-mkdir -p agent/package
-git clone https://github.com/totto2727-org/agent-sdk.git agent/package/agent-sdk
+mkdir -p package/agent-sdk
+git clone https://github.com/totto2727-org/agent-sdk.git package/agent-sdk/agent-sdk
 ```
 
 ## 作業上の注意
