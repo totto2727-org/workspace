@@ -27,12 +27,12 @@ AI向けpluginやmarketplaceなど、`app`や`package`へ分類することが�
 | geo | https://github.com/totto2727-org/geo.git | `package/geo/` |
 | lens | https://github.com/totto2727-org/lens.git | `package/lens/` |
 | tui.mbt | https://github.com/totto2727/tui.mbt.git | `package/tui.mbt/` |
+| workgraph | https://github.com/totto2727-org/workgraph.git | `package/workgraph/` |
 | x | https://github.com/totto2727-org/x.git | `package/x/` |
 | template-go-simple | https://github.com/totto2727-org/template-go-simple.git | `template/go-simple/` |
 | template-moonbit-simple | https://github.com/totto2727-org/template-moonbit-simple.git | `template/moonbit-simple/` |
 | template-rust-simple | https://github.com/totto2727-org/template-rust-simple.git | `template/rust-simple/` |
 | moonbit-overlay | https://github.com/totto2727-org/moonbit-overlay.git | `toolchain/moonbit-overlay/` |
-| workgraph | https://github.com/totto2727-org/workgraph.git | `package/workgraph/` |
 
 ## 初期化方法
 
