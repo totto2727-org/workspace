@@ -34,7 +34,18 @@ AI向けpluginやmarketplaceなど、`app`や`package`へ分類することが�
 | template-rust-simple | https://github.com/totto2727-org/template-rust-simple.git | `template/rust-simple/` |
 | moonbit-overlay | https://github.com/totto2727-org/moonbit-overlay.git | `toolchain/moonbit-overlay/` |
 
-## 初期化方法
+## セットアップ
+
+### ワークスペースのセットアップ
+
+最初にvirtual monorepo本体をcloneし、ワークスペースのルートへ移動します。
+
+```bash
+git clone https://github.com/totto2727-org/workspace.git
+cd workspace
+```
+
+### 各プロジェクトの初期化
 
 `setup.sh`などの一括初期化スクリプトは用意しません。
 必要なリポジトリを上の一覧から選び、親ディレクトリを作成して配置パスへcloneします。
