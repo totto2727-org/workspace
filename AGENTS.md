@@ -1,15 +1,15 @@
 # Virtual Monorepo
 
-## 概要
+## Overview
 
-本リポジトリは、複数の独立したGitリポジトリを一つの作業空間へ配置するvirtual monorepoです。
-各配置先は固有の`.git`、履歴、ブランチ、リリース手順を維持し、このルート自体を一括ビルドまたはデプロイすることは想定しません。
-リポジトリは使用言語では分割せず、実行可能なアプリケーションを`app/`、汎用ライブラリを`package/`、関連するパッケージ群を`package/<領域>/`へ配置します。
-AI向けpluginやmarketplaceなど、`app`や`package`へ分類することが不自然なリポジトリは、ルート直下など役割に合う場所へ配置します。
+This repository is a virtual monorepo that places multiple independent Git repositories in one workspace.
+Each mapped directory keeps its own `.git` directory, history, branches, and release process. The workspace root is not intended to be built or deployed as a single unit.
+Repositories are organized by role rather than programming language. Executable applications belong under `app/`, reusable libraries belong under `package/`, and related package families belong under `package/<domain>/`.
+Repositories that do not naturally fit under `app/` or `package/`, such as AI agent plugins and marketplaces, may be placed at the workspace root or another role-appropriate path.
 
-## リポジトリ一覧
+## Repository Map
 
-| リポジトリ名 | リポジトリURL | 配置パス |
+| Repository | Repository URL | Workspace Path |
 | --- | --- | --- |
 | agent | https://github.com/totto2727-org/agent.git | `agent/` |
 | agent-core-sdk | https://github.com/totto2727-org/agent-core-sdk.git | `package/agent-sdk/agent-core-sdk/` |
@@ -33,31 +33,31 @@ AI向けpluginやmarketplaceなど、`app`や`package`へ分類することが�
 | template-rust-simple | https://github.com/totto2727-org/template-rust-simple.git | `template/rust-simple/` |
 | moonbit-overlay | https://github.com/totto2727-org/moonbit-overlay.git | `toolchain/moonbit-overlay/` |
 
-## セットアップ
+## Setup
 
-### ワークスペースのセットアップ
+### Set Up the Workspace
 
-最初にvirtual monorepo本体をcloneし、ワークスペースのルートへ移動します。
+Clone the virtual monorepo repository, then enter the workspace root.
 
 ```bash
 git clone https://github.com/totto2727-org/workspace.git
 cd workspace
 ```
 
-### 各プロジェクトの初期化
+### Initialize Projects
 
-`setup.sh`などの一括初期化スクリプトは用意しません。
-必要なリポジトリを上の一覧から選び、親ディレクトリを作成して配置パスへcloneします。
-例えば`agent-sdk`は次のように初期化します。
+This repository intentionally does not provide a bulk initialization script such as `setup.sh`.
+Choose a repository from the map above, create its parent directory, and clone it into the documented workspace path.
+For example, initialize `agent-sdk` as follows:
 
 ```bash
 mkdir -p package/agent-sdk
 git clone https://github.com/totto2727-org/agent-sdk.git package/agent-sdk/agent-sdk
 ```
 
-## 作業上の注意
+## Working Guidelines
 
-- Git操作、コミット、ブランチ、タグ、リリース、Pull Requestは各配下リポジトリ単位で扱ってください。
-- 複数リポジトリを変更する場合も、変更と検証は各リポジトリで行い、コミットを分けてください。
-- 配下リポジトリに`AGENTS.md`がある場合、そのリポジトリ内部の作業では配下の指示を優先してください。
-- リポジトリを追加または移動するときは、この一覧とルート`.gitignore`を同時に更新してください。
+- Run Git operations, commits, branches, tags, releases, and pull requests within each independent child repository.
+- For cross-repository changes, modify and validate each repository independently and create separate commits in each repository.
+- When a child repository contains its own `AGENTS.md`, follow that file for work inside the child repository.
+- When adding or moving a repository, update both the repository map in this file and the root `.gitignore` in the same change.
