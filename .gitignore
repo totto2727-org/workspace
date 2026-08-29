@@ -22,8 +22,8 @@
 /toolchain/moonbit-overlay/
 /workgraph/
 
-# Local temporary linked worktrees
-/codex-sdk-baseline.*/
+# Local temporary files and linked worktrees
+/tmp/
 
 # macOS metadata
 .DS_Store
