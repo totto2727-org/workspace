@@ -26,6 +26,7 @@ Repositories that do not naturally fit under `app/` or `package/`, such as AI ag
 | any-collection | https://github.com/totto2727-org/any-collection.git | `package/any-collection/` |
 | e2e | https://github.com/totto2727-org/e2e.git | `package/e2e/` |
 | geo | https://github.com/totto2727-org/geo.git | `package/geo/` |
+| graph-flow | https://github.com/totto2727-org/graph-flow.git | `package/graph-flow/` |
 | lens | https://github.com/totto2727-org/lens.git | `package/lens/` |
 | workgraph | https://github.com/totto2727-org/workgraph.git | `package/workgraph/` |
 | x | https://github.com/totto2727-org/x.git | `package/x/` |
