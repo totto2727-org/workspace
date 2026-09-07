@@ -18,7 +18,6 @@ Repositories that do not naturally fit under `app/` or `package/`, such as AI ag
 | codex-sdk | https://github.com/totto2727-org/codex-sdk.git | `package/agent-sdk/codex-sdk/` |
 | opencode-sdk | https://github.com/totto2727-org/opencode-sdk.git | `package/agent-sdk/opencode-sdk/` |
 | atlas-to-kysely | https://github.com/totto2727-org/atlas-to-kysely.git | `app/atlas-to-kysely/` |
-| bw | https://github.com/totto2727-org/bw.git | `app/bw/` |
 | c-plugin | https://github.com/totto2727-org/c-plugin.git | `app/c-plugin/` |
 | flowdeck | https://github.com/totto2727-org/flowdeck.git | `app/flowdeck/` |
 | glossshift | https://github.com/totto2727-org/glossshift.git | `app/glossshift/` |
