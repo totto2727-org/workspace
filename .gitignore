@@ -16,6 +16,8 @@
 /package/lens/
 /package/x/
 /template/go-simple/
+/template/vite-plus-simple/
+/template/deno-simple/
 /template/moonbit-simple/
 /template/rust-simple/
 /toolchain/moonbit-overlay/
