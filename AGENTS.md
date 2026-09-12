@@ -31,8 +31,8 @@ Repositories that do not naturally fit under `app/` or `package/`, such as AI ag
 | x | https://github.com/totto2727-org/x.git | `package/x/` |
 | template-go-simple | https://github.com/totto2727-org/template-go-simple.git | `template/go-simple/` |
 | template-vite-plus-simple | https://github.com/totto2727-org/template-vite-plus-simple.git | `template/vite-plus-simple/` |
-| template-vite-plus-library-simple | https://github.com/totto2727-org/template-vite-plus-library-simple.git | `template/vite-plus-library-simple/` |
-| template-vite-plus-cli-simple | https://github.com/totto2727-org/template-vite-plus-cli-simple.git | `template/vite-plus-cli-simple/` |
+| template-vite-plus-lib | https://github.com/totto2727-org/template-vite-plus-lib.git | `template/vite-plus-lib/` |
+| template-vite-plus-app | https://github.com/totto2727-org/template-vite-plus-app.git | `template/vite-plus-app/` |
 | template-deno-simple | https://github.com/totto2727-org/template-deno-simple.git | `template/deno-simple/` |
 | template-moonbit-simple | https://github.com/totto2727-org/template-moonbit-simple.git | `template/moonbit-simple/` |
 | template-rust-simple | https://github.com/totto2727-org/template-rust-simple.git | `template/rust-simple/` |

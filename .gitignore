@@ -17,8 +17,8 @@
 /package/x/
 /template/go-simple/
 /template/vite-plus-simple/
-/template/vite-plus-library-simple/
-/template/vite-plus-cli-simple/
+/template/vite-plus-lib/
+/template/vite-plus-app/
 /template/deno-simple/
 /template/moonbit-simple/
 /template/rust-simple/
