@@ -30,6 +30,8 @@ Repositories that do not naturally fit under `app/` or `package/`, such as AI ag
 | workgraph | https://github.com/totto2727-org/workgraph.git | `package/workgraph/` |
 | x | https://github.com/totto2727-org/x.git | `package/x/` |
 | template-go-simple | https://github.com/totto2727-org/template-go-simple.git | `template/go-simple/` |
+| template-vite-plus-simple | https://github.com/totto2727-org/template-vite-plus-simple.git | `template/vite-plus-simple/` |
+| template-deno-simple | https://github.com/totto2727-org/template-deno-simple.git | `template/deno-simple/` |
 | template-moonbit-simple | https://github.com/totto2727-org/template-moonbit-simple.git | `template/moonbit-simple/` |
 | template-rust-simple | https://github.com/totto2727-org/template-rust-simple.git | `template/rust-simple/` |
 | moonbit-overlay | https://github.com/totto2727-org/moonbit-overlay.git | `toolchain/moonbit-overlay/` |
