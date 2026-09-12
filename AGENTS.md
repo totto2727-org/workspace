@@ -30,7 +30,6 @@ Repositories that do not naturally fit under `app/` or `package/`, such as AI ag
 | workgraph | https://github.com/totto2727-org/workgraph.git | `package/workgraph/` |
 | x | https://github.com/totto2727-org/x.git | `package/x/` |
 | template-go-simple | https://github.com/totto2727-org/template-go-simple.git | `template/go-simple/` |
-| template-vite-plus-simple | https://github.com/totto2727-org/template-vite-plus-simple.git | `template/vite-plus-simple/` |
 | template-vite-plus-lib | https://github.com/totto2727-org/template-vite-plus-lib.git | `template/vite-plus-lib/` |
 | template-vite-plus-app | https://github.com/totto2727-org/template-vite-plus-app.git | `template/vite-plus-app/` |
 | template-deno-simple | https://github.com/totto2727-org/template-deno-simple.git | `template/deno-simple/` |
