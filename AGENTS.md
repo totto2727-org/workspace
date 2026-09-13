@@ -21,6 +21,7 @@ Repositories that do not naturally fit under `app/` or `package/`, such as AI ag
 | c-plugin | https://github.com/totto2727-org/c-plugin.git | `app/c-plugin/` |
 | flowdeck | https://github.com/totto2727-org/flowdeck.git | `app/flowdeck/` |
 | glossshift | https://github.com/totto2727-org/glossshift.git | `app/glossshift/` |
+| mdts | https://github.com/totto2727-org/mdts.git | `app/mdts/` |
 | wt | https://github.com/totto2727-org/wt.git | `app/wt/` |
 | admiral | https://github.com/totto2727-org/admiral.git | `package/admiral/` |
 | any-collection | https://github.com/totto2727-org/any-collection.git | `package/any-collection/` |
