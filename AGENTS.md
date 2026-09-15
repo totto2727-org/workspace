@@ -25,6 +25,7 @@ Repositories that do not naturally fit under `app/` or `package/`, such as AI ag
 | wt | https://github.com/totto2727-org/wt.git | `app/wt/` |
 | admiral | https://github.com/totto2727-org/admiral.git | `package/admiral/` |
 | any-collection | https://github.com/totto2727-org/any-collection.git | `package/any-collection/` |
+| effront | https://github.com/totto2727-org/effective-rsc.git | `packages/effront/` |
 | e2e | https://github.com/totto2727-org/e2e.git | `package/e2e/` |
 | geo | https://github.com/totto2727-org/geo.git | `package/geo/` |
 | gitignore-patterns | https://github.com/totto2727-org/gitignore-patterns.git | `package/gitignore-patterns/` |
