@@ -24,7 +24,9 @@ Repositories that do not naturally fit under `app/` or `package/`, such as AI ag
 | mdts | https://github.com/totto2727-org/mdts.git | `app/mdts/` |
 | wt | https://github.com/totto2727-org/wt.git | `app/wt/` |
 | admiral | https://github.com/totto2727-org/admiral.git | `package/admiral/` |
+| agents-config | Local Git repository (remote not yet configured) | `package/agents-config/` |
 | any-collection | https://github.com/totto2727-org/any-collection.git | `package/any-collection/` |
+| effront | https://github.com/totto2727-org/effront.git | `package/effront/` |
 | e2e | https://github.com/totto2727-org/e2e.git | `package/e2e/` |
 | geo | https://github.com/totto2727-org/geo.git | `package/geo/` |
 | gitignore-patterns | https://github.com/totto2727-org/gitignore-patterns.git | `package/gitignore-patterns/` |

@@ -11,6 +11,7 @@
 /app/mdts/
 /app/wt/
 /package/admiral/
+/package/agents-config/
 /package/any-collection/
 /package/e2e/
 /package/geo/
@@ -34,3 +35,6 @@
 
 # vpx skills
 .agents/
+
+# Effront package family
+/package/effront/
