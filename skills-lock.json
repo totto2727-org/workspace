@@ -16,14 +16,20 @@
     "doc-search": {
       "source": "totto2727-org/agent",
       "sourceType": "github",
-      "skillPath": "plugins/external-search/skills/doc-search/SKILL.md",
-      "computedHash": "50979524cfe0d97fdf9f7fd373b72d2211653626edb35f715e77ab1af30354f2"
+      "skillPath": "plugins/external-information/skills/doc-search/SKILL.md",
+      "computedHash": "763f85b0b21466963095c1768e76f0a90111e3f304939bd968193c1967e550e3"
     },
     "document-e2e-scenarios": {
       "source": "totto2727-org/e2e",
       "sourceType": "github",
       "skillPath": ".agents/skills/document-e2e-scenarios/SKILL.md",
       "computedHash": "2794049ed89db05349db1ea5bb77bc6a0aec6a4aab4159790650cfceb5eea83e"
+    },
+    "documentation-principles": {
+      "source": "totto2727-org/agent",
+      "sourceType": "github",
+      "skillPath": "plugins/totto2727-coding/skills/documentation-principles/SKILL.md",
+      "computedHash": "a15aada31fa7fcb72ffc7175e45922ee4022f6376fa97035b1a2f25abaaecc27"
     },
     "html-doc": {
       "source": "totto2727-org/agent",
@@ -79,6 +85,12 @@
       "skillPath": "skills/moonbit-orientation/SKILL.md",
       "computedHash": "a09b3d046f016875448f8d8b7e25c1e0e878648cb48740252fd110cd05b44e69"
     },
+    "open-connector": {
+      "source": "totto2727-org/agent",
+      "sourceType": "github",
+      "skillPath": "plugins/external-information/skills/open-connector/SKILL.md",
+      "computedHash": "4028f27df6f9d06fe05aff2976d2c5112e45a19a9bac9df72d70c812b4dbc3ed"
+    },
     "realpath": {
       "source": "totto2727-org/agent",
       "sourceType": "github",
@@ -101,7 +113,7 @@
       "source": "totto2727-org/agent",
       "sourceType": "github",
       "skillPath": "plugins/totto2727-coding/skills/share-artifact/SKILL.md",
-      "computedHash": "4f46f593d6437338446386b764973cbde87224195d20d4def2026ff6ec27fb9e"
+      "computedHash": "cd8d52c61bdf47c17b8bf692623576b870216b09ad4165343711c832108d152d"
     },
     "share-coding": {
       "source": "totto2727-org/agent",
@@ -130,14 +142,8 @@
     "web-search": {
       "source": "totto2727-org/agent",
       "sourceType": "github",
-      "skillPath": "plugins/external-search/skills/web-search/SKILL.md",
-      "computedHash": "6023255e9b54bc202415be1022734ccfc022ca4301ff4cf14c3226742393b28d"
-    },
-    "zmx": {
-      "source": "totto2727-org/agent",
-      "sourceType": "github",
-      "skillPath": "plugins/totto2727/skills/zmx/SKILL.md",
-      "computedHash": "7f3fd446338d080cee5d470bf4c4eb9578a8a883869ab5c3a43ad2863a216008"
+      "skillPath": "plugins/external-information/skills/web-search/SKILL.md",
+      "computedHash": "3af3e0619443165d4b8fc14949e5b7523d66aad2cb3a29eef14fdb2eee1dafdf"
     }
   }
 }
