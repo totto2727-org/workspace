@@ -139,6 +139,12 @@
       "skillPath": "plugins/totto2727/skills/skill-reviewer/SKILL.md",
       "computedHash": "58b9bfaad646f2f8d2c0fecb9e483b758854b2731d1e97e65ba595dbbc1e08f3"
     },
+    "typesafe-ai": {
+      "source": "typesafe-ai/skills",
+      "sourceType": "github",
+      "skillPath": "skills/typesafe-ai/SKILL.md",
+      "computedHash": "9cd84c5e535dec8dec59917c110f9c00b4a61faadb86b432ec7e41051170af12"
+    },
     "web-search": {
       "source": "totto2727-org/agent",
       "sourceType": "github",
