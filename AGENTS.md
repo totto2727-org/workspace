@@ -22,6 +22,7 @@ Repositories that do not naturally fit under `app/` or `package/`, such as AI ag
 | flowdeck | https://github.com/totto2727-org/flowdeck.git | `app/flowdeck/` |
 | glossshift | https://github.com/totto2727-org/glossshift.git | `app/glossshift/` |
 | mdts | https://github.com/totto2727-org/mdts.git | `app/mdts/` |
+| open-connector | https://github.com/totto2727-org/open-connector.git | `app/open-connector/` |
 | wt | https://github.com/totto2727-org/wt.git | `app/wt/` |
 | admiral | https://github.com/totto2727-org/admiral.git | `package/admiral/` |
 | llm-profiles | https://github.com/totto2727-org/llm-profiles.git | `package/llm-profiles/` |
@@ -70,3 +71,4 @@ git clone https://github.com/totto2727-org/agent-sdk.git package/agent-sdk/agent
 - For cross-repository changes, modify and validate each repository independently and create separate commits in each repository.
 - When a child repository contains its own `AGENTS.md`, follow that file for work inside the child repository.
 - When adding or moving a repository, update both the repository map in this file and the root `.gitignore` in the same change.
+- `app/open-connector/` is a fork of `oomol-lab/open-connector`. Keep `origin` pointed at `totto2727-org/open-connector` and `upstream` pointed at the original repository, target fork pull requests at `origin/main`, and maintain its committed divergence record in `docs/upstream-differences.md` inside the child repository.
