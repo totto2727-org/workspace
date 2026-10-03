@@ -19,10 +19,12 @@ Repositories that do not naturally fit under `app/` or `package/`, such as AI ag
 | opencode-sdk | https://github.com/totto2727-org/opencode-sdk.git | `package/agent-sdk/opencode-sdk/` |
 | atlas-to-kysely | https://github.com/totto2727-org/atlas-to-kysely.git | `app/atlas-to-kysely/` |
 | c-plugin | https://github.com/totto2727-org/c-plugin.git | `app/c-plugin/` |
+| cloudflare-os-starter | https://github.com/cloudflare/cloudflare-os-starter.git | `app/cloudflare-os-starter/` |
 | flowdeck | https://github.com/totto2727-org/flowdeck.git | `app/flowdeck/` |
 | glossshift | https://github.com/totto2727-org/glossshift.git | `app/glossshift/` |
 | mdts | https://github.com/totto2727-org/mdts.git | `app/mdts/` |
 | open-connector | https://github.com/totto2727-org/open-connector.git | `app/open-connector/` |
+| projektor-deploy-example | https://github.com/TAJD/projektor-deploy-example.git | `app/projektor-deploy-example/` |
 | wt | https://github.com/totto2727-org/wt.git | `app/wt/` |
 | admiral | https://github.com/totto2727-org/admiral.git | `package/admiral/` |
 | llm-profiles | https://github.com/totto2727-org/llm-profiles.git | `package/llm-profiles/` |
