@@ -38,6 +38,7 @@
 
 # vpx skills
 .agents/
+.claude/
 
 # Effront package family
 /package/effront/

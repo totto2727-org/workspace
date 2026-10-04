@@ -1,17 +1,23 @@
 {
   "version": 1,
   "skills": {
-    "csv-analysis": {
+    "cloudflare-ai": {
       "source": "totto2727-org/agent",
       "sourceType": "github",
-      "skillPath": "plugins/totto2727/skills/csv-analysis/SKILL.md",
-      "computedHash": "dcf2f91090eef2be5ad7850f46944618b0dd03959953dbc247e5b565911b3672"
+      "skillPath": "plugins/external-information/skills/cloudflare-ai/SKILL.md",
+      "computedHash": "16d8c43bc378e7ead5253ae7cb200aed33e1d6d92c925695622672b8255a6ee0"
+    },
+    "decision-model": {
+      "source": "totto2727-org/agent",
+      "sourceType": "github",
+      "skillPath": "plugins/external-information/skills/decision-model/SKILL.md",
+      "computedHash": "c2a76796061d675e1b48db133d361d8f3e39857ac4239e00e588437fef4ad6f9"
     },
     "doc-search": {
       "source": "totto2727-org/agent",
       "sourceType": "github",
       "skillPath": "plugins/external-information/skills/doc-search/SKILL.md",
-      "computedHash": "5eba0d45d2b1b6476e3dbdf59e5fb9fa96d748a0ac0a2f3f693d35eca621e3cf"
+      "computedHash": "3d890b8153d56d998e85c3859aebe73d79ed895898a2f0332b24abf932443d20"
     },
     "document-e2e-scenarios": {
       "source": "totto2727-org/e2e",
@@ -23,49 +29,31 @@
       "source": "totto2727-org/agent",
       "sourceType": "github",
       "skillPath": "plugins/totto2727-coding/skills/documentation-principles/SKILL.md",
-      "computedHash": "f7b71a6ab8ab9ce1d34d1f3c39959b87e9e27fe9719524af588ef56715f02871"
+      "computedHash": "db653178482c962fad619c762da7ffc7feef53a1ab41b814e5ff4dd91a26f4e6"
     },
     "documentation-quality": {
       "source": "totto2727-org/agent",
       "sourceType": "github",
       "skillPath": "plugins/totto2727-coding/skills/documentation-quality/SKILL.md",
-      "computedHash": "67e8aff04ff5d58703665b05ef1d0db1f351fe2a88aa84fae73a25e1bfd1f867"
-    },
-    "explain-with-anim": {
-      "source": "mizchi/explainer",
-      "sourceType": "github",
-      "skillPath": "skills/explain-with-anim/SKILL.md",
-      "computedHash": "dfc9d4fb2bb1e88278816766f60b208720edcb053b608a99680e654216b79be0"
+      "computedHash": "ebf16589097a39bd9bfc70c55a5713374cac4867d21f97b0be849f76274b9cf1"
     },
     "explainer": {
       "source": "mizchi/explainer",
       "sourceType": "github",
       "skillPath": "skills/explainer/SKILL.md",
-      "computedHash": "2c8f44ca10bfdafd4d12d4eff8d6d1132c522bb26d5ee14ed4e2f6fdda6d89aa"
+      "computedHash": "704768ba5840c1586b009cc8e3c87696e0159b31a222401b132e368005dc163f"
     },
     "explainer-book": {
       "source": "mizchi/explainer",
       "sourceType": "github",
       "skillPath": "skills/explainer-book/SKILL.md",
-      "computedHash": "de6b3d27a7a9ee9dd4d64c5f7d3c6969fa78ed7a31782b9b88f2db0e41b59120"
-    },
-    "explanatory-animation": {
-      "source": "mizchi/explainer",
-      "sourceType": "github",
-      "skillPath": "skills/explanatory-animation/SKILL.md",
-      "computedHash": "dc2af459bbd80039975646497c56e95ba2dd264ab02ecc5f7a77721f8a2089e7"
+      "computedHash": "6f256e5eca1f7ce9eff8b3191186c093fd9ef753a4faaab03db5cd02e1ee86e1"
     },
     "first-reader": {
       "source": "mizchi/explainer",
       "sourceType": "github",
       "skillPath": "skills/first-reader/SKILL.md",
       "computedHash": "4d3d4aadae2812bb326ad7ab70bdbb4975b7960dc95ae5b27e612af2824827cc"
-    },
-    "html-doc": {
-      "source": "totto2727-org/agent",
-      "sourceType": "github",
-      "skillPath": "plugins/totto2727/skills/html-doc/SKILL.md",
-      "computedHash": "4f3926f7e5f784037fe940948a86e6790429d495a800c96bbe9f8d18a7578f37"
     },
     "implement-cli-e2e": {
       "source": "totto2727-org/e2e",
@@ -77,7 +65,7 @@
       "source": "totto2727-org/agent",
       "sourceType": "github",
       "skillPath": "plugins/totto2727-coding/skills/js-coding/SKILL.md",
-      "computedHash": "6c518db9271db14b9d53f18c9805514cb1d0482baeaa898126ffb2f558a483a8"
+      "computedHash": "71a4d133d051fff9a0acdb6c5f962c8238289a2db54e618fc0c0f5b6a8d014d0"
     },
     "js-test": {
       "source": "totto2727-org/agent",
@@ -95,7 +83,7 @@
       "source": "totto2727-org/agent",
       "sourceType": "github",
       "skillPath": "plugins/totto2727-coding/skills/mbt-coding/SKILL.md",
-      "computedHash": "bcaadd11c3343c82bf0cc6030c7b39e135fa13a4ffbafe1a7168319a858be927"
+      "computedHash": "9a7b27de164d6d2595bab4ff6eacffd00ca0b738103bd4013e5cc2aa4a879693"
     },
     "mbt-test": {
       "source": "totto2727-org/agent",
@@ -107,7 +95,7 @@
       "source": "totto2727-org/agent",
       "sourceType": "github",
       "skillPath": "plugins/external-information/skills/monid/SKILL.md",
-      "computedHash": "cfb1ec54f3aba54ff8f8106f27eb47e4e880a0932ab1ef02001fa23f069435a1"
+      "computedHash": "cf8828dd2b87c2507f7ea59870c0c5fb6fab833917d8dd60d80f8799b4248315"
     },
     "moonbit-orientation": {
       "source": "moonbitlang/skills",
@@ -119,19 +107,19 @@
       "source": "totto2727-org/agent",
       "sourceType": "github",
       "skillPath": "plugins/external-information/skills/open-connector/SKILL.md",
-      "computedHash": "bdc5eda7327fd11e6a757fab51a40bc36608e2b10239ab0d9e7727d88d34c987"
+      "computedHash": "380f4f480c56652232728039bc2e7d299d604734f7a19b2d86480a6fd2943332"
     },
     "realpath": {
       "source": "totto2727-org/agent",
       "sourceType": "github",
-      "skillPath": "plugins/totto2727/skills/realpath/SKILL.md",
+      "skillPath": "plugins/totto2727-coding/skills/realpath/SKILL.md",
       "computedHash": "f5dacc048000e65a646839dffd114eafdd39c2449d7279b0270f29227bed000b"
     },
     "rust-coding": {
       "source": "totto2727-org/agent",
       "sourceType": "github",
       "skillPath": "plugins/totto2727-coding/skills/rust-coding/SKILL.md",
-      "computedHash": "92745145e1cae3cac3be9f645de0d70b5f66510ae81235742e23804b74f0d44d"
+      "computedHash": "e8e855949a1be59d7415aee1326982f58a01a115eccb2f9ada18d1eb929ae63b"
     },
     "rust-test": {
       "source": "totto2727-org/agent",
@@ -143,19 +131,19 @@
       "source": "totto2727-org/agent",
       "sourceType": "github",
       "skillPath": "plugins/totto2727-coding/skills/share-artifact/SKILL.md",
-      "computedHash": "f9433dd4836e68ca3c2c9c356126601a2d1f6886a7606f9d180ecaf719966a4d"
+      "computedHash": "2b281e80b560fd60ca16a4332dc8f8b10d2acee51ae0d771664bdf752602b2d3"
     },
     "share-coding": {
       "source": "totto2727-org/agent",
       "sourceType": "github",
       "skillPath": "plugins/totto2727-coding/skills/share-coding/SKILL.md",
-      "computedHash": "9f59d57d0a4a97c117692fa57dd1be631d8addab0bfe9b2625a553f80cc607a6"
+      "computedHash": "351e3527aa1bd14a13ea3944193ffc0b168b4ee8641f0fb95f26c9766059b9b2"
     },
     "share-test": {
       "source": "totto2727-org/agent",
       "sourceType": "github",
       "skillPath": "plugins/totto2727-coding/skills/share-test/SKILL.md",
-      "computedHash": "c0c0683b97a3e7056002bcbe2792febae2c0fbe871113d6232eca84b739fee21"
+      "computedHash": "07442c3b5c0514f0abcb8c4d2abc14ce9d92aca4af97b46d44d449aa36d38c5e"
     },
     "share-test-design": {
       "source": "totto2727-org/agent",
@@ -166,8 +154,8 @@
     "skill-reviewer": {
       "source": "totto2727-org/agent",
       "sourceType": "github",
-      "skillPath": "plugins/totto2727/skills/skill-reviewer/SKILL.md",
-      "computedHash": "b7ef3b5a367fb3525ee26483fb11ceb7a87f8e90f55c3f63ca513ac828699bf5"
+      "skillPath": "plugins/totto2727-coding/skills/skill-reviewer/SKILL.md",
+      "computedHash": "17da0867fdd478a5801bd6e46d5d59d92c70a56ad57ebdbf392d8b83353f256a"
     },
     "typesafe-ai": {
       "source": "typesafe-ai/skills",
@@ -179,7 +167,7 @@
       "source": "totto2727-org/agent",
       "sourceType": "github",
       "skillPath": "plugins/external-information/skills/web-search/SKILL.md",
-      "computedHash": "c3d72fa9f51ced29ccc9e434343e729174af4c211d310a3ae178c615d46dca12"
+      "computedHash": "cab489a00b750b93dde662d588157212895e88973a84732d3fa94e04848667fe"
     }
   }
 }
