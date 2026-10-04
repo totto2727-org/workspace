@@ -69,14 +69,6 @@ git clone https://github.com/totto2727-org/agent-sdk.git package/agent-sdk/agent
 
 ## Working Guidelines
 
-### Shared Skills
-
-- The workspace root `skills-lock.json` is the canonical lock for shared installed skills, including those used by `monorepo/`.
-- Keep installer-managed skill copies and agent-specific links out of Git. Do not add a second shared skill lock inside `monorepo/`.
-- Repository-owned skills that are not installer-managed remain in their owning repository unless a suitable new owner is established.
-
-### Repository Changes
-
 - At the start of work, run `git pull --ff-only` in each initialized child repository before making changes. Resolve any dirty or diverged state within that child repository first.
 - Run Git operations, commits, branches, tags, releases, and pull requests within each independent child repository.
 - For cross-repository changes, modify and validate each repository independently and create separate commits in each repository.
