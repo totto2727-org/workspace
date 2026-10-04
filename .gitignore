@@ -1,5 +1,6 @@
 # Independent repositories in this virtual monorepo
 /agent/
+/monorepo/
 /package/agent-sdk/agent-core-sdk/
 /package/agent-sdk/agent-sdk/
 /package/agent-sdk/codex-sdk/
@@ -37,8 +38,8 @@
 .DS_Store
 
 # vpx skills
-.agents/
-.claude/
+.agents
+.claude
 
 # Effront package family
 /package/effront/

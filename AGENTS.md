@@ -13,6 +13,7 @@ Repositories that do not naturally fit under `app/` or `package/`, such as AI ag
 | Repository | Repository URL | Workspace Path |
 | --- | --- | --- |
 | agent | https://github.com/totto2727-org/agent.git | `agent/` |
+| monorepo | https://github.com/totto2727-org/monorepo.git | `monorepo/` |
 | agent-core-sdk | https://github.com/totto2727-org/agent-core-sdk.git | `package/agent-sdk/agent-core-sdk/` |
 | agent-sdk | https://github.com/totto2727-org/agent-sdk.git | `package/agent-sdk/agent-sdk/` |
 | codex-sdk | https://github.com/totto2727-org/codex-sdk.git | `package/agent-sdk/codex-sdk/` |
