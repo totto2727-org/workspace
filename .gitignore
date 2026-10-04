@@ -38,8 +38,8 @@
 .DS_Store
 
 # vpx skills
-.agent/skills/
-.claude/skills/
+.agents
+.claude
 
 # Effront package family
 /package/effront/
