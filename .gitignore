@@ -43,3 +43,7 @@
 
 # Effront package family
 /package/effront/
+
+# Oxlint package and documentation application
+/package/oxlint/
+/app/oxlint-docs/

@@ -30,6 +30,8 @@ Repositories that do not naturally fit under `app/` or `package/`, such as AI ag
 | admiral | https://github.com/totto2727-org/admiral.git | `package/admiral/` |
 | llm-profiles | https://github.com/totto2727-org/llm-profiles.git | `package/llm-profiles/` |
 | any-collection | https://github.com/totto2727-org/any-collection.git | `package/any-collection/` |
+| oxlint | https://github.com/totto2727-org/oxlint.git | `package/oxlint/` |
+| oxlint-docs | https://github.com/totto2727-org/oxlint-docs.git | `app/oxlint-docs/` |
 | effront | https://github.com/totto2727-org/effront.git | `package/effront/` |
 | e2e | https://github.com/totto2727-org/e2e.git | `package/e2e/` |
 | geo | https://github.com/totto2727-org/geo.git | `package/geo/` |
