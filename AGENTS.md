@@ -26,6 +26,7 @@ Upstream-first forks belong under `fork/`, with role-based paths such as `fork/a
 | glossshift | https://github.com/totto2727-org/glossshift.git | `app/glossshift/` |
 | mdts | https://github.com/totto2727-org/mdts.git | `app/mdts/` |
 | open-connector | https://github.com/totto2727-org/open-connector.git | `fork/app/open-connector/` |
+| jev-lint | https://github.com/mizchi/jev-lint.git | `fork/app/jev-lint/` |
 | projektor | https://github.com/totto2727-org/projektor.git | `app/projektor/` |
 | projektor-deploy-example | https://github.com/TAJD/projektor-deploy-example.git | `app/projektor-deploy-example/` |
 | wt | https://github.com/totto2727-org/wt.git | `app/wt/` |
