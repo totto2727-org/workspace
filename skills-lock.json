@@ -5,13 +5,25 @@
       "source": "totto2727-org/agent",
       "sourceType": "github",
       "skillPath": "plugins/external-information/skills/cloudflare-ai/SKILL.md",
-      "computedHash": "16d8c43bc378e7ead5253ae7cb200aed33e1d6d92c925695622672b8255a6ee0"
+      "computedHash": "ebc82203ac0b52f19d0a5c13cf36ffe3b499836c2ea5736262999ca84e788474"
+    },
+    "d2-diagram": {
+      "source": "mizchi/explainer",
+      "sourceType": "github",
+      "skillPath": "skills/d2-diagram/SKILL.md",
+      "computedHash": "2de55313654b234c9681dd072cd1e1d8c6cde42143f16064f557a7d898558370"
+    },
+    "d2-slides": {
+      "source": "mizchi/explainer",
+      "sourceType": "github",
+      "skillPath": "skills/d2-slides/SKILL.md",
+      "computedHash": "6d847e0799ff261e4efde7ff6e201ecadda9308b06c8fb84cfa53235428cf2f0"
     },
     "decision-model": {
       "source": "totto2727-org/agent",
       "sourceType": "github",
       "skillPath": "plugins/external-information/skills/decision-model/SKILL.md",
-      "computedHash": "c2a76796061d675e1b48db133d361d8f3e39857ac4239e00e588437fef4ad6f9"
+      "computedHash": "df69373f00eaa70ba3e6c298ae19fe66367ba222b47a51ded8accf1add1675a4"
     },
     "doc-search": {
       "source": "totto2727-org/agent",
@@ -29,13 +41,13 @@
       "source": "totto2727-org/agent",
       "sourceType": "github",
       "skillPath": "plugins/totto2727-coding/skills/documentation-principles/SKILL.md",
-      "computedHash": "db653178482c962fad619c762da7ffc7feef53a1ab41b814e5ff4dd91a26f4e6"
+      "computedHash": "67ffa8a5b7c6fbeafa5aad251b5e4b9c7f32feff71f97f244f69dcfa84ed546d"
     },
     "documentation-quality": {
       "source": "totto2727-org/agent",
       "sourceType": "github",
       "skillPath": "plugins/totto2727-coding/skills/documentation-quality/SKILL.md",
-      "computedHash": "ebf16589097a39bd9bfc70c55a5713374cac4867d21f97b0be849f76274b9cf1"
+      "computedHash": "fc50b202ad7bc03e7b3a4f199ac792661838e103d386b92e65f6f0d2475c55ec"
     },
     "explainer": {
       "source": "mizchi/explainer",
