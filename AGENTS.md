@@ -7,6 +7,7 @@ Each mapped directory keeps its own `.git` directory, history, branches, and rel
 The workspace intentionally does not use Git submodules or pin child repositories to exact commit hashes.
 Repositories are organized by role rather than programming language. Executable applications belong under `app/`, reusable libraries belong under `package/`, and related package families belong under `package/<domain>/`.
 Repositories that do not naturally fit under `app/` or `package/`, such as AI agent plugins and marketplaces, may be placed at the workspace root or another role-appropriate path.
+Upstream-first forks belong under `fork/`, with role-based paths such as `fork/app/` and `fork/package/`.
 
 ## Repository Map
 
@@ -20,11 +21,11 @@ Repositories that do not naturally fit under `app/` or `package/`, such as AI ag
 | opencode-sdk | https://github.com/totto2727-org/opencode-sdk.git | `package/agent-sdk/opencode-sdk/` |
 | atlas-to-kysely | https://github.com/totto2727-org/atlas-to-kysely.git | `app/atlas-to-kysely/` |
 | c-plugin | https://github.com/totto2727-org/c-plugin.git | `app/c-plugin/` |
-| cloudflare-os-starter | https://github.com/cloudflare/cloudflare-os-starter.git | `app/cloudflare-os-starter/` |
+| cloudflare-os-starter | https://github.com/totto2727-org/cloudflare-os-starter.git | `fork/app/cloudflare-os/` |
 | flowdeck | https://github.com/totto2727-org/flowdeck.git | `app/flowdeck/` |
 | glossshift | https://github.com/totto2727-org/glossshift.git | `app/glossshift/` |
 | mdts | https://github.com/totto2727-org/mdts.git | `app/mdts/` |
-| open-connector | https://github.com/totto2727-org/open-connector.git | `app/open-connector/` |
+| open-connector | https://github.com/totto2727-org/open-connector.git | `fork/app/open-connector/` |
 | projektor | https://github.com/totto2727-org/projektor.git | `app/projektor/` |
 | projektor-deploy-example | https://github.com/TAJD/projektor-deploy-example.git | `app/projektor-deploy-example/` |
 | wt | https://github.com/totto2727-org/wt.git | `app/wt/` |
@@ -70,6 +71,18 @@ mkdir -p package/agent-sdk
 git clone https://github.com/totto2727-org/agent-sdk.git package/agent-sdk/agent-sdk
 ```
 
+## Upstream-first Fork Policy
+
+- Keep repositories under `fork/` as close to upstream as possible. Prefer upstream implementations, dependency declarations, and toolchains over workspace-wide preferences.
+- Limit fork-specific changes to required deployment configuration or demonstrated compatibility, security, or operational fixes. Explain why each retained change is necessary in the repository's maintained divergence record.
+- Do not introduce optional refactors, toolchain migrations, dependency-policy rewrites, or runtime changes merely to support a local tooling preference.
+- Review custom changes when updating upstream. Remove obsolete divergence and prefer submitting generally useful fixes upstream.
+- Keep `origin` pointed at the user's fork and `upstream` pointed at the original repository. Open workspace pull requests against the user's fork, not the upstream repository.
+- Maintain `docs/upstream-differences.md` inside each fork, recording the upstream comparison revision, purpose, affected areas, and operational impact of retained differences. Do not use this document as a progress log.
+- `fork/app/cloudflare-os/` contains the `cloudflare-os-starter` repository, forked from `cloudflare/cloudflare-os-starter`. Its directory name does not rename the GitHub repository or change its nested runtime source.
+- `fork/app/open-connector/` is forked from `oomol-lab/open-connector`. Target its fork pull requests at `origin/main`.
+- Moving additional repositories into `fork/` requires the user's approval. Present candidates and evidence before changing their placement.
+
 ## Working Guidelines
 
 - At the start of work, run `git pull --ff-only` in each initialized child repository before making changes. Resolve any dirty or diverged state within that child repository first.
@@ -77,4 +90,3 @@ git clone https://github.com/totto2727-org/agent-sdk.git package/agent-sdk/agent
 - For cross-repository changes, modify and validate each repository independently and create separate commits in each repository.
 - When a child repository contains its own `AGENTS.md`, follow that file for work inside the child repository.
 - When adding or moving a repository, update both the repository map in this file and the root `.gitignore` in the same change.
-- `app/open-connector/` is a fork of `oomol-lab/open-connector`. Keep `origin` pointed at `totto2727-org/open-connector` and `upstream` pointed at the original repository, target fork pull requests at `origin/main`, and maintain its committed divergence record in `docs/upstream-differences.md` inside the child repository.
