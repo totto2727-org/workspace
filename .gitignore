@@ -7,11 +7,12 @@
 /package/agent-sdk/opencode-sdk/
 /app/atlas-to-kysely/
 /app/c-plugin/
-/app/cloudflare-os-starter/
+/fork/app/cloudflare-os/
 /app/flowdeck/
 /app/glossshift/
 /app/mdts/
-/app/open-connector/
+/fork/app/open-connector/
+/app/projektor/
 /app/projektor-deploy-example/
 /app/wt/
 /package/admiral/
