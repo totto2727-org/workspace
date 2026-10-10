@@ -21,7 +21,7 @@ Upstream-first forks belong under `fork/`, with role-based paths such as `fork/a
 | opencode-sdk | https://github.com/totto2727-org/opencode-sdk.git | `package/agent-sdk/opencode-sdk/` |
 | atlas-to-kysely | https://github.com/totto2727-org/atlas-to-kysely.git | `app/atlas-to-kysely/` |
 | c-plugin | https://github.com/totto2727-org/c-plugin.git | `app/c-plugin/` |
-| cloudflare-os-starter | https://github.com/totto2727-org/cloudflare-os-starter.git | `fork/app/cloudflare-os/` |
+| cloudflare-os-starter | https://github.com/totto2727-org/cloudflare-os-starter.git | `fork/app/cloudflare-os-starter/` |
 | flowdeck | https://github.com/totto2727-org/flowdeck.git | `app/flowdeck/` |
 | glossshift | https://github.com/totto2727-org/glossshift.git | `app/glossshift/` |
 | mdts | https://github.com/totto2727-org/mdts.git | `app/mdts/` |
@@ -79,7 +79,7 @@ git clone https://github.com/totto2727-org/agent-sdk.git package/agent-sdk/agent
 - Review custom changes when updating upstream. Remove obsolete divergence and prefer submitting generally useful fixes upstream.
 - Keep `origin` pointed at the user's fork and `upstream` pointed at the original repository. Open workspace pull requests against the user's fork, not the upstream repository.
 - Maintain `docs/upstream-differences.md` inside each fork, recording the upstream comparison revision, purpose, affected areas, and operational impact of retained differences. Do not use this document as a progress log.
-- `fork/app/cloudflare-os/` contains the `cloudflare-os-starter` repository, forked from `cloudflare/cloudflare-os-starter`. Its directory name does not rename the GitHub repository or change its nested runtime source.
+- `fork/app/cloudflare-os-starter/` contains the `cloudflare-os-starter` repository, forked from `cloudflare/cloudflare-os-starter`. Its checkout directory matches the repository name. Its nested runtime source remains unchanged.
 - `fork/app/open-connector/` is forked from `oomol-lab/open-connector`. Target its fork pull requests at `origin/main`.
 - Moving additional repositories into `fork/` requires the user's approval. Present candidates and evidence before changing their placement.
 
