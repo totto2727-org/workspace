@@ -13,12 +13,6 @@
       "skillPath": "plugins/external-information/skills/decision-model/SKILL.md",
       "computedHash": "df69373f00eaa70ba3e6c298ae19fe66367ba222b47a51ded8accf1add1675a4"
     },
-    "doc-search": {
-      "source": "totto2727-org/agent",
-      "sourceType": "github",
-      "skillPath": "plugins/external-information/skills/doc-search/SKILL.md",
-      "computedHash": "3d890b8153d56d998e85c3859aebe73d79ed895898a2f0332b24abf932443d20"
-    },
     "document-e2e-scenarios": {
       "source": "totto2727-org/e2e",
       "sourceType": "github",
@@ -73,23 +67,11 @@
       "skillPath": "plugins/totto2727-coding/skills/mbt-test/SKILL.md",
       "computedHash": "ce3dcc999fcb7e1f75d00314021fbcf8ecf4becef29cc9533ec62ca37b79d122"
     },
-    "monid": {
-      "source": "totto2727-org/agent",
-      "sourceType": "github",
-      "skillPath": "plugins/external-information/skills/monid/SKILL.md",
-      "computedHash": "cf8828dd2b87c2507f7ea59870c0c5fb6fab833917d8dd60d80f8799b4248315"
-    },
     "moonbit-orientation": {
       "source": "moonbitlang/skills",
       "sourceType": "github",
       "skillPath": "skills/moonbit-orientation/SKILL.md",
       "computedHash": "a09b3d046f016875448f8d8b7e25c1e0e878648cb48740252fd110cd05b44e69"
-    },
-    "open-connector": {
-      "source": "totto2727-org/agent",
-      "sourceType": "github",
-      "skillPath": "plugins/external-information/skills/open-connector/SKILL.md",
-      "computedHash": "380f4f480c56652232728039bc2e7d299d604734f7a19b2d86480a6fd2943332"
     },
     "realpath": {
       "source": "totto2727-org/agent",
@@ -144,12 +126,6 @@
       "sourceType": "github",
       "skillPath": "skills/typesafe-ai/SKILL.md",
       "computedHash": "9cd84c5e535dec8dec59917c110f9c00b4a61faadb86b432ec7e41051170af12"
-    },
-    "web-search": {
-      "source": "totto2727-org/agent",
-      "sourceType": "github",
-      "skillPath": "plugins/external-information/skills/web-search/SKILL.md",
-      "computedHash": "cab489a00b750b93dde662d588157212895e88973a84732d3fa94e04848667fe"
     }
   }
 }
