@@ -29,6 +29,7 @@
 /template/deno-simple/
 /template/moonbit-simple/
 /template/rust-simple/
+/template/haskell-simple/
 /toolchain/moonbit-overlay/
 /package/workgraph/
 
