@@ -15,6 +15,7 @@ Upstream-first forks belong under `fork/`, with role-based paths such as `fork/a
 | --- | --- | --- |
 | agent | https://github.com/totto2727-org/agent.git | `agent/` |
 | monorepo | https://github.com/totto2727-org/monorepo.git | `monorepo/` |
+| infra | https://github.com/totto2727-org/infra.git | `infra/` |
 | nix | https://github.com/totto2727-dotfiles/nix.git | `nix/` |
 | agent-core-sdk | https://github.com/totto2727-org/agent-core-sdk.git | `package/agent-sdk/agent-core-sdk/` |
 | agent-sdk | https://github.com/totto2727-org/agent-sdk.git | `package/agent-sdk/agent-sdk/` |
