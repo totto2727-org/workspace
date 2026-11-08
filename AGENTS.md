@@ -26,10 +26,9 @@ Upstream-first forks belong under `fork/`, with role-based paths such as `fork/a
 | flowdeck | https://github.com/totto2727-org/flowdeck.git | `app/flowdeck/` |
 | glossshift | https://github.com/totto2727-org/glossshift.git | `app/glossshift/` |
 | mdts | https://github.com/totto2727-org/mdts.git | `app/mdts/` |
-| nix-cache | Local prototype, remote not created | `app/nix-cache/` |
+| nix-cache | https://github.com/totto2727-org/nix-cache.git (creation pending in Pulumi) | `app/nix-cache/` |
 | open-connector | https://github.com/totto2727-org/open-connector.git | `fork/app/open-connector/` |
 | projektor | https://github.com/totto2727-org/projektor.git | `app/projektor/` |
-| projektor-deploy-example | https://github.com/TAJD/projektor-deploy-example.git | `app/projektor-deploy-example/` |
 | wt | https://github.com/totto2727-org/wt.git | `app/wt/` |
 | reylo | https://github.com/totto2727-org/reylo.git | `fork/package/reylo/` |
 | admiral | https://github.com/totto2727-org/admiral.git | `package/admiral/` |
