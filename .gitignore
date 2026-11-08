@@ -1,6 +1,7 @@
 # Independent repositories in this virtual monorepo
 /agent/
 /monorepo/
+/infra/
 /nix/
 /package/agent-sdk/agent-core-sdk/
 /package/agent-sdk/agent-sdk/
