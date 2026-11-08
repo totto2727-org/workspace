@@ -1,6 +1,7 @@
 # Independent repositories in this virtual monorepo
 /agent/
 /monorepo/
+/nix/
 /package/agent-sdk/agent-core-sdk/
 /package/agent-sdk/agent-sdk/
 /package/agent-sdk/codex-sdk/
@@ -11,10 +12,12 @@
 /app/flowdeck/
 /app/glossshift/
 /app/mdts/
+/app/nix-cache/
 /fork/app/open-connector/
 /app/projektor/
 /app/projektor-deploy-example/
 /app/wt/
+/fork/package/reylo/
 /package/admiral/
 /package/llm-profiles/
 /package/any-collection/
