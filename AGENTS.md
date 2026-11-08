@@ -26,7 +26,7 @@ Upstream-first forks belong under `fork/`, with role-based paths such as `fork/a
 | flowdeck | https://github.com/totto2727-org/flowdeck.git | `app/flowdeck/` |
 | glossshift | https://github.com/totto2727-org/glossshift.git | `app/glossshift/` |
 | mdts | https://github.com/totto2727-org/mdts.git | `app/mdts/` |
-| nix-cache | https://github.com/totto2727-org/nix-cache.git (creation pending in Pulumi) | `app/nix-cache/` |
+| nix-cache | https://github.com/totto2727-org/nix-cache.git | `app/nix-cache/` |
 | open-connector | https://github.com/totto2727-org/open-connector.git | `fork/app/open-connector/` |
 | projektor | https://github.com/totto2727-org/projektor.git | `app/projektor/` |
 | wt | https://github.com/totto2727-org/wt.git | `app/wt/` |
