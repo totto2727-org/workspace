@@ -30,7 +30,6 @@ Upstream-first forks belong under `fork/`, with role-based paths such as `fork/a
 | nix-cache | https://github.com/totto2727-org/nix-cache.git | `app/nix-cache/` |
 | open-connector | https://github.com/totto2727-org/open-connector.git | `fork/app/open-connector/` |
 | projektor | https://github.com/totto2727-org/projektor.git | `app/projektor/` |
-| wt | https://github.com/totto2727-org/wt.git | `app/wt/` |
 | reylo | https://github.com/totto2727-org/reylo.git | `fork/package/reylo/` |
 | admiral | https://github.com/totto2727-org/admiral.git | `package/admiral/` |
 | llm-profiles | https://github.com/totto2727-org/llm-profiles.git | `package/llm-profiles/` |
@@ -47,7 +46,6 @@ Upstream-first forks belong under `fork/`, with role-based paths such as `fork/a
 | template-go-simple | https://github.com/totto2727-org/template-go-simple.git | `template/go-simple/` |
 | template-vite-plus-lib | https://github.com/totto2727-org/template-vite-plus-lib.git | `template/vite-plus-lib/` |
 | template-vite-plus-app | https://github.com/totto2727-org/template-vite-plus-app.git | `template/vite-plus-app/` |
-| template-deno-simple | https://github.com/totto2727-org/template-deno-simple.git | `template/deno-simple/` |
 | template-moonbit-simple | https://github.com/totto2727-org/template-moonbit-simple.git | `template/moonbit-simple/` |
 | template-rust-simple | https://github.com/totto2727-org/template-rust-simple.git | `template/rust-simple/` |
 | template-haskell-simple | https://github.com/totto2727-org/template-haskell-simple.git | `template/haskell-simple/` |

@@ -16,7 +16,6 @@
 /app/nix-cache/
 /fork/app/open-connector/
 /app/projektor/
-/app/wt/
 /fork/package/reylo/
 /package/admiral/
 /package/llm-profiles/
@@ -29,7 +28,6 @@
 /template/go-simple/
 /template/vite-plus-lib/
 /template/vite-plus-app/
-/template/deno-simple/
 /template/moonbit-simple/
 /template/rust-simple/
 /template/haskell-simple/
