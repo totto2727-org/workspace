@@ -47,6 +47,10 @@
 # Effront package family
 /package/effront/
 
+# Effect utility packages
+/package/effect-http/
+/package/effect-identify/
+
 # Oxlint package and documentation application
 /package/oxlint/
 /app/oxlint-docs/

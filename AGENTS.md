@@ -37,6 +37,8 @@ Upstream-first forks belong under `fork/`, with role-based paths such as `fork/a
 | oxlint | https://github.com/totto2727-org/oxlint.git | `package/oxlint/` |
 | oxlint-docs | https://github.com/totto2727-org/oxlint-docs.git | `app/oxlint-docs/` |
 | effront | https://github.com/totto2727-org/effront.git | `package/effront/` |
+| effect-http | https://github.com/totto2727-org/effect-http.git | `package/effect-http/` |
+| effect-identify | https://github.com/totto2727-org/effect-identify.git | `package/effect-identify/` |
 | e2e | https://github.com/totto2727-org/e2e.git | `package/e2e/` |
 | geo | https://github.com/totto2727-org/geo.git | `package/geo/` |
 | gitignore-patterns | https://github.com/totto2727-org/gitignore-patterns.git | `package/gitignore-patterns/` |
