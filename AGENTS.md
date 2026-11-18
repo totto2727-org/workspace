@@ -41,6 +41,7 @@ Upstream-first forks belong under `fork/`, with role-based paths such as `fork/a
 | geo | https://github.com/totto2727-org/geo.git | `package/geo/` |
 | gitignore-patterns | https://github.com/totto2727-org/gitignore-patterns.git | `package/gitignore-patterns/` |
 | lens | https://github.com/totto2727-org/lens.git | `package/lens/` |
+| serde | https://github.com/totto2727-org/serde.git | `package/serde/` |
 | workgraph | https://github.com/totto2727-org/workgraph.git | `package/workgraph/` |
 | x | https://github.com/totto2727-org/x.git | `package/x/` |
 | template-go-simple | https://github.com/totto2727-org/template-go-simple.git | `template/go-simple/` |
