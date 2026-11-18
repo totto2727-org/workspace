@@ -31,6 +31,8 @@ Upstream-first forks belong under `fork/`, with role-based paths such as `fork/a
 | open-connector | https://github.com/totto2727-org/open-connector.git | `fork/app/open-connector/` |
 | projektor | https://github.com/totto2727-org/projektor.git | `app/projektor/` |
 | reylo | https://github.com/totto2727-org/reylo.git | `fork/package/reylo/` |
+| syntree.mbt | https://github.com/totto2727-org/syntree.mbt.git | `fork/package/syntree.mbt/` |
+| tui.mbt | https://github.com/totto2727-org/tui.mbt.git | `fork/package/tui.mbt/` |
 | admiral | https://github.com/totto2727-org/admiral.git | `package/admiral/` |
 | llm-profiles | https://github.com/totto2727-org/llm-profiles.git | `package/llm-profiles/` |
 | any-collection | https://github.com/totto2727-org/any-collection.git | `package/any-collection/` |
