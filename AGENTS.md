@@ -97,3 +97,4 @@ git clone https://github.com/totto2727-org/agent-sdk.git package/agent-sdk/agent
 - For cross-repository changes, modify and validate each repository independently and create separate commits in each repository.
 - When a child repository contains its own `AGENTS.md`, follow that file for work inside the child repository.
 - When adding or moving a repository, update both the repository map in this file and the root `.gitignore` in the same change.
+- When you add a managed GitHub repository, also update its organization declaration in [infra](https://github.com/totto2727-org/infra/tree/main/github). Link the workspace and infra pull requests to each other.
