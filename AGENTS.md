@@ -30,6 +30,7 @@ Upstream-first forks belong under `fork/`, with role-based paths such as `fork/a
 | nix-cache | https://github.com/totto2727-org/nix-cache.git | `app/nix-cache/` |
 | open-connector | https://github.com/totto2727-org/open-connector.git | `fork/app/open-connector/` |
 | projektor | https://github.com/totto2727-org/projektor.git | `app/projektor/` |
+| llm | https://github.com/totto2727-org/llm.git | `fork/package/llm/` |
 | moon-nix | https://github.com/totto2727-org/moon-nix.git | `fork/package/moon-nix/` |
 | reylo | https://github.com/totto2727-org/reylo.git | `fork/package/reylo/` |
 | syntree.mbt | https://github.com/totto2727-org/syntree.mbt.git | `fork/package/syntree.mbt/` |
