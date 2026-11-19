@@ -36,7 +36,6 @@ Upstream-first forks belong under `fork/`, with role-based paths such as `fork/a
 | tui.mbt | https://github.com/totto2727-org/tui.mbt.git | `fork/package/tui.mbt/` |
 | admiral | https://github.com/totto2727-org/admiral.git | `package/admiral/` |
 | llm-profiles | https://github.com/totto2727-org/llm-profiles.git | `package/llm-profiles/` |
-| any-collection | https://github.com/totto2727-org/any-collection.git | `package/any-collection/` |
 | oxlint | https://github.com/totto2727-org/oxlint.git | `package/oxlint/` |
 | oxlint-docs | https://github.com/totto2727-org/oxlint-docs.git | `app/oxlint-docs/` |
 | effront | https://github.com/totto2727-org/effront.git | `package/effront/` |
