@@ -5,13 +5,13 @@
       "source": "totto2727-org/agent",
       "sourceType": "github",
       "skillPath": "plugins/external-information/skills/cloudflare-ai/SKILL.md",
-      "computedHash": "ebc82203ac0b52f19d0a5c13cf36ffe3b499836c2ea5736262999ca84e788474"
+      "computedHash": "322b02be5bc8bff640a6e9ad573e819df7f07e27f265422b6caf93e0c72be27e"
     },
     "decision-model": {
       "source": "totto2727-org/agent",
       "sourceType": "github",
       "skillPath": "plugins/external-information/skills/decision-model/SKILL.md",
-      "computedHash": "df69373f00eaa70ba3e6c298ae19fe66367ba222b47a51ded8accf1add1675a4"
+      "computedHash": "48fa6516ac1b06168abf3a7b872f551d40aa03d6a4a8bff49ad0c36ca4cdfdc1"
     },
     "documentation-principles": {
       "source": "totto2727-org/agent",
