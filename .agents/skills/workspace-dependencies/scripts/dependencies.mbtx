@@ -53,7 +53,7 @@ suberror InvalidGraph {
 }
 
 fn Graph::validate(self : Graph) -> Unit raise InvalidGraph {
-  guard self.schema_version == 1 else { raise InvalidGraph("未対応の schema_version") }
+  guard self.schema_version == 1 else { raise InvalidGraph("Unsupported schema_version") }
   let seen : Set[(String, String)] = Set([])
   for edge in self.edges {
     let pair = (edge.provider, edge.consumer)
@@ -61,15 +61,15 @@ fn Graph::validate(self : Graph) -> Unit raise InvalidGraph {
       self.repositories.contains(edge.provider) &&
       self.repositories.contains(edge.consumer) && !seen.contains(pair) &&
       !edge.evidence.is_empty() else {
-      raise InvalidGraph("不正または重複した辺: \{edge.provider} → \{edge.consumer}")
+      raise InvalidGraph("Invalid or duplicate relationship: \{edge.provider} -> \{edge.consumer}")
     }
     seen.add(pair)
     for row in edge.evidence {
       guard row.mode == "pin" || row.mode == "verify" || row.mode == "review" else {
-        raise InvalidGraph("未知の関係: \{row.mode} (\{row.file})")
+        raise InvalidGraph("Unknown relationship mode: \{row.mode} (\{row.file})")
       }
       guard row.file != "" && row.artifact != "" else {
-        raise InvalidGraph("根拠ファイルまたは成果物が空: \{edge.consumer}")
+        raise InvalidGraph("Missing evidence file or artifact: \{edge.consumer}")
       }
     }
   }
@@ -81,13 +81,13 @@ fn Graph::markdown(self : Graph) -> String {
   let number : Map[String, Int] = Map([])
   ids.eachi((i, id) => number[id] = i)
   let lines = [
-    "# Workspace のリポジトリ間依存",
+    "# Workspace repository dependencies",
     "",
-    "証拠の正本は [dependencies.json](dependencies.json)。[更新手順](maintenance.md) に従い、MoonBit スクリプトでこの図表を再生成する。",
+    "[dependencies.json](dependencies.json) contains the source evidence. Follow the [maintenance procedure](maintenance.md) to regenerate this diagram and table with the MoonBit script.",
     "",
-    "\{ids.length()} リポジトリ、\{self.edges.length()} 組の依存。矢印は提供元 → 利用側。実線は固定参照の更新候補、点線は検証または運用確認。",
+    "\{ids.length()} repositories, \{self.edges.length()} dependency pairs. Arrows point from the provider to the consumer. Solid arrows show pinned references that may need an update. Dotted arrows show relationships to verify or review.",
     "",
-    "## パッケージ・ツール・運用上の関係",
+    "## Package, tool, and operational relationships",
     "",
     "```mermaid",
     "flowchart LR",
@@ -101,8 +101,8 @@ fn Graph::markdown(self : Graph) -> String {
     lines.push("    n\{number[p]}[\"\{p}\"] \{arrow} n\{number[c]}[\"\{c}\"]")
   }
   lines.append([
-    "```", "", "共通 CI は下表と JSON に含める。同じ組に複数の関係がある場合、図では固定参照を優先する。", "",
-    "## 提供元と利用側", "", "| 提供元 | 利用側 | 関係 | 根拠ファイル |", "| --- | --- | --- | --- |",
+    "```", "", "Shared CI dependencies appear only in the table and JSON. If a pair has more than one relationship, the diagram uses a solid arrow when any displayed relationship is pinned.", "",
+    "## Providers and consumers", "", "| Provider | Consumer | Relationship | Evidence files |", "| --- | --- | --- | --- |",
   ])
   for edge in self.edges {
     let modes = Set([])
@@ -120,8 +120,8 @@ fn Graph::markdown(self : Graph) -> String {
     lines.push("| `\{edge.provider}` | `\{edge.consumer}` | \{kinds} | \{files} |")
   }
   lines.append([
-    "", "根拠ファイルは利用側リポジトリからの相対パス。参照値と同定できなかった依存は JSON を参照。", "",
-    "## 対象リポジトリ", "", "| ID | workspace 内のパス | 状態 |", "| --- | --- | --- |",
+    "", "Evidence paths are relative to the consumer repository. See the JSON inventory for reference values and unresolved dependencies.", "",
+    "## Repositories", "", "| ID | Workspace path | Status |", "| --- | --- | --- |",
   ])
   for id in ids {
     let repo = self.repositories[id]
@@ -132,7 +132,7 @@ fn Graph::markdown(self : Graph) -> String {
 }
 
 fn Graph::impact(self : Graph, start : String, artifact : String?) -> Impact raise InvalidGraph {
-  guard self.repositories.contains(start) else { raise InvalidGraph("未登録のリポジトリ: \{start}") }
+  guard self.repositories.contains(start) else { raise InvalidGraph("Repository not in the inventory: \{start}") }
   let downstream : Map[String, Array[Edge]] = Map([])
   for edge in self.edges {
     let rows = match artifact {
@@ -145,7 +145,7 @@ fn Graph::impact(self : Graph, start : String, artifact : String?) -> Impact rai
   }
   let direct = downstream.get(start).unwrap_or([])
   guard artifact is None || !direct.is_empty() else {
-    raise InvalidGraph("起点 \{start} から指定した成果物への記録がない。成果物名と最新の宣言を確認する。")
+    raise InvalidGraph("No match for the specified artifact from \{start}. Check the artifact name and current declarations.")
   }
   let pending = Set([start])
   let work = [start]
@@ -195,12 +195,12 @@ fn read_graph(path : String) -> Graph raise {
 fn run(args : ArrayView[String]) -> Unit raise {
   match args {
     ["render", graph, markdown] => {
-      guard markdown.has_suffix(".md") else { raise InvalidGraph("図表の出力先に .md を指定する。") }
+      guard markdown.has_suffix(".md") else { raise InvalidGraph("Specify a .md output path.") }
       @fs.write_string_to_file(markdown, read_graph(graph).markdown())
     }
     ["check", graph, markdown] => {
       guard read_graph(graph).markdown() == @fs.read_file_to_string(markdown) else {
-        raise InvalidGraph("図表が古い。render を実行する。")
+        raise InvalidGraph("The diagram and table are out of date. Run render.")
       }
     }
     ["impact", graph, provider] => println(ToJson::to_json(read_graph(graph).impact(provider, None)).stringify(indent=2))

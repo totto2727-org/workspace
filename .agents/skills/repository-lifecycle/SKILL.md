@@ -1,13 +1,13 @@
 ---
 name: repository-lifecycle
-description: workspace の新規 GitHub リポジトリを作成・登録し、既存リポジトリを取り込むか、引退したリポジトリを安全にアーカイブする。新規は原則 totto2727-org の public とし、infra と workspace の両方への登録を確認する。アーカイブ時は利用先と Pulumi 管理からの切り離しを確認し、GitHub の履歴を削除しない。
+description: Create and register a GitHub repository for the workspace, add an existing repository, or safely archive a retired repository. Create new repositories as public under totto2727-org by default, and register them in both infra and workspace. Before archiving, check consumers and remove the repository from Pulumi management without deleting its GitHub history.
 ---
 
-# リポジトリの追加とアーカイブ
+# Add or archive a repository
 
-- **新規作成する。** 原則として `totto2727-org` に **public** で作る。別の owner が必要なら作成前に理由を示し、承認を得る。代わりに private で作らない。公開できない内容がある場合は作成を止める。
-- **既存リポジトリを追加する。** 新規作成と区別する。現在の公開範囲と保護設定を確認し、登録を理由に既存 private リポジトリを公開しない。
-- **両方に登録する。** `infra` の所有者別 Pulumi 宣言と、`workspace` の `AGENTS.md` の Repository Map および `.gitignore` を変更する。別 PR にして相互リンクする。片側だけでは完了にしない。
-- **アーカイブする。** 利用側と運用設定を先に確認し、両方の管理対象から外す。GitHub のアーカイブ、組織間移管、Pulumi state の切り離しは別の操作。明示的に承認された操作だけを行い、リポジトリは削除しない。
+- **Create a repository.** Use `totto2727-org` and set the visibility to **public**. If a different owner is necessary, explain why and get approval before creation. Do not create a private repository instead. Stop if the content cannot be public.
+- **Add an existing repository.** Check its current visibility and protection settings. Do not make an existing private repository public just to register it.
+- **Register in both repositories.** Update the owner-specific Pulumi declaration in `infra`. Update the Repository Map in `workspace/AGENTS.md` and the workspace root `.gitignore`. Open a pull request in each repository and link them to each other. Registration is not complete until both sides are updated.
+- **Archive a repository.** Check consumers and operational settings first, then remove the repository from both inventories. GitHub archival, transfer between organizations, and removal from Pulumi state are separate operations. Do only the operations that have explicit approval. Do not delete the repository.
 
-詳細は [作成・登録・アーカイブの手順](references/procedures.md) を読む。依存調査と図表更新は [workspace-dependencies](../workspace-dependencies/SKILL.md) を使う。
+Read the [creation, registration, and archival procedures](references/procedures.md) for details. Use [workspace-dependencies](../workspace-dependencies/SKILL.md) to find consumers and update the dependency inventory.

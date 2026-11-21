@@ -93,6 +93,7 @@ git clone https://github.com/totto2727-org/agent-sdk.git package/agent-sdk/agent
 
 ## Working Guidelines
 
+- Write workspace-owned skills, their references, and user-facing script output in English.
 - For a cross-repository dependency map, a map refresh, or a downstream update plan, use the [workspace-dependencies skill](.agents/skills/workspace-dependencies/SKILL.md).
 - To create, register, or archive a repository, use the [repository-lifecycle skill](.agents/skills/repository-lifecycle/SKILL.md).
 - At the start of work, run `git pull --ff-only` in each initialized child repository before making changes. Resolve any dirty or diverged state within that child repository first.
@@ -104,5 +105,5 @@ git clone https://github.com/totto2727-org/agent-sdk.git package/agent-sdk/agent
 
 ## Workspace generation scripts
 
-- Use [MoonBit script mode](https://docs.moonbitlang.com/ja/stable/toolchain/moon/script-mode.html) for new generators at the workspace root. Prefer Wasm. Use native or JavaScript if Wasm cannot meet a verified requirement.
+- Use [MoonBit script mode](https://docs.moonbitlang.com/en/stable/toolchain/moon/script-mode.html) for new generators at the workspace root. Prefer Wasm. Use native or JavaScript if Wasm cannot meet a verified requirement.
 - Prefer MoonBit core, `moonbitlang/x`, `totto2727/*`, or `moonbitstack/*` packages. `mizchi/*` packages are also allowed. Use Bit for Git operations implemented in MoonBit.

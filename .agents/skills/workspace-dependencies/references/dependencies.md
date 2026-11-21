@@ -1,10 +1,10 @@
-# Workspace のリポジトリ間依存
+# Workspace repository dependencies
 
-証拠の正本は [dependencies.json](dependencies.json)。[更新手順](maintenance.md) に従い、MoonBit スクリプトでこの図表を再生成する。
+[dependencies.json](dependencies.json) contains the source evidence. Follow the [maintenance procedure](maintenance.md) to regenerate this diagram and table with the MoonBit script.
 
-46 リポジトリ、74 組の依存。矢印は提供元 → 利用側。実線は固定参照の更新候補、点線は検証または運用確認。
+46 repositories, 74 dependency pairs. Arrows point from the provider to the consumer. Solid arrows show pinned references that may need an update. Dotted arrows show relationships to verify or review.
 
-## パッケージ・ツール・運用上の関係
+## Package, tool, and operational relationships
 
 ```mermaid
 flowchart LR
@@ -49,11 +49,11 @@ flowchart LR
     n0["x"] --> n24["workgraph"]
 ```
 
-共通 CI は下表と JSON に含める。同じ組に複数の関係がある場合、図では固定参照を優先する。
+Shared CI dependencies appear only in the table and JSON. If a pair has more than one relationship, the diagram uses a solid arrow when any displayed relationship is pinned.
 
-## 提供元と利用側
+## Providers and consumers
 
-| 提供元 | 利用側 | 関係 | 根拠ファイル |
+| Provider | Consumer | Relationship | Evidence files |
 | --- | --- | --- | --- |
 | `admiral` | `c-plugin` | mooncakes: pin | `moon.mod` |
 | `admiral` | `serde` | nix: pin, mooncakes: pin | `flake.lock`, `src/cmd/serde-gen/moon.mod` |
@@ -130,11 +130,11 @@ flowchart LR
 | `x` | `codex-sdk` | mooncakes: pin | `moon.mod` |
 | `x` | `workgraph` | mooncakes: pin | `package/workgraph-core/moon.mod`, `package/workgraph-agent-cli/moon.mod` |
 
-根拠ファイルは利用側リポジトリからの相対パス。参照値と同定できなかった依存は JSON を参照。
+Evidence paths are relative to the consumer repository. See the JSON inventory for reference values and unresolved dependencies.
 
-## 対象リポジトリ
+## Repositories
 
-| ID | workspace 内のパス | 状態 |
+| ID | Workspace path | Status |
 | --- | --- | --- |
 | `x` | `package/x` | mapped |
 | `e2e` | `package/e2e` | mapped |

@@ -1,11 +1,11 @@
-# 依存図表の更新と追従の判断
+# Maintain the dependency inventory and plan downstream updates
 
-## 図表を再生成する
+## Regenerate the diagram and table
 
-1. workspace の `AGENTS.md` にある Repository Map と子リポジトリを照合する。基準リビジョンを決め、たとえば `git -C package/workgraph show HEAD:package/workgraph-agent-cli/moon.mod` で宣言を読む。作業中の別プロジェクトを切り替えたり、`just repo sync` で一括更新したりしない。
-2. 更新した成果物の公開名や GitHub パスを、依存の宣言元から探す。たとえば `git -C package/workgraph grep -nF 'totto2727/agent-sdk@' HEAD -- ':(glob)**/moon.mod'` を使う。見つからないチェックアウトや未確認の名前は、削除・依存なしと判断しない。
-3. [JSON 台帳](dependencies.json) の `repositories` と `edges` を更新する。`provider` は提供元、`consumer` は利用側。組ごとに `evidence` をまとめる。`file` は利用側からの相対パス、`kind` は参照の種類（例: `mooncakes`）、`artifact` は公開名・入力名・アクションパス、`reference` は宣言値、`mode` は下表の判定。共通 CI は `scope: "ci"` とする。それ以外の `scope` は省略できる。曖昧な参照は根拠を添えて `unmapped` に置く。未コミットの試験用参照や秘密は台帳に足さない。
-4. workspace ルートで図表を再生成し、検証する。生成物の Markdown は手で直さない。
+1. Compare the Repository Map in the workspace `AGENTS.md` with the local checkouts. Select the Git revisions to inspect. For example, run `git -C package/workgraph show HEAD:package/workgraph-agent-cli/moon.mod` to read a committed declaration. Do not switch other projects' branches or run `just repo sync` as part of this procedure.
+2. Search consumers' declarations for the changed artifact's published name or GitHub path. For example, run `git -C package/workgraph grep -nF 'totto2727/agent-sdk@' HEAD -- ':(glob)**/moon.mod'`. A missing checkout or an unverified artifact name does not show that the dependency was removed or never existed.
+3. Update `repositories` and `edges` in the [JSON inventory](dependencies.json). Use `provider` for the source of an artifact and `consumer` for the repository that uses it. Group `evidence` by provider and consumer. Set `file` to the path relative to the consumer repository. Set `kind` to the reference type, such as `mooncakes`. Set `artifact` to the published name, input name, or action path. Use the declared value for `reference` and the table below for `mode`. Set `scope` to `ci` for shared CI. Otherwise, you can omit `scope`. Record ambiguous references with evidence in `unmapped`. Do not record uncommitted test references or secrets.
+4. Run these commands from the workspace root to regenerate and check the diagram and table. Do not edit the generated Markdown by hand.
 
 ```sh
 skill=.agents/skills/workspace-dependencies
@@ -16,35 +16,39 @@ moon run --target wasm --target-dir tmp/workspace-dependencies-build "$skill/scr
 git diff -- "$graph" "$view"
 ```
 
-5. 差分を宣言元と照合し、実例の `impact` に意図した利用側が出ることを確認する。台帳と図表を workspace 側でまとめてレビューする。
+5. Compare the diff with the source declarations. Run `impact` for a changed artifact and check that the result identifies the expected consumers. Review the inventory and generated diagram together in `workspace`.
 
-このスクリプトは台帳を検証して図表に変換する。子リポジトリの自動探索や Git 操作は行わない。`check` は台帳と図表の一致を確かめるもので、依存の鮮度は保証しない。
-`.mbtx` の先頭に `---` で囲んだ import を書ける [MoonBit スクリプトモード](https://docs.moonbitlang.com/ja/stable/toolchain/moon/script-mode.html) が必要。Wasm は `moon 0.1.20261117` で確認した。
+The script validates the inventory and generates the diagram and table. It does not discover child repositories or run Git commands. `check` confirms that the output matches the inventory. It does not confirm that the inventory is current.
 
-## 追従するかを決める
+Use a version of [MoonBit script mode](https://docs.moonbitlang.com/en/stable/toolchain/moon/script-mode.html) that accepts imports between `---` delimiters at the start of an `.mbtx` file. The Wasm commands were verified with `moon 0.1.20261117`.
 
-| 観測した関係 | 既定の判断 |
+## Decide which consumers need action
+
+| Relationship | Default action |
 | --- | --- |
-| `pin`: Mooncakes、npm、Go、Cargo、Nix の固定参照など | 採用する理由がある場合だけ、該当する宣言、ロック、必要なハッシュを更新する。範囲指定で新しい版を解決できるなら、宣言を書き換えずロックの更新で足りることもある。 |
-| `verify`: `@main` の GitHub Actions やローカルパス | 参照を変更せず、変わる入出力や該当する CI を検証する。固定 SHA・タグの Actions は `pin` だが、そのアクションに変更がある場合だけ追従を検討する。 |
-| `review`: 設定形式、API、ドキュメントなどの関係 | 変わった契約と利用側の前提を比較する。契約が変わっていなければ更新しない。 |
-| 見送り | 非公開、変更範囲外、互換性が未確認、最低リリース経過日数を満たさない、または更新による便益がない場合は理由を残す。 |
+| `pin`: pinned Mooncakes, npm, Go, Cargo, or Nix reference | Update the relevant declarations, lockfiles, and hashes only when there is a reason to adopt the new release. If a version range already permits the new release, you may only need to update the lockfile. |
+| `verify`: a GitHub Action at `@main` or a local path | Keep the reference. Check the affected inputs, outputs, or CI workflows. A GitHub Action fixed to a SHA or tag is a `pin`. Consider updating it only when that action changes. |
+| `review`: a configuration format, API, or documentation contract | Compare the changed contract with the consumer's assumptions. Do not update the consumer if the contract did not change. |
+| Skip | Record the reason. For example, the artifact is not published, the consumer is out of scope, compatibility is unverified, the release is too recent under the release-age policy, or there is no benefit. |
 
-`candidate_waves` は `pin` をたどる候補順であり、実行計画ではない。`--artifact` は起点から出る辺だけを完全一致で絞る。途中のパッケージを再公開する場合に限り、その公開名で再度 `impact` を実行する。開発・テスト・CI の変更だけなら通常は再公開しない。`blocked_by_cycle` が空でなければ、同時変更の要否や前後互換の中間版を検討する。
+`candidate_waves` shows a possible order based on `pin` relationships. It is not an execution plan. `--artifact` applies an exact match only to relationships from the starting repository. If an intermediate consumer publishes a changed artifact, run `impact` again for that artifact. Development, test, or CI changes alone do not normally require a new release. If `blocked_by_cycle` is not empty, consider whether to coordinate the changes or publish a compatible intermediate release.
 
-- **`agent-core-sdk`** の公開更新では `codex-sdk` と `opencode-sdk` の採用可否を先に調べる。採用して再公開した SDK のみ、`agent-sdk` と `workgraph` の追従判断につなげる。
-- **`monorepo` の `setup-nix`** を更新したら、`@main` の利用側では代表 CI を検証する。SHA 固定の利用側は、対象のワークフローが必要とする修正か確認してからピンを変える。`monorepo` の無関係なアプリ変更ではこれらを更新しない。
-- **`flowdeck`** の FlakeHub 公開版を採用するなら、`nix/share/my/flake.lock` の該当入力とその利用先を確認する。`glossshift` の設定形式だけが変わるなら、`flowdeck` の設定読み取りを別に検証する。
+- **`agent-core-sdk`:** First assess whether `codex-sdk` and `opencode-sdk` need the new release. Check `agent-sdk` and `workgraph` only for SDKs that adopt the release and publish a changed artifact.
+- **`monorepo` `setup-nix`:** Run a representative CI workflow for consumers that use `@main`. For consumers that use a fixed SHA, change the pin only if their workflow needs the fix. Do not update these consumers for an unrelated application change in `monorepo`.
+- **`flowdeck`:** To adopt a FlakeHub release, check the input in `nix/share/my/flake.lock` and where it is used. If only the `glossshift` configuration format changes, check how `flowdeck` reads the configuration separately.
 
-報告には `利用側 | 成果物・参照 | 更新／検証／見送り | 根拠・確認結果` を含める。見送りは成功扱いにせず、何を確認したかか、何が未確認かを書く。
+Report `Consumer | Artifact and reference | Update, verify only, or skip | Reason and verification result`. Do not report a skipped consumer as verified. State what you checked or what remains unverified.
 
-## 抽出範囲と限界
+## Inventory scope and limits
 
-Git 管理下の `package.json`、`moon.mod`、`moon.mod.json`、`moon.work`、`go.mod`、`Cargo.toml`、`cabal.project`、直下入力の `flake.lock`、有効な GitHub Actions、`skills-lock.json` と、確認済みの運用参照を対象にする。
-初版は `main` の Repository Map とローカルチェックアウトのコミット済み宣言を基にした。マップにないチェックアウトは `local` として区別する。別ブランチの改名は `main` に反映されてから台帳に取り込む。
-npm 名や MoonBit モジュール名などが一致した関係だけを結ぶ。同じリポジトリ内の依存、テストフィクスチャ、ベンダーやサブモジュール、無効化されたワークフロー、外部レジストリでしか解決できない推移的依存は図に含めない。
-通常の lockfile とカタログは再解決せず、参照欄は宣言値を表示する。Nix はロックの直下入力だけを読み、入れ子のロック更新や別のホスト設定への伝播は現物を確認する。
+The inventory covers tracked `package.json`, `moon.mod`, `moon.mod.json`, `moon.work`, `go.mod`, `Cargo.toml`, `cabal.project`, direct inputs in `flake.lock`, active GitHub Actions, `skills-lock.json`, and confirmed operational references.
 
-fork の URL と upstream の URL を同一視しない。たとえば `app/c-plugin` の `moonbit-community/moon-nix` は、workspace の `fork/package/moon-nix` を更新しても追従しない。`mizchi/syntree` のレジストリ参照と sibling checkout を指定した場合の `moon.work` の関係も別に扱う。不明な過去の公開名や upstream 参照は JSON の `unmapped` を確認する。名前が似ているだけでは辺を足さない。
+The first inventory used the Repository Map on `main` and committed declarations from local checkouts. Repositories outside the map are marked `local`. Record a rename from another branch only after it reaches `main`.
 
-ないことを証明する図ではない。動的な依存、別名の公開物、サービス間のデプロイや環境設定が変わる場合は、対象の URL、パッケージ名、アクション名、設定キーを `git grep` でも検索する。新しいリポジトリ、ルールセット、デプロイ名の変更では、必要に応じて `infra` の定義も個別に確認する。
+Link repositories only when the artifact identity is confirmed, for example, by matching the npm package or MoonBit module name. The diagram excludes dependencies within a repository, test fixtures, vendored code, submodules, disabled workflows, and transitive dependencies that only an external registry can resolve.
+
+The inventory shows declared values. It does not resolve ordinary lockfiles or catalogs. For Nix, it records only direct inputs. Check the actual files for nested lockfile updates or effects on other host configurations.
+
+Do not treat a fork URL as an upstream URL. For example, updating `fork/package/moon-nix` does not change the `moonbit-community/moon-nix` input in `app/c-plugin`. Treat a `mizchi/syntree` registry reference and a `moon.work` reference to a sibling checkout as separate relationships. Check `unmapped` in the JSON for unresolved historical names and upstream references. Do not add a relationship based on a similar name alone.
+
+The diagram cannot prove that a dependency does not exist. When dynamic dependencies, aliases, cross-service deployments, or environment settings change, also use `git grep` to look for the URL, package name, action name, or configuration key. Check the `infra` definitions when a repository, ruleset, or deployment name changes and those definitions can be affected.

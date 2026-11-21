@@ -1,26 +1,26 @@
-# リポジトリの作成・登録・アーカイブ手順
+# Create, register, and archive a repository
 
-## 作成・登録
+## Create and register
 
-1. リポジトリ名、用途、owner、配置先、空リポジトリ・テンプレート・fork・既存取り込みの別を確定する。GitHub 上の同名リポジトリと workspace 内の同名パスを確認する。`app/`、`package/`、`template/`、`fork/` は `AGENTS.md` の役割区分に従う。
-2. 新規に公開する内容と履歴に秘密や非公開データがないことを確認する。既存の取り込みでは、GitHub で現状の visibility、デフォルトブランチ、ルールセットを確認する。既存 private の公開は別途承認が必要。
-3. `infra/github/README.md` に従い、通常は `infra/github/src/totto2727-org.ts` に `createRepository` の宣言を足す。新規は既定の `public` を使い、必要な設定だけ指定する。既存は実際の visibility と import 設定を指定し、重複作成や置換を避ける。fork では upstream、テンプレート利用ではテンプレート元を記録する。required checks は実際の CI 名に合わせる。
-4. 必要な個別出力を `infra/github/index.ts` に追加し、所有者別・リソース件数のテストを更新する。`infra` で `vp run ci` を実行する。`just github-preview` で作成または import が想定どおりか確認し、無関係な置換・削除・公開範囲変更があれば止める。Pulumi の適用は infra の運用に従ってプレビューをレビューしてから手動で行う。
-5. `workspace/AGENTS.md` の Repository Map に正しい URL とパスを追加し、同じ変更でルート `.gitignore` にパスを追加する。`just repo list` に行が出ることと、`git check-ignore -v <path>/` が意図した規則を返すことを確認する。子リポジトリは独立した Git リポジトリとして配置し、workspace のサブモジュールにはしない。fork なら `origin` と `upstream` を区別する。
-6. `infra` と `workspace` に別々の PR を出し、両方の本文から相互にリンクする。適用後は GitHub で owner、visibility、デフォルトブランチを確認する。両側の PR や適用が未完了ならその状態を明示する。依存が増える場合は workspace の依存台帳と図も更新する。
+1. Identify the repository name, purpose, owner, and workspace path. Decide whether to create an empty repository, use a template, create a fork, or add an existing repository. Check for a repository with the same name on GitHub and for a path conflict in the workspace. Use the directory categories in `AGENTS.md` for `app/`, `package/`, `template/`, and `fork/`.
+2. Before creating a public repository, check that its content and history contain no secrets or private data. For an existing repository, check the visibility, default branch, and rulesets on GitHub. Get separate approval before making an existing private repository public.
+3. Follow `infra/github/README.md`. For the default owner, add a `createRepository` declaration to `infra/github/src/totto2727-org.ts`. For new repositories, use the default `public` visibility and specify only the necessary settings. For existing repositories, specify the current visibility and import settings to avoid duplicate creation or replacement. Record the upstream repository for a fork, or the source repository for a template. Use the actual CI check names for required checks.
+4. Add any necessary outputs to `infra/github/index.ts`. Update the tests for the owner and the resource count. Run `vp run ci` in `infra`. Run `just github-preview` and check that it shows the expected creation or import. Stop if the preview shows unrelated replacements, deletions, or visibility changes. Follow the `infra` procedure to review the preview before you apply it manually.
+5. Add the URL and path to the Repository Map in `workspace/AGENTS.md`. Add the path to the root `.gitignore` in the same change. Confirm that `just repo list` shows the repository and that `git check-ignore -v <path>/` shows the expected rule. Keep the child repository independent. Do not add it as a workspace submodule. For a fork, distinguish `origin` from `upstream`.
+6. Open separate pull requests in `infra` and `workspace`. Link each pull request to the other in its description. After the apply, check the owner, visibility, and default branch on GitHub. Report any open pull request or pending apply. If the repository adds dependencies, update the dependency inventory and diagram.
 
-## アーカイブ
+## Archive
 
-1. 対象を `owner/repo` で一つに絞る。現在の visibility、アーカイブ状態、履歴や未マージの変更、引継ぎ先を確認する。通常は現在の owner のまま read-only にする。`totto2727-archive` への移管を希望された場合は、移管先、権限、URL、リダイレクトやパッケージ公開への影響を別に確認する。アーカイブだけを頼まれた場合は移管しない。
-2. 依存スキルで直接・間接の利用先を確認する。図表に載らない CI、deploy、公開パッケージ、Nix、ドキュメント参照も検索する。継続利用、代替先への移行、廃止のいずれかを利用先ごとに判断する。既存の pin を一律に変更したり、公開パッケージを削除したりしない。
-3. `infra` の所有者別宣言、個別出力、テストから対象を外す PR と、`workspace` の Repository Map と `.gitignore` から対象を外す PR を用意して相互リンクする。依存台帳から管理終了したノードと辺を外す。外部依存として残る参照は移行記録で扱う。ローカルの clone や未コミット作業を削除しない。管理パスに残る clone は承認を得て別の場所に保管し、workspace に誤って追加しない。
-4. Pulumi の production stack に対象があるか確認する。repository、ruleset、vulnerability alerts は `protect` と `retainOnDelete` を持ち、宣言の削除だけでは管理を安全に解除できない場合がある。`infra/github/README.md` の手順で refresh 付きプレビューを取り、GitHub 側のリソースを削除しないことを確認する。state 操作が必要なら、対象 stack と正確な URN、保持するリソース、復旧手段を示して別途承認を得る。全体の保護を解除しない。予期しない削除・置換が残る状態で適用しない。
-5. 管理解除と利用先への対応を確認する。対象が明示的に承認されている場合のみ GitHub でアーカイブする。必要なら事前に後継先や read-only 化を案内する。GitHub の URL と `archived` 状態、Pulumi の対象不在、workspace のマップと ignore の対象不在をそれぞれ再確認する。リポジトリ、Git 履歴、既存リリースは削除しない。
+1. Identify one repository by `owner/repo`. Check its visibility, archive status, history, unmerged changes, and successor. Keep the current owner by default and make the repository read-only. If the user also requests a transfer to `totto2727-archive`, check the destination, permissions, URLs, redirects, and effects on package publishing separately. Do not transfer a repository on an archive-only request.
+2. Use the dependency skill to find direct and indirect consumers. Also search for CI, deployments, published packages, Nix inputs, and documentation references that the diagram does not show. Decide whether each consumer can keep using the repository, must migrate, or can stop using it. Do not change all existing pins or remove published packages.
+3. Prepare two linked pull requests. In `infra`, remove the owner-specific declaration, outputs, and test entries. In `workspace`, remove the Repository Map entry and the `.gitignore` rule. Remove the retired repository and its relationships from the dependency inventory. Record references that remain external in the migration notes. Do not delete local clones or uncommitted work. If a clone remains at the managed path, get approval before moving it to a safe location. Do not stage it in `workspace`.
+4. Check whether the production Pulumi stack manages the repository. The repository, rulesets, and vulnerability alerts use `protect` and `retainOnDelete`. Removing declarations alone may not safely remove these resources from Pulumi management. Follow `infra/github/README.md` to run a preview with refresh and confirm that it does not delete GitHub resources. If a state operation is necessary, identify the stack, exact URNs, resources to retain, and recovery procedure. Get separate approval. Do not disable protection across the stack. Do not apply if the preview still shows unexpected deletions or replacements.
+5. Confirm that the repository is no longer managed and that consumers have been addressed. Archive it on GitHub only with explicit approval for that repository. If necessary, announce the successor or the change to read-only access first. Verify the GitHub URL and `archived` status. Confirm that the repository is absent from Pulumi state, the Repository Map, and the root `.gitignore`. Do not delete the repository, Git history, or existing releases.
 
-確認例は [any-collection の workspace 側 PR](https://github.com/totto2727-org/workspace/pull/28) と [infra 側 PR](https://github.com/totto2727-org/infra/pull/24)。これは宣言を外す差分の例で、GitHub のアーカイブや Pulumi の適用が完了した証拠には使わない。
+See the [workspace pull request](https://github.com/totto2727-org/workspace/pull/28) and [infra pull request](https://github.com/totto2727-org/infra/pull/24) for examples of removing `any-collection` declarations. These changes do not prove that GitHub archival or a Pulumi apply completed.
 
-### `totto2727-archive` にも移管する場合
+### Transfer to `totto2727-archive` if approved
 
-承認された対象について、移管先に同名リポジトリがないことと実行権限を確認する。移管前に Repository ID、visibility、アーカイブ状態、デフォルトブランチと Git refs、必要な Issue・PR・Release を記録する。移管後に新しい owner で同一 ID と状態を照合し、旧 URL と新 URL の読み取りも確認する。移管要求の受付や旧 URL の転送だけでは完了扱いにしない。リダイレクトを維持したい場合は旧パスに同名リポジトリを作らない。保管先を `infra` の現役リポジトリ管理には再登録しない。
+Confirm that the destination has no repository with the same name and that you have permission to transfer the approved repository. Before transfer, record the GitHub repository ID, visibility, archive status, default branch, Git refs, and relevant issues, pull requests, and releases. After transfer, verify that the new owner has the same repository ID and status. Check read access through both the old and new URLs. An accepted transfer request or a redirect alone does not prove that the transfer is complete. To preserve the redirect, do not reuse the old repository path. Do not add the archive destination to the active repository inventory in `infra`.
 
-GitHub 仕様: [アーカイブ](https://docs.github.com/ja/repositories/archiving-a-github-repository/archiving-repositories)、[移管](https://docs.github.com/ja/repositories/creating-and-managing-repositories/transferring-a-repository)。
+GitHub documentation: [Archive a repository](https://docs.github.com/en/repositories/archiving-a-github-repository/archiving-repositories) and [Transfer a repository](https://docs.github.com/en/repositories/creating-and-managing-repositories/transferring-a-repository).
