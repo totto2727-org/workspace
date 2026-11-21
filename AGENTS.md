@@ -6,9 +6,9 @@ This repository coordinates independent Git repositories. Each repository keeps 
 
 ## Layout and work policy
 
-- **Mapped checkouts** are the primary clones of child repositories. Use `app/` for applications, `package/` for libraries, `package/<domain>/` for package families, `template/` for templates, and `fork/<role>/` for upstream-first forks. Use other paths when they better describe the repository's role.
-- **`worktree/<repository-id>/<task-slug>/`** is the default location for changes to a child repository. Use its ID from the Repository Map and a short lowercase kebab-case task slug. Make one linked worktree per affected repository. Fetch and select a base for those repositories only. Do not switch, pull, or edit a primary clone as a prerequisite for work.
-- **`worktree/workspace/<task-slug>/`** is the corresponding location for isolated changes to this repository. A task already using an appropriate linked worktree can continue there. Read-only inspection does not need a new worktree.
+- **Primary checkouts are for people.** This includes the workspace root and the mapped child checkouts. Agents may inspect them, initialize a missing clone when needed, and fetch refs or manage linked worktrees without changing the primary branch or working files. Do not edit, switch, pull, stash, or reset a primary checkout without an explicit request for that checkout operation.
+- **`worktree/<repository-id>/<task-slug>/` is for AI tasks.** Agents may create, use, and clean up their own linked worktrees without asking. Use one worktree per affected repository, its ID from the Repository Map, and a short lowercase kebab-case task slug. Use `workspace` as the ID for this repository. Leave other tasks' worktrees and shared branches alone. An existing task can keep its current linked worktree. Read-only inspection does not need a new worktree.
+- **Mapped child checkout paths** reflect the repository's role. Use `app/` for applications, `package/` for libraries, `package/<domain>/` for package families, `template/` for templates, and `fork/<role>/` for upstream-first forks. Use other paths when they better describe the repository's role.
 - **`tmp/`** is for temporary artifacts, not new task worktrees. The root ignores `worktree/` and does not register worktree paths in the Repository Map.
 
 Follow the child repository's `AGENTS.md` and run its checks, commits, and release steps in its own repository. For a change that spans multiple repositories, validate and commit each repository separately.

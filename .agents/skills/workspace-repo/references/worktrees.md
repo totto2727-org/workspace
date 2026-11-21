@@ -2,6 +2,8 @@
 
 Use the primary workspace root for the Repository Map, mapped clones, and task worktrees. If you started inside a linked worktree, identify the primary workspace root before you resolve paths. `git rev-parse --show-toplevel` gives the root of your current checkout, not necessarily the primary workspace root.
 
+Create, use, and clean up your own task worktrees without asking. Manage your own working files, index, and task branch. Fetch refs as needed, but do not change shared Git settings, other branches, or another checkout's files or index.
+
 If a mapped clone is missing, follow the [primary checkout procedure](checkouts.md) to initialize it first.
 
 ## Start or resume a task
