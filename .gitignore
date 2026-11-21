@@ -38,7 +38,10 @@
 /toolchain/moonbit-overlay/
 /package/workgraph/
 
-# Local temporary files and linked worktrees
+# Local linked worktrees
+/worktree/
+
+# Local temporary files
 /tmp/
 
 # macOS metadata

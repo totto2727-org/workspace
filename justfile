@@ -2,5 +2,5 @@
 default:
     @just --list --list-submodules
 
-# Inspect managed repositories.
+# Inspect or sync mapped checkouts.
 mod repo

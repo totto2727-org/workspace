@@ -1,13 +1,25 @@
-# Virtual Monorepo
+# Workspace
 
 ## Overview
 
-This repository is a virtual monorepo that places multiple independent Git repositories in one workspace.
-Each mapped directory keeps its own `.git` directory, history, branches, and release process. The workspace root is not intended to be built or deployed as a single unit.
-The workspace intentionally does not use Git submodules or pin child repositories to exact commit hashes.
-Repositories are organized by role rather than programming language. Executable applications belong under `app/`, reusable libraries belong under `package/`, and related package families belong under `package/<domain>/`.
-Repositories that do not naturally fit under `app/` or `package/`, such as AI agent plugins and marketplaces, may be placed at the workspace root or another role-appropriate path.
-Upstream-first forks belong under `fork/`, with role-based paths such as `fork/app/` and `fork/package/`.
+This repository coordinates independent Git repositories. Each repository keeps its own history, branches, checks, and releases. The root does not build or deploy them as a unit, use Git submodules, or pin child checkouts to particular commits.
+
+## Layout and work policy
+
+- **Mapped checkouts** are the primary clones of child repositories. Use `app/` for applications, `package/` for libraries, `package/<domain>/` for package families, `template/` for templates, and `fork/<role>/` for upstream-first forks. Use other paths when they better describe the repository's role.
+- **`worktree/<repository-id>/<task-slug>/`** is the default location for changes to a child repository. Use its ID from the Repository Map and a short lowercase kebab-case task slug. Make one linked worktree per affected repository. Fetch and select a base for those repositories only. Do not switch, pull, or edit a primary clone as a prerequisite for work.
+- **`worktree/workspace/<task-slug>/`** is the corresponding location for isolated changes to this repository. A task already using an appropriate linked worktree can continue there. Read-only inspection does not need a new worktree.
+- **`tmp/`** is for temporary artifacts, not new task worktrees. The root ignores `worktree/` and does not register worktree paths in the Repository Map.
+
+Follow the child repository's `AGENTS.md` and run its checks, commits, and release steps in its own repository. For a change that spans multiple repositories, validate and commit each repository separately.
+
+## Skills
+
+Write workspace-owned skills, their references, and user-facing script output in English.
+
+- [workspace-repo](.agents/skills/workspace-repo/SKILL.md): Initialize a mapped clone, create or retire a linked worktree, or use `just repo list` and `just repo sync`.
+- [repository-lifecycle](.agents/skills/repository-lifecycle/SKILL.md): Create, register, or archive a repository. Update both the Repository Map and root `.gitignore` when you add or move a repository. Register new managed GitHub repositories in both `infra` and `workspace`.
+- [workspace-dependencies](.agents/skills/workspace-dependencies/SKILL.md): Inspect or refresh the dependency inventory, then decide which consumers need to update, verify only, or take no action.
 
 ## Repository Map
 
@@ -59,8 +71,6 @@ Upstream-first forks belong under `fork/`, with role-based paths such as `fork/a
 
 ## Setup
 
-### Set Up the Workspace
-
 Clone the virtual monorepo repository, then enter the workspace root.
 
 ```bash
@@ -68,16 +78,7 @@ git clone https://github.com/totto2727-org/workspace.git
 cd workspace
 ```
 
-### Initialize Projects
-
-This repository intentionally does not provide a bulk initialization script such as `setup.sh`.
-Choose a repository from the map above, create its parent directory, and clone it into the documented workspace path.
-For example, initialize `agent-sdk` as follows:
-
-```bash
-mkdir -p package/agent-sdk
-git clone https://github.com/totto2727-org/agent-sdk.git package/agent-sdk/agent-sdk
-```
+Use [workspace-repo](.agents/skills/workspace-repo/SKILL.md) to initialize only the mapped checkouts you need.
 
 ## Upstream-first Fork Policy
 
@@ -90,19 +91,6 @@ git clone https://github.com/totto2727-org/agent-sdk.git package/agent-sdk/agent
 - `fork/app/cloudflare-os-starter/` contains the `cloudflare-os-starter` repository, forked from `cloudflare/cloudflare-os-starter`. Its checkout directory matches the repository name. Its nested runtime source remains unchanged.
 - `fork/app/open-connector/` is forked from `oomol-lab/open-connector`. Target its fork pull requests at `origin/main`.
 - Moving additional repositories into `fork/` requires the user's approval. Present candidates and evidence before changing their placement.
-
-## Working Guidelines
-
-- Write workspace-owned skills, their references, and user-facing script output in English.
-- For a cross-repository dependency map, a map refresh, or a downstream update plan, use the [workspace-dependencies skill](.agents/skills/workspace-dependencies/SKILL.md).
-- To create, register, or archive a repository, use the [repository-lifecycle skill](.agents/skills/repository-lifecycle/SKILL.md).
-- To list checkouts or sync managed repositories with `just repo`, use the [workspace-repo skill](.agents/skills/workspace-repo/SKILL.md).
-- At the start of work, run `git pull --ff-only` in each initialized child repository before making changes. Resolve any dirty or diverged state within that child repository first.
-- Run Git operations, commits, branches, tags, releases, and pull requests within each independent child repository.
-- For cross-repository changes, modify and validate each repository independently and create separate commits in each repository.
-- When a child repository contains its own `AGENTS.md`, follow that file for work inside the child repository.
-- When adding or moving a repository, update both the repository map in this file and the root `.gitignore` in the same change.
-- When you add a managed GitHub repository, also update its organization declaration in [infra](https://github.com/totto2727-org/infra/tree/main/github). Link the workspace and infra pull requests to each other.
 
 ## Workspace generation scripts
 

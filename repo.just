@@ -1,4 +1,4 @@
-# List managed repositories and their current branches in a compact table.
+# List mapped checkouts and their current branches.
 list:
     #!/usr/bin/env bash
     set -euo pipefail
@@ -22,7 +22,7 @@ list:
         printf '%-*s  %s\n' "$width" "$repo" "$branch"
     done <<< "$repos"
 
-# Switch clean, fully pushed repositories to their default branch and pull in parallel.
+# Sync eligible mapped checkouts, including the workspace root, to their origin default branches.
 sync:
     #!/usr/bin/env bash
     set -euo pipefail
