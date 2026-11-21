@@ -27,7 +27,7 @@
 /package/geo/
 /package/gitignore-patterns/
 /package/lens/
-/package/serde/
+/package/model/
 /package/x/
 /template/go-simple/
 /template/vite-plus-lib/
