@@ -5,6 +5,7 @@ import {
   "moonbitlang/core/json",
   "moonbitlang/x@0.5.7/fs",
   "moonbitlang/x@0.5.7/sys",
+  "moonbitstack/moonmd@0.2.1",
 }
 ---
 
@@ -75,60 +76,73 @@ fn Graph::validate(self : Graph) -> Unit raise InvalidGraph {
   }
 }
 
+fn heading(level : Int, text : String) -> @moonmd.Block {
+  @moonmd.Block::Heading({ level, content: [Text(text)] })
+}
+
+fn table(headers : Array[String], body : Array[Array[Array[@moonmd.Inline]]]) -> @moonmd.Block {
+  @moonmd.Block::Table({
+    align: headers.map(_ => @moonmd.Align::Default),
+    head: headers.map(text => [Text(text)]),
+    body,
+  })
+}
+
 fn Graph::markdown(self : Graph) -> String {
   let ids = self.repositories.keys().collect()
   ids.sort()
   let number : Map[String, Int] = Map([])
   ids.eachi((i, id) => number[id] = i)
-  let lines = [
-    "# Workspace repository dependencies",
-    "",
-    "[dependencies.json](dependencies.json) contains the source evidence. Follow the [maintenance procedure](maintenance.md) to regenerate this diagram and table with the MoonBit script.",
-    "",
-    "\{ids.length()} repositories, \{self.edges.length()} dependency pairs. Arrows point from the provider to the consumer. Solid arrows show pinned references that may need an update. Dotted arrows show relationships to verify or review.",
-    "",
-    "## Package, tool, and operational relationships",
-    "",
-    "```mermaid",
-    "flowchart LR",
-  ]
+  let diagram = ["flowchart LR"]
   for edge in self.edges {
     let rows = edge.evidence.filter(row => row.scope != Some("ci"))
     if rows.is_empty() { continue }
     let arrow = if rows.any(row => row.mode == "pin") { "-->" } else { "-.->" }
     let p = edge.provider
     let c = edge.consumer
-    lines.push("    n\{number[p]}[\"\{p}\"] \{arrow} n\{number[c]}[\"\{c}\"]")
+    diagram.push("    n\{number[p]}[\"\{p}\"] \{arrow} n\{number[c]}[\"\{c}\"]")
   }
-  lines.append([
-    "```", "", "Shared CI dependencies appear only in the table and JSON. If a pair has more than one relationship, the diagram uses a solid arrow when any displayed relationship is pinned.", "",
-    "## Providers and consumers", "", "| Provider | Consumer | Relationship | Evidence files |", "| --- | --- | --- | --- |",
-  ])
-  for edge in self.edges {
+  let relationships : Array[Array[Array[@moonmd.Inline]]] = self.edges.map(edge => {
     let modes = Set([])
     let sources = Set([])
     for row in edge.evidence {
       modes.add("\{row.kind}: \{row.mode}")
-      sources.add("`\{row.file}`")
+      sources.add(row.file)
     }
     let kinds = modes.iter().collect()
     let files = sources.iter().collect()
     kinds.sort()
     files.sort()
-    let kinds = kinds.join(", ")
-    let files = files.join(", ")
-    lines.push("| `\{edge.provider}` | `\{edge.consumer}` | \{kinds} | \{files} |")
-  }
-  lines.append([
-    "", "Evidence paths are relative to the consumer repository. See the JSON inventory for reference values and unresolved dependencies.", "",
-    "## Repositories", "", "| ID | Workspace path | Status |", "| --- | --- | --- |",
-  ])
-  for id in ids {
+    let evidence : Array[@moonmd.Inline] = []
+    files.eachi((i, file) => {
+      if i > 0 { evidence.push(Text(", ")) }
+      evidence.push(Code(file))
+    })
+    [[Code(edge.provider)], [Code(edge.consumer)], [Text(kinds.join(", "))], evidence]
+  })
+  let repositories : Array[Array[Array[@moonmd.Inline]]] = ids.map(id => {
     let repo = self.repositories[id]
-    lines.push("| `\{id}` | `\{repo.path}` | \{repo.status} |")
-  }
-  lines.push("")
-  lines.join("\n")
+    [[Code(id)], [Code(repo.path)], [Text(repo.status)]]
+  })
+  let blocks : Array[@moonmd.Block] = [
+    heading(1, "Workspace repository dependencies"),
+    Paragraph([
+      Link({ dest: "dependencies.json", title: "", content: [Text("dependencies.json")] }),
+      Text(" contains the source evidence. Follow the "),
+      Link({ dest: "maintenance.md", title: "", content: [Text("maintenance procedure")] }),
+      Text(" to regenerate this diagram and table with the MoonBit script."),
+    ]),
+    Paragraph([Text("\{ids.length()} repositories, \{self.edges.length()} dependency pairs. Arrows point from the provider to the consumer. Solid arrows show pinned references that may need an update. Dotted arrows show relationships to verify or review.")]),
+    heading(2, "Package, tool, and operational relationships"),
+    Code({ info: "mermaid", text: diagram.join("\n"), fenced: true }),
+    Paragraph([Text("Shared CI dependencies appear only in the table and JSON. If a pair has more than one relationship, the diagram uses a solid arrow when any displayed relationship is pinned.")]),
+    heading(2, "Providers and consumers"),
+    table(["Provider", "Consumer", "Relationship", "Evidence files"], relationships),
+    Paragraph([Text("Evidence paths are relative to the consumer repository. See the JSON inventory for reference values and unresolved dependencies.")]),
+    heading(2, "Repositories"),
+    table(["ID", "Workspace path", "Status"], repositories),
+  ]
+  @moonmd.Document::of_blocks(blocks, flavor=@moonmd.gfm).markdown()
 }
 
 fn Graph::impact(self : Graph, start : String, artifact : String?) -> Impact raise InvalidGraph {
@@ -252,4 +266,24 @@ test "report a pin cycle and consumers blocked by it rather than guessing an ord
   let impact = graph.impact("a", None)
   assert_true(impact.candidate_waves.is_empty())
   assert_true(impact.blocked_by_cycle == ["a", "b", "d"])
+}
+
+test "render a Mermaid fence and preserve the evidence cell in the GFM table" {
+  let graph = example_graph([("a", "b", "sdk", "pin")])
+  let edge = graph.edges[0]
+  edge.evidence[0] = { ..edge.evidence[0], file: "file|part.mbt" }
+  let markdown = graph.markdown()
+  assert_true(markdown.contains("```mermaid\nflowchart LR\n    n0[\"a\"] --> n1[\"b\"]\n```"))
+  assert_true(markdown.contains("| `a` | `b` | mooncakes: pin | `file\\|part.mbt` |"))
+  let document = @moonmd.parse(markdown[:])
+  let tables = document.blocks().filter_map(block => match block {
+    @moonmd.Block::Table(value) => Some(value)
+    _ => None
+  })
+  assert_eq(tables.length(), 2)
+  assert_eq(tables[0].body[0].length(), 4)
+  match tables[0].body[0][3] {
+    [Code(file)] => assert_eq(file, "file|part.mbt")
+    _ => fail("Expected one evidence path in the fourth table cell")
+  }
 }

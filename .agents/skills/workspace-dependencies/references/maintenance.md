@@ -18,7 +18,7 @@ git diff -- "$graph" "$view"
 
 5. Compare the diff with the source declarations. Run `impact` for a changed artifact and check that the result identifies the expected consumers. Review the inventory and generated diagram together in `workspace`.
 
-The script validates the inventory and generates the diagram and table. It does not discover child repositories or run Git commands. `check` confirms that the output matches the inventory. It does not confirm that the inventory is current.
+The script validates the inventory and uses [moonmd](https://github.com/moonbitstack/moonmd) to write the GFM tables and the Mermaid code block. It does not discover child repositories or run Git commands. `check` confirms that the output matches the inventory. It does not confirm that the inventory is current.
 
 Use a version of [MoonBit script mode](https://docs.moonbitlang.com/en/stable/toolchain/moon/script-mode.html) that accepts imports between `---` delimiters at the start of an `.mbtx` file. The Wasm commands were verified with `moon 0.1.20261117`.
 
