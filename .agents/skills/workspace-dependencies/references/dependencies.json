@@ -1,0 +1,2841 @@
+{
+  "schema_version": 1,
+  "source": "reviewed-checkouts",
+  "repositories": {
+    "admiral": {
+      "path": "package/admiral",
+      "github": "totto2727-org/admiral",
+      "status": "mapped"
+    },
+    "agent": {
+      "path": "agent",
+      "github": "totto2727-org/agent",
+      "status": "mapped"
+    },
+    "agent-core-sdk": {
+      "path": "package/agent-sdk/agent-core-sdk",
+      "github": "totto2727-org/agent-core-sdk",
+      "status": "mapped"
+    },
+    "agent-sdk": {
+      "path": "package/agent-sdk/agent-sdk",
+      "github": "totto2727-org/agent-sdk",
+      "status": "mapped"
+    },
+    "atlas-to-kysely": {
+      "path": "app/atlas-to-kysely",
+      "github": "totto2727-org/atlas-to-kysely",
+      "status": "mapped"
+    },
+    "c-plugin": {
+      "path": "app/c-plugin",
+      "github": "totto2727-org/c-plugin",
+      "status": "mapped"
+    },
+    "cloudflare-os-starter": {
+      "path": "fork/app/cloudflare-os-starter",
+      "github": "totto2727-org/cloudflare-os-starter",
+      "status": "mapped"
+    },
+    "codex-sdk": {
+      "path": "package/agent-sdk/codex-sdk",
+      "github": "totto2727-org/codex-sdk",
+      "status": "mapped"
+    },
+    "e2e": {
+      "path": "package/e2e",
+      "github": "totto2727-org/e2e",
+      "status": "mapped"
+    },
+    "effect-http": {
+      "path": "package/effect-http",
+      "github": "totto2727-org/effect-http",
+      "status": "mapped"
+    },
+    "effect-identify": {
+      "path": "package/effect-identify",
+      "github": "totto2727-org/effect-identify",
+      "status": "mapped"
+    },
+    "effront": {
+      "path": "package/effront",
+      "github": "totto2727-org/effront",
+      "status": "mapped"
+    },
+    "flowdeck": {
+      "path": "app/flowdeck",
+      "github": "totto2727-org/flowdeck",
+      "status": "mapped"
+    },
+    "geo": {
+      "path": "package/geo",
+      "github": "totto2727-org/geo",
+      "status": "mapped"
+    },
+    "gitignore-patterns": {
+      "path": "package/gitignore-patterns",
+      "github": "totto2727-org/gitignore-patterns",
+      "status": "mapped"
+    },
+    "glossshift": {
+      "path": "app/glossshift",
+      "github": "totto2727-org/glossshift",
+      "status": "mapped"
+    },
+    "infra": {
+      "path": "infra",
+      "github": "totto2727-org/infra",
+      "status": "mapped"
+    },
+    "lapriere-website": {
+      "path": "app/lapriere-website",
+      "github": "totto2727-org/lapriere-website",
+      "status": "local"
+    },
+    "lens": {
+      "path": "package/lens",
+      "github": "totto2727-org/lens",
+      "status": "mapped"
+    },
+    "llm": {
+      "path": "fork/package/llm",
+      "github": "totto2727-org/llm",
+      "status": "mapped"
+    },
+    "llm-profiles": {
+      "path": "package/llm-profiles",
+      "github": "totto2727-org/llm-profiles",
+      "status": "mapped"
+    },
+    "mdts": {
+      "path": "app/mdts",
+      "github": "totto2727-org/mdts",
+      "status": "mapped"
+    },
+    "serde": {
+      "path": "package/serde",
+      "github": "totto2727-org/serde",
+      "status": "mapped"
+    },
+    "monorepo": {
+      "path": "monorepo",
+      "github": "totto2727-org/monorepo",
+      "status": "mapped"
+    },
+    "moon-nix": {
+      "path": "fork/package/moon-nix",
+      "github": "totto2727-org/moon-nix",
+      "status": "mapped"
+    },
+    "moonbit-overlay": {
+      "path": "toolchain/moonbit-overlay",
+      "github": "totto2727-org/moonbit-overlay",
+      "status": "mapped"
+    },
+    "nix": {
+      "path": "nix",
+      "github": "totto2727-dotfiles/nix",
+      "status": "mapped"
+    },
+    "nix-cache": {
+      "path": "app/nix-cache",
+      "github": "totto2727-org/nix-cache",
+      "status": "mapped"
+    },
+    "open-connector": {
+      "path": "fork/app/open-connector",
+      "github": "totto2727-org/open-connector",
+      "status": "mapped"
+    },
+    "opencode-sdk": {
+      "path": "package/agent-sdk/opencode-sdk",
+      "github": "totto2727-org/opencode-sdk",
+      "status": "mapped"
+    },
+    "oxlint": {
+      "path": "package/oxlint",
+      "github": "totto2727-org/oxlint",
+      "status": "mapped"
+    },
+    "oxlint-docs": {
+      "path": "app/oxlint-docs",
+      "github": "totto2727-org/oxlint-docs",
+      "status": "mapped"
+    },
+    "projektor": {
+      "path": "app/projektor",
+      "github": "totto2727-org/projektor",
+      "status": "mapped"
+    },
+    "reylo": {
+      "path": "fork/package/reylo",
+      "github": "totto2727-org/reylo",
+      "status": "mapped"
+    },
+    "syntree.mbt": {
+      "path": "fork/package/syntree.mbt",
+      "github": "totto2727-org/syntree.mbt",
+      "status": "mapped"
+    },
+    "template-go-simple": {
+      "path": "template/go-simple",
+      "github": "totto2727-org/template-go-simple",
+      "status": "mapped"
+    },
+    "template-haskell-simple": {
+      "path": "template/haskell-simple",
+      "github": "totto2727-org/template-haskell-simple",
+      "status": "mapped"
+    },
+    "template-moonbit-simple": {
+      "path": "template/moonbit-simple",
+      "github": "totto2727-org/template-moonbit-simple",
+      "status": "mapped"
+    },
+    "template-rust-simple": {
+      "path": "template/rust-simple",
+      "github": "totto2727-org/template-rust-simple",
+      "status": "mapped"
+    },
+    "template-vite-plus-app": {
+      "path": "template/vite-plus-app",
+      "github": "totto2727-org/template-vite-plus-app",
+      "status": "mapped"
+    },
+    "template-vite-plus-lib": {
+      "path": "template/vite-plus-lib",
+      "github": "totto2727-org/template-vite-plus-lib",
+      "status": "mapped"
+    },
+    "tui.mbt": {
+      "path": "fork/package/tui.mbt",
+      "github": "totto2727-org/tui.mbt",
+      "status": "mapped"
+    },
+    "workgraph": {
+      "path": "package/workgraph",
+      "github": "totto2727-org/workgraph",
+      "status": "mapped"
+    },
+    "workspace": {
+      "path": ".",
+      "github": "totto2727-org/workspace",
+      "status": "root"
+    },
+    "www": {
+      "path": "app/www",
+      "github": "totto2727-org/www",
+      "status": "local"
+    },
+    "x": {
+      "path": "package/x",
+      "github": "totto2727-org/x",
+      "status": "mapped"
+    }
+  },
+  "edges": [
+    {
+      "provider": "admiral",
+      "consumer": "c-plugin",
+      "evidence": [
+        {
+          "file": "moon.mod",
+          "kind": "mooncakes",
+          "artifact": "totto2727/admiral",
+          "reference": "0.6.5",
+          "mode": "pin"
+        }
+      ]
+    },
+    {
+      "provider": "admiral",
+      "consumer": "serde",
+      "evidence": [
+        {
+          "file": "flake.lock",
+          "kind": "nix",
+          "artifact": "admiral",
+          "reference": {
+            "source": {
+              "owner": "totto2727-org",
+              "repo": "admiral",
+              "rev": "d4441fe9360acc24f59f3eb0c2a7ade859d1d498",
+              "type": "github"
+            },
+            "rev": "d4441fe9360acc24f59f3eb0c2a7ade859d1d498"
+          },
+          "mode": "pin"
+        },
+        {
+          "file": "src/cmd/serde-gen/moon.mod",
+          "kind": "mooncakes",
+          "artifact": "totto2727/admiral",
+          "reference": "0.7.0",
+          "mode": "pin"
+        }
+      ]
+    },
+    {
+      "provider": "agent",
+      "consumer": "workspace",
+      "evidence": [
+        {
+          "file": "skills-lock.json",
+          "kind": "skills",
+          "artifact": "cloudflare-ai",
+          "reference": "322b02be5bc8bff640a6e9ad573e819df7f07e27f265422b6caf93e0c72be27e",
+          "mode": "pin",
+          "scope": "development"
+        },
+        {
+          "file": "skills-lock.json",
+          "kind": "skills",
+          "artifact": "decision-model",
+          "reference": "48fa6516ac1b06168abf3a7b872f551d40aa03d6a4a8bff49ad0c36ca4cdfdc1",
+          "mode": "pin",
+          "scope": "development"
+        },
+        {
+          "file": "skills-lock.json",
+          "kind": "skills",
+          "artifact": "documentation-principles",
+          "reference": "67ffa8a5b7c6fbeafa5aad251b5e4b9c7f32feff71f97f244f69dcfa84ed546d",
+          "mode": "pin",
+          "scope": "development"
+        },
+        {
+          "file": "skills-lock.json",
+          "kind": "skills",
+          "artifact": "documentation-quality",
+          "reference": "f0b5a53023384e7d24256b16fda6e9c841013a6a5e8d448f31b20bc1e0c40233",
+          "mode": "pin",
+          "scope": "development"
+        },
+        {
+          "file": "skills-lock.json",
+          "kind": "skills",
+          "artifact": "js-coding",
+          "reference": "39e4c1bd10b9e1988538f057b6e29432c7fbc0e720c4b2f29e35a4c3840381fc",
+          "mode": "pin",
+          "scope": "development"
+        },
+        {
+          "file": "skills-lock.json",
+          "kind": "skills",
+          "artifact": "js-test",
+          "reference": "7ec0e3188bb65406139bd76edf3dae0686460973b1c14efa1cf4993876a05e1d",
+          "mode": "pin",
+          "scope": "development"
+        },
+        {
+          "file": "skills-lock.json",
+          "kind": "skills",
+          "artifact": "mbt-coding",
+          "reference": "9a7b27de164d6d2595bab4ff6eacffd00ca0b738103bd4013e5cc2aa4a879693",
+          "mode": "pin",
+          "scope": "development"
+        },
+        {
+          "file": "skills-lock.json",
+          "kind": "skills",
+          "artifact": "mbt-test",
+          "reference": "ce3dcc999fcb7e1f75d00314021fbcf8ecf4becef29cc9533ec62ca37b79d122",
+          "mode": "pin",
+          "scope": "development"
+        },
+        {
+          "file": "skills-lock.json",
+          "kind": "skills",
+          "artifact": "rust-coding",
+          "reference": "e8e855949a1be59d7415aee1326982f58a01a115eccb2f9ada18d1eb929ae63b",
+          "mode": "pin",
+          "scope": "development"
+        },
+        {
+          "file": "skills-lock.json",
+          "kind": "skills",
+          "artifact": "rust-test",
+          "reference": "b2f56307e0b156ac5b674f182d08e1518850827ceef40dcdf4980f94aa27190f",
+          "mode": "pin",
+          "scope": "development"
+        },
+        {
+          "file": "skills-lock.json",
+          "kind": "skills",
+          "artifact": "share-artifact",
+          "reference": "2b281e80b560fd60ca16a4332dc8f8b10d2acee51ae0d771664bdf752602b2d3",
+          "mode": "pin",
+          "scope": "development"
+        },
+        {
+          "file": "skills-lock.json",
+          "kind": "skills",
+          "artifact": "share-coding",
+          "reference": "fef8a423539db133ceb6c24803d98bd6cd3bd904520e2914c6e19bc47a777ed3",
+          "mode": "pin",
+          "scope": "development"
+        },
+        {
+          "file": "skills-lock.json",
+          "kind": "skills",
+          "artifact": "share-test",
+          "reference": "a0a75669cf34b88256f9617a60625c9db7564d7057425502c0a51c3ee72c4f48",
+          "mode": "pin",
+          "scope": "development"
+        },
+        {
+          "file": "skills-lock.json",
+          "kind": "skills",
+          "artifact": "share-test-design",
+          "reference": "d16af5e7d966c8b1a4a5f4233e394557cbb2d8a64b6d2591d45d14ce8d02f99d",
+          "mode": "pin",
+          "scope": "development"
+        },
+        {
+          "file": "skills-lock.json",
+          "kind": "skills",
+          "artifact": "skill-reviewer",
+          "reference": "17da0867fdd478a5801bd6e46d5d59d92c70a56ad57ebdbf392d8b83353f256a",
+          "mode": "pin",
+          "scope": "development"
+        }
+      ]
+    },
+    {
+      "provider": "agent-core-sdk",
+      "consumer": "codex-sdk",
+      "evidence": [
+        {
+          "file": "moon.mod",
+          "kind": "mooncakes",
+          "artifact": "totto2727/agent-core-sdk",
+          "reference": "0.1.3",
+          "mode": "pin"
+        }
+      ]
+    },
+    {
+      "provider": "agent-core-sdk",
+      "consumer": "opencode-sdk",
+      "evidence": [
+        {
+          "file": "moon.mod",
+          "kind": "mooncakes",
+          "artifact": "totto2727/agent-core-sdk",
+          "reference": "0.1.3",
+          "mode": "pin"
+        }
+      ]
+    },
+    {
+      "provider": "agent-sdk",
+      "consumer": "workgraph",
+      "evidence": [
+        {
+          "file": "package/workgraph-agent-cli/moon.mod",
+          "kind": "mooncakes",
+          "artifact": "totto2727/agent-sdk",
+          "reference": "0.2.2",
+          "mode": "pin"
+        },
+        {
+          "file": "package/workgraph-codex-cli/moon.mod",
+          "kind": "mooncakes",
+          "artifact": "totto2727/agent-sdk",
+          "reference": "0.2.2",
+          "mode": "pin"
+        },
+        {
+          "file": "package/workgraph-opencode-cli/moon.mod",
+          "kind": "mooncakes",
+          "artifact": "totto2727/agent-sdk",
+          "reference": "0.2.2",
+          "mode": "pin"
+        }
+      ]
+    },
+    {
+      "provider": "codex-sdk",
+      "consumer": "agent-sdk",
+      "evidence": [
+        {
+          "file": "moon.mod",
+          "kind": "mooncakes",
+          "artifact": "totto2727/codex-sdk",
+          "reference": "0.4.2",
+          "mode": "pin"
+        }
+      ]
+    },
+    {
+      "provider": "codex-sdk",
+      "consumer": "workgraph",
+      "evidence": [
+        {
+          "file": "package/workgraph-codex-cli/moon.mod",
+          "kind": "mooncakes",
+          "artifact": "totto2727/codex-sdk",
+          "reference": "0.4.2",
+          "mode": "pin"
+        }
+      ]
+    },
+    {
+      "provider": "e2e",
+      "consumer": "c-plugin",
+      "evidence": [
+        {
+          "file": "AGENTS.md",
+          "kind": "contract",
+          "artifact": "e2e-contract",
+          "reference": "totto2727-org/e2e",
+          "mode": "review"
+        }
+      ]
+    },
+    {
+      "provider": "effront",
+      "consumer": "oxlint-docs",
+      "evidence": [
+        {
+          "file": "package.json",
+          "kind": "npm",
+          "artifact": "@effront/alchemy",
+          "reference": "^0.4.1",
+          "mode": "pin",
+          "scope": "dependencies"
+        },
+        {
+          "file": "package.json",
+          "kind": "npm",
+          "artifact": "@effront/core",
+          "reference": "^0.4.1",
+          "mode": "pin",
+          "scope": "dependencies"
+        },
+        {
+          "file": "package.json",
+          "kind": "npm",
+          "artifact": "@effront/markdown",
+          "reference": "^0.4.1",
+          "mode": "pin",
+          "scope": "dependencies"
+        },
+        {
+          "file": "package.json",
+          "kind": "npm",
+          "artifact": "@effront/tailwind",
+          "reference": "^0.4.1",
+          "mode": "pin",
+          "scope": "devDependencies"
+        },
+        {
+          "file": "package.json",
+          "kind": "npm",
+          "artifact": "@effront/vite",
+          "reference": "^0.4.1",
+          "mode": "pin",
+          "scope": "devDependencies"
+        }
+      ]
+    },
+    {
+      "provider": "effront",
+      "consumer": "projektor",
+      "evidence": [
+        {
+          "file": "package.json",
+          "kind": "npm",
+          "artifact": "@effront/alchemy",
+          "reference": "^0.4.1",
+          "mode": "pin",
+          "scope": "dependencies"
+        },
+        {
+          "file": "package.json",
+          "kind": "npm",
+          "artifact": "@effront/core",
+          "reference": "^0.4.1",
+          "mode": "pin",
+          "scope": "dependencies"
+        },
+        {
+          "file": "package.json",
+          "kind": "npm",
+          "artifact": "@effront/tailwind",
+          "reference": "^0.4.1",
+          "mode": "pin",
+          "scope": "devDependencies"
+        },
+        {
+          "file": "package.json",
+          "kind": "npm",
+          "artifact": "@effront/vite",
+          "reference": "^0.4.1",
+          "mode": "pin",
+          "scope": "devDependencies"
+        }
+      ]
+    },
+    {
+      "provider": "flowdeck",
+      "consumer": "nix",
+      "evidence": [
+        {
+          "file": "share/my/flake.lock",
+          "kind": "nix",
+          "artifact": "flowdeck",
+          "reference": {
+            "source": {
+              "type": "tarball",
+              "url": "https://flakehub.com/f/totto2727-org/flowdeck/0.1"
+            },
+            "rev": "839b4400f46d66dab03daaabfc7e2e90ed75ee9f"
+          },
+          "mode": "pin"
+        }
+      ]
+    },
+    {
+      "provider": "gitignore-patterns",
+      "consumer": "cloudflare-os-starter",
+      "evidence": [
+        {
+          "file": "package.json",
+          "kind": "npm",
+          "artifact": "@totto2727/gitignore-patterns",
+          "reference": "^0.1.0",
+          "mode": "pin",
+          "scope": "devDependencies"
+        }
+      ]
+    },
+    {
+      "provider": "gitignore-patterns",
+      "consumer": "e2e",
+      "evidence": [
+        {
+          "file": "package.json",
+          "kind": "npm",
+          "artifact": "@totto2727/gitignore-patterns",
+          "reference": "^0.1.0",
+          "mode": "pin",
+          "scope": "devDependencies"
+        }
+      ]
+    },
+    {
+      "provider": "gitignore-patterns",
+      "consumer": "effect-http",
+      "evidence": [
+        {
+          "file": "package.json",
+          "kind": "npm",
+          "artifact": "@totto2727/gitignore-patterns",
+          "reference": "^0.1.0",
+          "mode": "pin",
+          "scope": "devDependencies"
+        }
+      ]
+    },
+    {
+      "provider": "gitignore-patterns",
+      "consumer": "effect-identify",
+      "evidence": [
+        {
+          "file": "package.json",
+          "kind": "npm",
+          "artifact": "@totto2727/gitignore-patterns",
+          "reference": "^0.1.0",
+          "mode": "pin",
+          "scope": "devDependencies"
+        }
+      ]
+    },
+    {
+      "provider": "gitignore-patterns",
+      "consumer": "effront",
+      "evidence": [
+        {
+          "file": "app/docs/package.json",
+          "kind": "npm",
+          "artifact": "@totto2727/gitignore-patterns",
+          "reference": "catalog:",
+          "mode": "pin",
+          "scope": "devDependencies"
+        },
+        {
+          "file": "examples/basic/package.json",
+          "kind": "npm",
+          "artifact": "@totto2727/gitignore-patterns",
+          "reference": "catalog:",
+          "mode": "pin",
+          "scope": "devDependencies"
+        },
+        {
+          "file": "examples/loading/package.json",
+          "kind": "npm",
+          "artifact": "@totto2727/gitignore-patterns",
+          "reference": "catalog:",
+          "mode": "pin",
+          "scope": "devDependencies"
+        },
+        {
+          "file": "examples/markdown/package.json",
+          "kind": "npm",
+          "artifact": "@totto2727/gitignore-patterns",
+          "reference": "catalog:",
+          "mode": "pin",
+          "scope": "devDependencies"
+        },
+        {
+          "file": "package.json",
+          "kind": "npm",
+          "artifact": "@totto2727/gitignore-patterns",
+          "reference": "catalog:",
+          "mode": "pin",
+          "scope": "devDependencies"
+        },
+        {
+          "file": "packages/create-effront/templates/alchemy-cloudflare/package.json",
+          "kind": "npm",
+          "artifact": "@totto2727/gitignore-patterns",
+          "reference": "^0.1.0",
+          "mode": "pin",
+          "scope": "devDependencies"
+        },
+        {
+          "file": "packages/create-effront/templates/bun/package.json",
+          "kind": "npm",
+          "artifact": "@totto2727/gitignore-patterns",
+          "reference": "^0.1.0",
+          "mode": "pin",
+          "scope": "devDependencies"
+        },
+        {
+          "file": "packages/create-effront/templates/cloudflare/package.json",
+          "kind": "npm",
+          "artifact": "@totto2727/gitignore-patterns",
+          "reference": "^0.1.0",
+          "mode": "pin",
+          "scope": "devDependencies"
+        },
+        {
+          "file": "packages/create-effront/templates/node/package.json",
+          "kind": "npm",
+          "artifact": "@totto2727/gitignore-patterns",
+          "reference": "^0.1.0",
+          "mode": "pin",
+          "scope": "devDependencies"
+        }
+      ]
+    },
+    {
+      "provider": "gitignore-patterns",
+      "consumer": "glossshift",
+      "evidence": [
+        {
+          "file": "package.json",
+          "kind": "npm",
+          "artifact": "@totto2727/gitignore-patterns",
+          "reference": "^0.1.0",
+          "mode": "pin",
+          "scope": "devDependencies"
+        }
+      ]
+    },
+    {
+      "provider": "gitignore-patterns",
+      "consumer": "infra",
+      "evidence": [
+        {
+          "file": "package.json",
+          "kind": "npm",
+          "artifact": "@totto2727/gitignore-patterns",
+          "reference": "^0.1.0",
+          "mode": "pin",
+          "scope": "devDependencies"
+        }
+      ]
+    },
+    {
+      "provider": "gitignore-patterns",
+      "consumer": "monorepo",
+      "evidence": [
+        {
+          "file": "package.json",
+          "kind": "npm",
+          "artifact": "@totto2727/gitignore-patterns",
+          "reference": "^0.1.0",
+          "mode": "pin",
+          "scope": "devDependencies"
+        }
+      ]
+    },
+    {
+      "provider": "gitignore-patterns",
+      "consumer": "nix-cache",
+      "evidence": [
+        {
+          "file": "package.json",
+          "kind": "npm",
+          "artifact": "@totto2727/gitignore-patterns",
+          "reference": "^0.1.0",
+          "mode": "pin",
+          "scope": "devDependencies"
+        }
+      ]
+    },
+    {
+      "provider": "gitignore-patterns",
+      "consumer": "oxlint",
+      "evidence": [
+        {
+          "file": "package.json",
+          "kind": "npm",
+          "artifact": "@totto2727/gitignore-patterns",
+          "reference": "^0.1.0",
+          "mode": "pin",
+          "scope": "devDependencies"
+        }
+      ]
+    },
+    {
+      "provider": "gitignore-patterns",
+      "consumer": "oxlint-docs",
+      "evidence": [
+        {
+          "file": "package.json",
+          "kind": "npm",
+          "artifact": "@totto2727/gitignore-patterns",
+          "reference": "^0.1.0",
+          "mode": "pin",
+          "scope": "devDependencies"
+        }
+      ]
+    },
+    {
+      "provider": "gitignore-patterns",
+      "consumer": "projektor",
+      "evidence": [
+        {
+          "file": "package.json",
+          "kind": "npm",
+          "artifact": "@totto2727/gitignore-patterns",
+          "reference": "^0.1.0",
+          "mode": "pin",
+          "scope": "devDependencies"
+        }
+      ]
+    },
+    {
+      "provider": "gitignore-patterns",
+      "consumer": "template-vite-plus-app",
+      "evidence": [
+        {
+          "file": "package.json",
+          "kind": "npm",
+          "artifact": "@totto2727/gitignore-patterns",
+          "reference": "^0.1.0",
+          "mode": "pin",
+          "scope": "devDependencies"
+        }
+      ]
+    },
+    {
+      "provider": "gitignore-patterns",
+      "consumer": "template-vite-plus-lib",
+      "evidence": [
+        {
+          "file": "package.json",
+          "kind": "npm",
+          "artifact": "@totto2727/gitignore-patterns",
+          "reference": "^0.1.0",
+          "mode": "pin",
+          "scope": "devDependencies"
+        }
+      ]
+    },
+    {
+      "provider": "glossshift",
+      "consumer": "flowdeck",
+      "evidence": [
+        {
+          "file": "src/workflows/jcode_translation/glossshift.rs",
+          "kind": "contract",
+          "artifact": "config-schema",
+          "reference": "BaseDirectories::with_prefix(\"glossshift\")",
+          "mode": "review"
+        }
+      ]
+    },
+    {
+      "provider": "glossshift",
+      "consumer": "nix",
+      "evidence": [
+        {
+          "file": "share/my/macos/flake.lock",
+          "kind": "nix",
+          "artifact": "glossshift",
+          "reference": {
+            "source": {
+              "type": "tarball",
+              "url": "https://flakehub.com/f/totto2727-org/glossshift/0.1"
+            },
+            "rev": "e01b80b5e373a5ad6fa5f5ec424b1f2025334210"
+          },
+          "mode": "pin"
+        }
+      ]
+    },
+    {
+      "provider": "llm",
+      "consumer": "workgraph",
+      "evidence": [
+        {
+          "file": "package/workgraph-llm/moon.mod",
+          "kind": "mooncakes",
+          "artifact": "totto2727/llm",
+          "reference": "0.3.3",
+          "mode": "pin"
+        }
+      ]
+    },
+    {
+      "provider": "monorepo",
+      "consumer": "admiral",
+      "evidence": [
+        {
+          "file": ".github/workflows/ci.yml",
+          "kind": "github-actions",
+          "artifact": ".github/actions/setup-nix",
+          "reference": "main",
+          "mode": "verify",
+          "scope": "ci"
+        },
+        {
+          "file": ".github/workflows/ci.yml",
+          "kind": "github-actions",
+          "artifact": ".github/actions/setup-moonbit",
+          "reference": "main",
+          "mode": "verify",
+          "scope": "ci"
+        },
+        {
+          "file": ".github/workflows/ci.yml",
+          "kind": "github-actions",
+          "artifact": ".github/actions/check-moonbit",
+          "reference": "main",
+          "mode": "verify",
+          "scope": "ci"
+        },
+        {
+          "file": ".github/workflows/publish.yml",
+          "kind": "github-actions",
+          "artifact": ".github/actions/setup-nix",
+          "reference": "main",
+          "mode": "verify",
+          "scope": "ci"
+        },
+        {
+          "file": ".github/workflows/publish.yml",
+          "kind": "github-actions",
+          "artifact": ".github/actions/publish-moonbit",
+          "reference": "main",
+          "mode": "verify",
+          "scope": "ci"
+        }
+      ]
+    },
+    {
+      "provider": "monorepo",
+      "consumer": "agent",
+      "evidence": [
+        {
+          "file": ".github/workflows/ci.yml",
+          "kind": "github-actions",
+          "artifact": ".github/actions/setup-nix",
+          "reference": "main",
+          "mode": "verify",
+          "scope": "ci"
+        },
+        {
+          "file": ".github/workflows/ci.yml",
+          "kind": "github-actions",
+          "artifact": ".github/actions/setup-typescript",
+          "reference": "main",
+          "mode": "verify",
+          "scope": "ci"
+        }
+      ]
+    },
+    {
+      "provider": "monorepo",
+      "consumer": "agent-core-sdk",
+      "evidence": [
+        {
+          "file": ".github/workflows/ci.yml",
+          "kind": "github-actions",
+          "artifact": ".github/actions/setup-nix",
+          "reference": "main",
+          "mode": "verify",
+          "scope": "ci"
+        },
+        {
+          "file": ".github/workflows/ci.yml",
+          "kind": "github-actions",
+          "artifact": ".github/actions/setup-moonbit",
+          "reference": "main",
+          "mode": "verify",
+          "scope": "ci"
+        },
+        {
+          "file": ".github/workflows/ci.yml",
+          "kind": "github-actions",
+          "artifact": ".github/actions/check-moonbit",
+          "reference": "main",
+          "mode": "verify",
+          "scope": "ci"
+        },
+        {
+          "file": ".github/workflows/publish.yml",
+          "kind": "github-actions",
+          "artifact": ".github/actions/setup-nix",
+          "reference": "main",
+          "mode": "verify",
+          "scope": "ci"
+        },
+        {
+          "file": ".github/workflows/publish.yml",
+          "kind": "github-actions",
+          "artifact": ".github/actions/publish-moonbit",
+          "reference": "main",
+          "mode": "verify",
+          "scope": "ci"
+        }
+      ]
+    },
+    {
+      "provider": "monorepo",
+      "consumer": "agent-sdk",
+      "evidence": [
+        {
+          "file": ".github/workflows/ci.yml",
+          "kind": "github-actions",
+          "artifact": ".github/actions/setup-nix",
+          "reference": "main",
+          "mode": "verify",
+          "scope": "ci"
+        },
+        {
+          "file": ".github/workflows/ci.yml",
+          "kind": "github-actions",
+          "artifact": ".github/actions/setup-moonbit",
+          "reference": "main",
+          "mode": "verify",
+          "scope": "ci"
+        },
+        {
+          "file": ".github/workflows/ci.yml",
+          "kind": "github-actions",
+          "artifact": ".github/actions/check-moonbit",
+          "reference": "main",
+          "mode": "verify",
+          "scope": "ci"
+        },
+        {
+          "file": ".github/workflows/publish.yml",
+          "kind": "github-actions",
+          "artifact": ".github/actions/setup-nix",
+          "reference": "main",
+          "mode": "verify",
+          "scope": "ci"
+        },
+        {
+          "file": ".github/workflows/publish.yml",
+          "kind": "github-actions",
+          "artifact": ".github/actions/publish-moonbit",
+          "reference": "main",
+          "mode": "verify",
+          "scope": "ci"
+        }
+      ]
+    },
+    {
+      "provider": "monorepo",
+      "consumer": "atlas-to-kysely",
+      "evidence": [
+        {
+          "file": ".github/workflows/ci.yml",
+          "kind": "github-actions",
+          "artifact": ".github/actions/setup-nix",
+          "reference": "main",
+          "mode": "verify",
+          "scope": "ci"
+        },
+        {
+          "file": ".github/workflows/flakehub-publish-rolling.yml",
+          "kind": "github-actions",
+          "artifact": ".github/actions/setup-nix",
+          "reference": "main",
+          "mode": "verify",
+          "scope": "ci"
+        },
+        {
+          "file": ".github/workflows/flakehub-publish-rolling.yml",
+          "kind": "github-actions",
+          "artifact": ".github/actions/publish-flakehub",
+          "reference": "main",
+          "mode": "verify",
+          "scope": "ci"
+        }
+      ]
+    },
+    {
+      "provider": "monorepo",
+      "consumer": "c-plugin",
+      "evidence": [
+        {
+          "file": ".github/workflows/ci.yml",
+          "kind": "github-actions",
+          "artifact": ".github/actions/setup-nix",
+          "reference": "main",
+          "mode": "verify",
+          "scope": "ci"
+        },
+        {
+          "file": ".github/workflows/ci.yml",
+          "kind": "github-actions",
+          "artifact": ".github/actions/setup-moonbit",
+          "reference": "main",
+          "mode": "verify",
+          "scope": "ci"
+        },
+        {
+          "file": ".github/workflows/ci.yml",
+          "kind": "github-actions",
+          "artifact": ".github/actions/check-moonbit",
+          "reference": "main",
+          "mode": "verify",
+          "scope": "ci"
+        }
+      ]
+    },
+    {
+      "provider": "monorepo",
+      "consumer": "codex-sdk",
+      "evidence": [
+        {
+          "file": ".github/workflows/ci.yml",
+          "kind": "github-actions",
+          "artifact": ".github/actions/setup-nix",
+          "reference": "main",
+          "mode": "verify",
+          "scope": "ci"
+        },
+        {
+          "file": ".github/workflows/ci.yml",
+          "kind": "github-actions",
+          "artifact": ".github/actions/setup-moonbit",
+          "reference": "main",
+          "mode": "verify",
+          "scope": "ci"
+        },
+        {
+          "file": ".github/workflows/ci.yml",
+          "kind": "github-actions",
+          "artifact": ".github/actions/check-moonbit",
+          "reference": "main",
+          "mode": "verify",
+          "scope": "ci"
+        },
+        {
+          "file": ".github/workflows/publish.yml",
+          "kind": "github-actions",
+          "artifact": ".github/actions/setup-nix",
+          "reference": "main",
+          "mode": "verify",
+          "scope": "ci"
+        },
+        {
+          "file": ".github/workflows/publish.yml",
+          "kind": "github-actions",
+          "artifact": ".github/actions/publish-moonbit",
+          "reference": "main",
+          "mode": "verify",
+          "scope": "ci"
+        }
+      ]
+    },
+    {
+      "provider": "monorepo",
+      "consumer": "e2e",
+      "evidence": [
+        {
+          "file": ".github/workflows/ci.yml",
+          "kind": "github-actions",
+          "artifact": ".github/actions/setup-nix",
+          "reference": "main",
+          "mode": "verify",
+          "scope": "ci"
+        },
+        {
+          "file": ".github/workflows/ci.yml",
+          "kind": "github-actions",
+          "artifact": ".github/actions/setup-typescript",
+          "reference": "main",
+          "mode": "verify",
+          "scope": "ci"
+        },
+        {
+          "file": ".github/workflows/ci.yml",
+          "kind": "github-actions",
+          "artifact": ".github/actions/setup-haskell",
+          "reference": "main",
+          "mode": "verify",
+          "scope": "ci"
+        },
+        {
+          "file": ".github/workflows/publish.yml",
+          "kind": "github-actions",
+          "artifact": ".github/actions/setup-nix",
+          "reference": "main",
+          "mode": "verify",
+          "scope": "ci"
+        },
+        {
+          "file": ".github/workflows/publish.yml",
+          "kind": "github-actions",
+          "artifact": ".github/actions/setup-typescript",
+          "reference": "main",
+          "mode": "verify",
+          "scope": "ci"
+        },
+        {
+          "file": ".github/workflows/publish.yml",
+          "kind": "github-actions",
+          "artifact": ".github/actions/publish-npm",
+          "reference": "main",
+          "mode": "verify",
+          "scope": "ci"
+        },
+        {
+          "file": ".github/workflows/publish.yml",
+          "kind": "github-actions",
+          "artifact": ".github/actions/publish-crate",
+          "reference": "main",
+          "mode": "verify",
+          "scope": "ci"
+        }
+      ]
+    },
+    {
+      "provider": "monorepo",
+      "consumer": "effect-http",
+      "evidence": [
+        {
+          "file": ".github/workflows/ci.yml",
+          "kind": "github-actions",
+          "artifact": ".github/actions/setup-nix",
+          "reference": "main",
+          "mode": "verify",
+          "scope": "ci"
+        },
+        {
+          "file": ".github/workflows/ci.yml",
+          "kind": "github-actions",
+          "artifact": ".github/actions/setup-typescript",
+          "reference": "main",
+          "mode": "verify",
+          "scope": "ci"
+        },
+        {
+          "file": ".github/workflows/publish.yml",
+          "kind": "github-actions",
+          "artifact": ".github/actions/setup-nix",
+          "reference": "main",
+          "mode": "verify",
+          "scope": "ci"
+        },
+        {
+          "file": ".github/workflows/publish.yml",
+          "kind": "github-actions",
+          "artifact": ".github/actions/setup-typescript",
+          "reference": "main",
+          "mode": "verify",
+          "scope": "ci"
+        },
+        {
+          "file": ".github/workflows/publish.yml",
+          "kind": "github-actions",
+          "artifact": ".github/actions/publish-npm",
+          "reference": "main",
+          "mode": "verify",
+          "scope": "ci"
+        }
+      ]
+    },
+    {
+      "provider": "monorepo",
+      "consumer": "effect-identify",
+      "evidence": [
+        {
+          "file": ".github/workflows/ci.yml",
+          "kind": "github-actions",
+          "artifact": ".github/actions/setup-nix",
+          "reference": "main",
+          "mode": "verify",
+          "scope": "ci"
+        },
+        {
+          "file": ".github/workflows/ci.yml",
+          "kind": "github-actions",
+          "artifact": ".github/actions/setup-typescript",
+          "reference": "main",
+          "mode": "verify",
+          "scope": "ci"
+        },
+        {
+          "file": ".github/workflows/publish.yml",
+          "kind": "github-actions",
+          "artifact": ".github/actions/setup-nix",
+          "reference": "main",
+          "mode": "verify",
+          "scope": "ci"
+        },
+        {
+          "file": ".github/workflows/publish.yml",
+          "kind": "github-actions",
+          "artifact": ".github/actions/setup-typescript",
+          "reference": "main",
+          "mode": "verify",
+          "scope": "ci"
+        },
+        {
+          "file": ".github/workflows/publish.yml",
+          "kind": "github-actions",
+          "artifact": ".github/actions/publish-npm",
+          "reference": "main",
+          "mode": "verify",
+          "scope": "ci"
+        }
+      ]
+    },
+    {
+      "provider": "monorepo",
+      "consumer": "effront",
+      "evidence": [
+        {
+          "file": ".github/workflows/ci.yml",
+          "kind": "github-actions",
+          "artifact": ".github/actions/setup-nix",
+          "reference": "main",
+          "mode": "verify",
+          "scope": "ci"
+        },
+        {
+          "file": ".github/workflows/ci.yml",
+          "kind": "github-actions",
+          "artifact": ".github/actions/setup-typescript",
+          "reference": "main",
+          "mode": "verify",
+          "scope": "ci"
+        },
+        {
+          "file": ".github/workflows/deploy-docs.yml",
+          "kind": "github-actions",
+          "artifact": ".github/actions/setup-nix",
+          "reference": "main",
+          "mode": "verify",
+          "scope": "ci"
+        },
+        {
+          "file": ".github/workflows/deploy-docs.yml",
+          "kind": "github-actions",
+          "artifact": ".github/actions/setup-typescript",
+          "reference": "main",
+          "mode": "verify",
+          "scope": "ci"
+        },
+        {
+          "file": ".github/workflows/deploy-docs.yml",
+          "kind": "github-actions",
+          "artifact": ".github/actions/deploy-alchemy",
+          "reference": "main",
+          "mode": "verify",
+          "scope": "ci"
+        },
+        {
+          "file": ".github/workflows/publish.yml",
+          "kind": "github-actions",
+          "artifact": ".github/actions/setup-nix",
+          "reference": "main",
+          "mode": "verify",
+          "scope": "ci"
+        },
+        {
+          "file": ".github/workflows/publish.yml",
+          "kind": "github-actions",
+          "artifact": ".github/actions/setup-typescript",
+          "reference": "main",
+          "mode": "verify",
+          "scope": "ci"
+        },
+        {
+          "file": ".github/workflows/publish.yml",
+          "kind": "github-actions",
+          "artifact": ".github/actions/publish-npm",
+          "reference": "main",
+          "mode": "verify",
+          "scope": "ci"
+        }
+      ]
+    },
+    {
+      "provider": "monorepo",
+      "consumer": "flowdeck",
+      "evidence": [
+        {
+          "file": ".github/workflows/ci.yml",
+          "kind": "github-actions",
+          "artifact": ".github/actions/setup-nix",
+          "reference": "main",
+          "mode": "verify",
+          "scope": "ci"
+        },
+        {
+          "file": ".github/workflows/flakehub-publish-rolling.yml",
+          "kind": "github-actions",
+          "artifact": ".github/actions/setup-nix",
+          "reference": "d8377d2a88897926fcc90c4f9eba3f90816fd56c",
+          "mode": "pin",
+          "scope": "ci"
+        },
+        {
+          "file": ".github/workflows/flakehub-publish-rolling.yml",
+          "kind": "github-actions",
+          "artifact": ".github/actions/publish-flakehub",
+          "reference": "d8377d2a88897926fcc90c4f9eba3f90816fd56c",
+          "mode": "pin",
+          "scope": "ci"
+        }
+      ]
+    },
+    {
+      "provider": "monorepo",
+      "consumer": "geo",
+      "evidence": [
+        {
+          "file": ".github/workflows/ci.yml",
+          "kind": "github-actions",
+          "artifact": ".github/actions/setup-nix",
+          "reference": "main",
+          "mode": "verify",
+          "scope": "ci"
+        },
+        {
+          "file": ".github/workflows/ci.yml",
+          "kind": "github-actions",
+          "artifact": ".github/actions/setup-moonbit",
+          "reference": "main",
+          "mode": "verify",
+          "scope": "ci"
+        },
+        {
+          "file": ".github/workflows/ci.yml",
+          "kind": "github-actions",
+          "artifact": ".github/actions/check-moonbit",
+          "reference": "main",
+          "mode": "verify",
+          "scope": "ci"
+        },
+        {
+          "file": ".github/workflows/publish.yml",
+          "kind": "github-actions",
+          "artifact": ".github/actions/setup-nix",
+          "reference": "main",
+          "mode": "verify",
+          "scope": "ci"
+        },
+        {
+          "file": ".github/workflows/publish.yml",
+          "kind": "github-actions",
+          "artifact": ".github/actions/publish-moonbit",
+          "reference": "main",
+          "mode": "verify",
+          "scope": "ci"
+        }
+      ]
+    },
+    {
+      "provider": "monorepo",
+      "consumer": "gitignore-patterns",
+      "evidence": [
+        {
+          "file": ".github/workflows/ci.yml",
+          "kind": "github-actions",
+          "artifact": ".github/actions/setup-nix",
+          "reference": "main",
+          "mode": "verify",
+          "scope": "ci"
+        },
+        {
+          "file": ".github/workflows/ci.yml",
+          "kind": "github-actions",
+          "artifact": ".github/actions/setup-typescript",
+          "reference": "main",
+          "mode": "verify",
+          "scope": "ci"
+        },
+        {
+          "file": ".github/workflows/publish.yml",
+          "kind": "github-actions",
+          "artifact": ".github/actions/setup-nix",
+          "reference": "main",
+          "mode": "verify",
+          "scope": "ci"
+        },
+        {
+          "file": ".github/workflows/publish.yml",
+          "kind": "github-actions",
+          "artifact": ".github/actions/setup-typescript",
+          "reference": "main",
+          "mode": "verify",
+          "scope": "ci"
+        },
+        {
+          "file": ".github/workflows/publish.yml",
+          "kind": "github-actions",
+          "artifact": ".github/actions/publish-npm",
+          "reference": "main",
+          "mode": "verify",
+          "scope": "ci"
+        }
+      ]
+    },
+    {
+      "provider": "monorepo",
+      "consumer": "glossshift",
+      "evidence": [
+        {
+          "file": ".github/workflows/ci.yml",
+          "kind": "github-actions",
+          "artifact": ".github/actions/setup-nix",
+          "reference": "main",
+          "mode": "verify",
+          "scope": "ci"
+        },
+        {
+          "file": ".github/workflows/flakehub-publish-rolling.yml",
+          "kind": "github-actions",
+          "artifact": ".github/actions/setup-nix",
+          "reference": "main",
+          "mode": "verify",
+          "scope": "ci"
+        },
+        {
+          "file": ".github/workflows/flakehub-publish-rolling.yml",
+          "kind": "github-actions",
+          "artifact": ".github/actions/publish-flakehub",
+          "reference": "main",
+          "mode": "verify",
+          "scope": "ci"
+        }
+      ]
+    },
+    {
+      "provider": "monorepo",
+      "consumer": "infra",
+      "evidence": [
+        {
+          "file": ".github/workflows/ci.yml",
+          "kind": "github-actions",
+          "artifact": ".github/actions/setup-nix",
+          "reference": "main",
+          "mode": "verify",
+          "scope": "ci"
+        },
+        {
+          "file": ".github/workflows/ci.yml",
+          "kind": "github-actions",
+          "artifact": ".github/actions/setup-typescript",
+          "reference": "main",
+          "mode": "verify",
+          "scope": "ci"
+        }
+      ]
+    },
+    {
+      "provider": "monorepo",
+      "consumer": "lens",
+      "evidence": [
+        {
+          "file": ".github/workflows/ci.yml",
+          "kind": "github-actions",
+          "artifact": ".github/actions/setup-nix",
+          "reference": "main",
+          "mode": "verify",
+          "scope": "ci"
+        },
+        {
+          "file": ".github/workflows/ci.yml",
+          "kind": "github-actions",
+          "artifact": ".github/actions/setup-moonbit",
+          "reference": "main",
+          "mode": "verify",
+          "scope": "ci"
+        },
+        {
+          "file": ".github/workflows/ci.yml",
+          "kind": "github-actions",
+          "artifact": ".github/actions/check-moonbit",
+          "reference": "main",
+          "mode": "verify",
+          "scope": "ci"
+        },
+        {
+          "file": ".github/workflows/publish.yml",
+          "kind": "github-actions",
+          "artifact": ".github/actions/setup-nix",
+          "reference": "main",
+          "mode": "verify",
+          "scope": "ci"
+        },
+        {
+          "file": ".github/workflows/publish.yml",
+          "kind": "github-actions",
+          "artifact": ".github/actions/publish-moonbit",
+          "reference": "main",
+          "mode": "verify",
+          "scope": "ci"
+        }
+      ]
+    },
+    {
+      "provider": "monorepo",
+      "consumer": "llm",
+      "evidence": [
+        {
+          "file": ".github/workflows/ci.yml",
+          "kind": "github-actions",
+          "artifact": ".github/actions/setup-nix",
+          "reference": "main",
+          "mode": "verify",
+          "scope": "ci"
+        },
+        {
+          "file": ".github/workflows/ci.yml",
+          "kind": "github-actions",
+          "artifact": ".github/actions/setup-moonbit",
+          "reference": "main",
+          "mode": "verify",
+          "scope": "ci"
+        },
+        {
+          "file": ".github/workflows/ci.yml",
+          "kind": "github-actions",
+          "artifact": ".github/actions/check-moonbit",
+          "reference": "main",
+          "mode": "verify",
+          "scope": "ci"
+        },
+        {
+          "file": ".github/workflows/copilot-setup-steps.yml",
+          "kind": "github-actions",
+          "artifact": ".github/actions/setup-nix",
+          "reference": "main",
+          "mode": "verify",
+          "scope": "ci"
+        },
+        {
+          "file": ".github/workflows/copilot-setup-steps.yml",
+          "kind": "github-actions",
+          "artifact": ".github/actions/setup-moonbit",
+          "reference": "main",
+          "mode": "verify",
+          "scope": "ci"
+        },
+        {
+          "file": ".github/workflows/publish.yml",
+          "kind": "github-actions",
+          "artifact": ".github/actions/setup-nix",
+          "reference": "main",
+          "mode": "verify",
+          "scope": "ci"
+        },
+        {
+          "file": ".github/workflows/publish.yml",
+          "kind": "github-actions",
+          "artifact": ".github/actions/publish-moonbit",
+          "reference": "main",
+          "mode": "verify",
+          "scope": "ci"
+        }
+      ]
+    },
+    {
+      "provider": "monorepo",
+      "consumer": "llm-profiles",
+      "evidence": [
+        {
+          "file": ".github/workflows/ci.yml",
+          "kind": "github-actions",
+          "artifact": ".github/actions/setup-nix",
+          "reference": "main",
+          "mode": "verify",
+          "scope": "ci"
+        },
+        {
+          "file": ".github/workflows/publish.yml",
+          "kind": "github-actions",
+          "artifact": ".github/actions/setup-nix",
+          "reference": "main",
+          "mode": "verify",
+          "scope": "ci"
+        },
+        {
+          "file": ".github/workflows/publish.yml",
+          "kind": "github-actions",
+          "artifact": ".github/actions/publish-crate",
+          "reference": "main",
+          "mode": "verify",
+          "scope": "ci"
+        }
+      ]
+    },
+    {
+      "provider": "monorepo",
+      "consumer": "serde",
+      "evidence": [
+        {
+          "file": ".github/workflows/ci.yml",
+          "kind": "github-actions",
+          "artifact": ".github/actions/setup-nix",
+          "reference": "main",
+          "mode": "verify",
+          "scope": "ci"
+        },
+        {
+          "file": ".github/workflows/ci.yml",
+          "kind": "github-actions",
+          "artifact": ".github/actions/setup-moonbit",
+          "reference": "main",
+          "mode": "verify",
+          "scope": "ci"
+        },
+        {
+          "file": ".github/workflows/ci.yml",
+          "kind": "github-actions",
+          "artifact": ".github/actions/check-moonbit",
+          "reference": "main",
+          "mode": "verify",
+          "scope": "ci"
+        }
+      ]
+    },
+    {
+      "provider": "monorepo",
+      "consumer": "moonbit-overlay",
+      "evidence": [
+        {
+          "file": ".github/workflows/flakehub-publish-rolling.yml",
+          "kind": "github-actions",
+          "artifact": ".github/actions/setup-nix",
+          "reference": "main",
+          "mode": "verify",
+          "scope": "ci"
+        },
+        {
+          "file": ".github/workflows/flakehub-publish-rolling.yml",
+          "kind": "github-actions",
+          "artifact": ".github/actions/publish-flakehub",
+          "reference": "main",
+          "mode": "verify",
+          "scope": "ci"
+        }
+      ]
+    },
+    {
+      "provider": "monorepo",
+      "consumer": "nix-cache",
+      "evidence": [
+        {
+          "file": ".github/workflows/ci.yml",
+          "kind": "github-actions",
+          "artifact": ".github/actions/setup-nix",
+          "reference": "main",
+          "mode": "verify",
+          "scope": "ci"
+        },
+        {
+          "file": ".github/workflows/ci.yml",
+          "kind": "github-actions",
+          "artifact": ".github/actions/setup-typescript",
+          "reference": "main",
+          "mode": "verify",
+          "scope": "ci"
+        }
+      ]
+    },
+    {
+      "provider": "monorepo",
+      "consumer": "opencode-sdk",
+      "evidence": [
+        {
+          "file": ".github/workflows/ci.yml",
+          "kind": "github-actions",
+          "artifact": ".github/actions/setup-nix",
+          "reference": "main",
+          "mode": "verify",
+          "scope": "ci"
+        },
+        {
+          "file": ".github/workflows/ci.yml",
+          "kind": "github-actions",
+          "artifact": ".github/actions/setup-moonbit",
+          "reference": "main",
+          "mode": "verify",
+          "scope": "ci"
+        },
+        {
+          "file": ".github/workflows/ci.yml",
+          "kind": "github-actions",
+          "artifact": ".github/actions/check-moonbit",
+          "reference": "main",
+          "mode": "verify",
+          "scope": "ci"
+        },
+        {
+          "file": ".github/workflows/publish.yml",
+          "kind": "github-actions",
+          "artifact": ".github/actions/setup-nix",
+          "reference": "main",
+          "mode": "verify",
+          "scope": "ci"
+        },
+        {
+          "file": ".github/workflows/publish.yml",
+          "kind": "github-actions",
+          "artifact": ".github/actions/publish-moonbit",
+          "reference": "main",
+          "mode": "verify",
+          "scope": "ci"
+        }
+      ]
+    },
+    {
+      "provider": "monorepo",
+      "consumer": "oxlint",
+      "evidence": [
+        {
+          "file": ".github/workflows/ci.yml",
+          "kind": "github-actions",
+          "artifact": ".github/actions/setup-nix",
+          "reference": "main",
+          "mode": "verify",
+          "scope": "ci"
+        },
+        {
+          "file": ".github/workflows/ci.yml",
+          "kind": "github-actions",
+          "artifact": ".github/actions/setup-typescript",
+          "reference": "main",
+          "mode": "verify",
+          "scope": "ci"
+        },
+        {
+          "file": ".github/workflows/publish.yml",
+          "kind": "github-actions",
+          "artifact": ".github/actions/setup-nix",
+          "reference": "main",
+          "mode": "verify",
+          "scope": "ci"
+        },
+        {
+          "file": ".github/workflows/publish.yml",
+          "kind": "github-actions",
+          "artifact": ".github/actions/setup-typescript",
+          "reference": "main",
+          "mode": "verify",
+          "scope": "ci"
+        },
+        {
+          "file": ".github/workflows/publish.yml",
+          "kind": "github-actions",
+          "artifact": ".github/actions/publish-npm",
+          "reference": "main",
+          "mode": "verify",
+          "scope": "ci"
+        }
+      ]
+    },
+    {
+      "provider": "monorepo",
+      "consumer": "oxlint-docs",
+      "evidence": [
+        {
+          "file": ".github/workflows/ci.yml",
+          "kind": "github-actions",
+          "artifact": ".github/actions/setup-nix",
+          "reference": "main",
+          "mode": "verify",
+          "scope": "ci"
+        },
+        {
+          "file": ".github/workflows/ci.yml",
+          "kind": "github-actions",
+          "artifact": ".github/actions/setup-typescript",
+          "reference": "main",
+          "mode": "verify",
+          "scope": "ci"
+        },
+        {
+          "file": ".github/workflows/deploy-docs.yml",
+          "kind": "github-actions",
+          "artifact": ".github/actions/setup-nix",
+          "reference": "main",
+          "mode": "verify",
+          "scope": "ci"
+        },
+        {
+          "file": ".github/workflows/deploy-docs.yml",
+          "kind": "github-actions",
+          "artifact": ".github/actions/setup-typescript",
+          "reference": "main",
+          "mode": "verify",
+          "scope": "ci"
+        }
+      ]
+    },
+    {
+      "provider": "monorepo",
+      "consumer": "projektor",
+      "evidence": [
+        {
+          "file": ".github/workflows/ci.yml",
+          "kind": "github-actions",
+          "artifact": ".github/actions/setup-nix",
+          "reference": "main",
+          "mode": "verify",
+          "scope": "ci"
+        },
+        {
+          "file": ".github/workflows/ci.yml",
+          "kind": "github-actions",
+          "artifact": ".github/actions/setup-typescript",
+          "reference": "main",
+          "mode": "verify",
+          "scope": "ci"
+        },
+        {
+          "file": ".github/workflows/deploy.yml",
+          "kind": "github-actions",
+          "artifact": ".github/actions/setup-nix",
+          "reference": "main",
+          "mode": "verify",
+          "scope": "ci"
+        },
+        {
+          "file": ".github/workflows/deploy.yml",
+          "kind": "github-actions",
+          "artifact": ".github/actions/setup-typescript",
+          "reference": "main",
+          "mode": "verify",
+          "scope": "ci"
+        }
+      ]
+    },
+    {
+      "provider": "monorepo",
+      "consumer": "reylo",
+      "evidence": [
+        {
+          "file": ".github/workflows/publish.yml",
+          "kind": "github-actions",
+          "artifact": ".github/actions/setup-nix",
+          "reference": "main",
+          "mode": "verify",
+          "scope": "ci"
+        },
+        {
+          "file": ".github/workflows/publish.yml",
+          "kind": "github-actions",
+          "artifact": ".github/actions/setup-typescript",
+          "reference": "main",
+          "mode": "verify",
+          "scope": "ci"
+        },
+        {
+          "file": ".github/workflows/publish.yml",
+          "kind": "github-actions",
+          "artifact": ".github/actions/publish-npm",
+          "reference": "main",
+          "mode": "verify",
+          "scope": "ci"
+        }
+      ]
+    },
+    {
+      "provider": "monorepo",
+      "consumer": "template-go-simple",
+      "evidence": [
+        {
+          "file": ".github/workflows/ci.yml",
+          "kind": "github-actions",
+          "artifact": ".github/actions/setup-nix",
+          "reference": "main",
+          "mode": "verify",
+          "scope": "ci"
+        }
+      ]
+    },
+    {
+      "provider": "monorepo",
+      "consumer": "template-haskell-simple",
+      "evidence": [
+        {
+          "file": ".github/workflows/ci.yml",
+          "kind": "github-actions",
+          "artifact": ".github/actions/setup-nix",
+          "reference": "main",
+          "mode": "verify",
+          "scope": "ci"
+        },
+        {
+          "file": ".github/workflows/ci.yml",
+          "kind": "github-actions",
+          "artifact": ".github/actions/setup-haskell",
+          "reference": "main",
+          "mode": "verify",
+          "scope": "ci"
+        }
+      ]
+    },
+    {
+      "provider": "monorepo",
+      "consumer": "template-moonbit-simple",
+      "evidence": [
+        {
+          "file": ".github/workflows/ci.yml",
+          "kind": "github-actions",
+          "artifact": ".github/actions/setup-nix",
+          "reference": "main",
+          "mode": "verify",
+          "scope": "ci"
+        },
+        {
+          "file": ".github/workflows/ci.yml",
+          "kind": "github-actions",
+          "artifact": ".github/actions/setup-moonbit",
+          "reference": "main",
+          "mode": "verify",
+          "scope": "ci"
+        },
+        {
+          "file": ".github/workflows/ci.yml",
+          "kind": "github-actions",
+          "artifact": ".github/actions/check-moonbit",
+          "reference": "main",
+          "mode": "verify",
+          "scope": "ci"
+        }
+      ]
+    },
+    {
+      "provider": "monorepo",
+      "consumer": "template-rust-simple",
+      "evidence": [
+        {
+          "file": ".github/workflows/ci.yml",
+          "kind": "github-actions",
+          "artifact": ".github/actions/setup-nix",
+          "reference": "main",
+          "mode": "verify",
+          "scope": "ci"
+        }
+      ]
+    },
+    {
+      "provider": "monorepo",
+      "consumer": "template-vite-plus-app",
+      "evidence": [
+        {
+          "file": ".github/workflows/ci.yml",
+          "kind": "github-actions",
+          "artifact": ".github/actions/setup-nix",
+          "reference": "main",
+          "mode": "verify",
+          "scope": "ci"
+        },
+        {
+          "file": ".github/workflows/ci.yml",
+          "kind": "github-actions",
+          "artifact": ".github/actions/setup-typescript",
+          "reference": "main",
+          "mode": "verify",
+          "scope": "ci"
+        }
+      ]
+    },
+    {
+      "provider": "monorepo",
+      "consumer": "template-vite-plus-lib",
+      "evidence": [
+        {
+          "file": ".github/workflows/ci.yml",
+          "kind": "github-actions",
+          "artifact": ".github/actions/setup-nix",
+          "reference": "main",
+          "mode": "verify",
+          "scope": "ci"
+        },
+        {
+          "file": ".github/workflows/ci.yml",
+          "kind": "github-actions",
+          "artifact": ".github/actions/setup-typescript",
+          "reference": "main",
+          "mode": "verify",
+          "scope": "ci"
+        }
+      ]
+    },
+    {
+      "provider": "monorepo",
+      "consumer": "workgraph",
+      "evidence": [
+        {
+          "file": ".github/workflows/ci.yml",
+          "kind": "github-actions",
+          "artifact": ".github/actions/setup-nix",
+          "reference": "main",
+          "mode": "verify",
+          "scope": "ci"
+        },
+        {
+          "file": ".github/workflows/ci.yml",
+          "kind": "github-actions",
+          "artifact": ".github/actions/setup-moonbit",
+          "reference": "main",
+          "mode": "verify",
+          "scope": "ci"
+        },
+        {
+          "file": ".github/workflows/ci.yml",
+          "kind": "github-actions",
+          "artifact": ".github/actions/check-moonbit",
+          "reference": "main",
+          "mode": "verify",
+          "scope": "ci"
+        },
+        {
+          "file": ".github/workflows/publish.yml",
+          "kind": "github-actions",
+          "artifact": ".github/actions/setup-nix",
+          "reference": "main",
+          "mode": "verify",
+          "scope": "ci"
+        },
+        {
+          "file": ".github/workflows/publish.yml",
+          "kind": "github-actions",
+          "artifact": ".github/actions/publish-moonbit",
+          "reference": "main",
+          "mode": "verify",
+          "scope": "ci"
+        }
+      ]
+    },
+    {
+      "provider": "monorepo",
+      "consumer": "x",
+      "evidence": [
+        {
+          "file": ".github/workflows/ci.yml",
+          "kind": "github-actions",
+          "artifact": ".github/actions/setup-nix",
+          "reference": "main",
+          "mode": "verify",
+          "scope": "ci"
+        },
+        {
+          "file": ".github/workflows/ci.yml",
+          "kind": "github-actions",
+          "artifact": ".github/actions/setup-moonbit",
+          "reference": "main",
+          "mode": "verify",
+          "scope": "ci"
+        },
+        {
+          "file": ".github/workflows/ci.yml",
+          "kind": "github-actions",
+          "artifact": ".github/actions/check-moonbit",
+          "reference": "main",
+          "mode": "verify",
+          "scope": "ci"
+        },
+        {
+          "file": ".github/workflows/publish.yml",
+          "kind": "github-actions",
+          "artifact": ".github/actions/setup-nix",
+          "reference": "main",
+          "mode": "verify",
+          "scope": "ci"
+        },
+        {
+          "file": ".github/workflows/publish.yml",
+          "kind": "github-actions",
+          "artifact": ".github/actions/publish-moonbit",
+          "reference": "main",
+          "mode": "verify",
+          "scope": "ci"
+        }
+      ]
+    },
+    {
+      "provider": "moon-nix",
+      "consumer": "serde",
+      "evidence": [
+        {
+          "file": "flake.lock",
+          "kind": "nix",
+          "artifact": "moon-nix",
+          "reference": {
+            "source": {
+              "owner": "totto2727-org",
+              "repo": "moon-nix",
+              "rev": "794cab241c4ca8892646c441d52a5d3633c914b4",
+              "type": "github"
+            },
+            "rev": "794cab241c4ca8892646c441d52a5d3633c914b4"
+          },
+          "mode": "pin"
+        }
+      ]
+    },
+    {
+      "provider": "moon-nix",
+      "consumer": "template-moonbit-simple",
+      "evidence": [
+        {
+          "file": "flake.lock",
+          "kind": "nix",
+          "artifact": "moon-nix",
+          "reference": {
+            "source": {
+              "owner": "totto2727-org",
+              "repo": "moon-nix",
+              "rev": "3ef17d82ff89135188c8f40f3420bd9f2e923835",
+              "type": "github"
+            },
+            "rev": "3ef17d82ff89135188c8f40f3420bd9f2e923835"
+          },
+          "mode": "pin"
+        }
+      ]
+    },
+    {
+      "provider": "open-connector",
+      "consumer": "nix",
+      "evidence": [
+        {
+          "file": "share/packages-scripts.nix",
+          "kind": "contract",
+          "artifact": "connector-endpoint",
+          "reference": "open-connector/url",
+          "mode": "review"
+        }
+      ]
+    },
+    {
+      "provider": "opencode-sdk",
+      "consumer": "agent-sdk",
+      "evidence": [
+        {
+          "file": "moon.mod",
+          "kind": "mooncakes",
+          "artifact": "totto2727/opencode-sdk",
+          "reference": "0.4.2",
+          "mode": "pin"
+        }
+      ]
+    },
+    {
+      "provider": "opencode-sdk",
+      "consumer": "workgraph",
+      "evidence": [
+        {
+          "file": "package/workgraph-opencode-cli/moon.mod",
+          "kind": "mooncakes",
+          "artifact": "totto2727/opencode-sdk",
+          "reference": "0.4.2",
+          "mode": "pin"
+        }
+      ]
+    },
+    {
+      "provider": "oxlint",
+      "consumer": "oxlint-docs",
+      "evidence": [
+        {
+          "file": "README.md",
+          "kind": "contract",
+          "artifact": "documented-rules",
+          "reference": "Rule and preset documentation for",
+          "mode": "review"
+        }
+      ]
+    },
+    {
+      "provider": "serde",
+      "consumer": "codex-sdk",
+      "evidence": [
+        {
+          "file": "moon.mod",
+          "kind": "mooncakes",
+          "artifact": "totto2727/serde",
+          "reference": "0.1.0",
+          "mode": "pin"
+        }
+      ]
+    },
+    {
+      "provider": "serde",
+      "consumer": "opencode-sdk",
+      "evidence": [
+        {
+          "file": "moon.mod",
+          "kind": "mooncakes",
+          "artifact": "totto2727/serde",
+          "reference": "0.1.0",
+          "mode": "pin"
+        }
+      ]
+    },
+    {
+      "provider": "x",
+      "consumer": "codex-sdk",
+      "evidence": [
+        {
+          "file": "moon.mod",
+          "kind": "mooncakes",
+          "artifact": "totto2727/x",
+          "reference": "0.8.0",
+          "mode": "pin"
+        }
+      ]
+    },
+    {
+      "provider": "x",
+      "consumer": "workgraph",
+      "evidence": [
+        {
+          "file": "package/workgraph-agent-cli/moon.mod",
+          "kind": "mooncakes",
+          "artifact": "totto2727/x",
+          "reference": "0.9.0",
+          "mode": "pin"
+        },
+        {
+          "file": "package/workgraph-core/moon.mod",
+          "kind": "mooncakes",
+          "artifact": "totto2727/x",
+          "reference": "0.9.0",
+          "mode": "pin"
+        }
+      ]
+    }
+  ],
+  "unmapped": [
+    {
+      "consumer": "admiral",
+      "file": "examples/tui/moon.mod",
+      "kind": "mooncakes",
+      "artifact": "totto2727/tui",
+      "reference": "0.10.2",
+      "mode": "pin"
+    },
+    {
+      "consumer": "admiral",
+      "file": "flake.lock",
+      "kind": "nix",
+      "artifact": "moonbit-overlay",
+      "reference": {
+        "source": {
+          "owner": "moonbit-community",
+          "repo": "moonbit-overlay",
+          "type": "github"
+        },
+        "rev": "c53b82559bb57d9a3393c3b02165efbac045ad96"
+      },
+      "mode": "pin"
+    },
+    {
+      "consumer": "agent-core-sdk",
+      "file": "flake.lock",
+      "kind": "nix",
+      "artifact": "moonbit-overlay",
+      "reference": {
+        "source": {
+          "owner": "moonbit-community",
+          "repo": "moonbit-overlay",
+          "type": "github"
+        },
+        "rev": "c53b82559bb57d9a3393c3b02165efbac045ad96"
+      },
+      "mode": "pin"
+    },
+    {
+      "consumer": "agent-sdk",
+      "file": "flake.lock",
+      "kind": "nix",
+      "artifact": "moonbit-overlay",
+      "reference": {
+        "source": {
+          "owner": "moonbit-community",
+          "repo": "moonbit-overlay",
+          "type": "github"
+        },
+        "rev": "c53b82559bb57d9a3393c3b02165efbac045ad96"
+      },
+      "mode": "pin"
+    },
+    {
+      "consumer": "c-plugin",
+      "file": "flake.lock",
+      "kind": "nix",
+      "artifact": "moon-nix",
+      "reference": {
+        "source": {
+          "owner": "moonbit-community",
+          "repo": "moon-nix",
+          "rev": "026f5a4e9fc7bf78699d69fdb70318c26ac8f07c",
+          "type": "github"
+        },
+        "rev": "026f5a4e9fc7bf78699d69fdb70318c26ac8f07c"
+      },
+      "mode": "pin"
+    },
+    {
+      "consumer": "c-plugin",
+      "file": "flake.lock",
+      "kind": "nix",
+      "artifact": "moonbit-overlay",
+      "reference": {
+        "source": {
+          "owner": "moonbit-community",
+          "repo": "moonbit-overlay",
+          "type": "github"
+        },
+        "rev": "654060dff5fc865113bfc98cdd08b955f94b9535"
+      },
+      "mode": "pin"
+    },
+    {
+      "consumer": "c-plugin",
+      "file": "moon.mod",
+      "kind": "mooncakes",
+      "artifact": "mizchi/tui-terminal-buffer",
+      "reference": "0.1.4",
+      "mode": "pin"
+    },
+    {
+      "consumer": "c-plugin",
+      "file": "moon.mod",
+      "kind": "mooncakes",
+      "artifact": "mizchi/tui",
+      "reference": "0.10.2",
+      "mode": "pin"
+    },
+    {
+      "consumer": "codex-sdk",
+      "file": "flake.lock",
+      "kind": "nix",
+      "artifact": "moonbit-overlay",
+      "reference": {
+        "source": {
+          "owner": "moonbit-community",
+          "repo": "moonbit-overlay",
+          "type": "github"
+        },
+        "rev": "c53b82559bb57d9a3393c3b02165efbac045ad96"
+      },
+      "mode": "pin"
+    },
+    {
+      "consumer": "codex-sdk",
+      "file": "moon.mod",
+      "kind": "mooncakes",
+      "artifact": "totto2727/copy",
+      "reference": "0.2.0",
+      "mode": "pin"
+    },
+    {
+      "consumer": "geo",
+      "file": "flake.lock",
+      "kind": "nix",
+      "artifact": "moonbit-overlay",
+      "reference": {
+        "source": {
+          "owner": "moonbit-community",
+          "repo": "moonbit-overlay",
+          "type": "github"
+        },
+        "rev": "c53b82559bb57d9a3393c3b02165efbac045ad96"
+      },
+      "mode": "pin"
+    },
+    {
+      "consumer": "lens",
+      "file": "flake.lock",
+      "kind": "nix",
+      "artifact": "moonbit-overlay",
+      "reference": {
+        "source": {
+          "owner": "moonbit-community",
+          "repo": "moonbit-overlay",
+          "type": "github"
+        },
+        "rev": "654060dff5fc865113bfc98cdd08b955f94b9535"
+      },
+      "mode": "pin"
+    },
+    {
+      "consumer": "llm",
+      "file": "flake.lock",
+      "kind": "nix",
+      "artifact": "moonbit-overlay",
+      "reference": {
+        "source": {
+          "owner": "moonbit-community",
+          "repo": "moonbit-overlay",
+          "type": "github"
+        },
+        "rev": "c53b82559bb57d9a3393c3b02165efbac045ad96"
+      },
+      "mode": "pin"
+    },
+    {
+      "consumer": "serde",
+      "file": "flake.lock",
+      "kind": "nix",
+      "artifact": "moonbit-overlay",
+      "reference": {
+        "source": {
+          "owner": "moonbit-community",
+          "repo": "moonbit-overlay",
+          "type": "github"
+        },
+        "rev": "c53b82559bb57d9a3393c3b02165efbac045ad96"
+      },
+      "mode": "pin"
+    },
+    {
+      "consumer": "moon-nix",
+      "file": "flake.lock",
+      "kind": "nix",
+      "artifact": "moonbit-overlay",
+      "reference": {
+        "source": {
+          "owner": "moonbit-community",
+          "ref": "master",
+          "repo": "moonbit-overlay",
+          "type": "github"
+        },
+        "rev": "5da4de8ddf6cc392416530653deafec242745eca"
+      },
+      "mode": "pin"
+    },
+    {
+      "consumer": "opencode-sdk",
+      "file": "flake.lock",
+      "kind": "nix",
+      "artifact": "moonbit-overlay",
+      "reference": {
+        "source": {
+          "owner": "moonbit-community",
+          "repo": "moonbit-overlay",
+          "type": "github"
+        },
+        "rev": "c53b82559bb57d9a3393c3b02165efbac045ad96"
+      },
+      "mode": "pin"
+    },
+    {
+      "consumer": "opencode-sdk",
+      "file": "moon.mod",
+      "kind": "mooncakes",
+      "artifact": "totto2727/copy",
+      "reference": "0.2.0",
+      "mode": "pin"
+    },
+    {
+      "consumer": "reylo",
+      "file": "examples/bun/package.json",
+      "kind": "npm",
+      "artifact": "@totto2727/reylo",
+      "reference": "link:../../dist/reylo",
+      "mode": "verify",
+      "scope": "dependencies"
+    },
+    {
+      "consumer": "reylo",
+      "file": "examples/bun/package.json",
+      "kind": "npm",
+      "artifact": "@totto2727/reylo-sqlite",
+      "reference": "link:../../dist/sqlite",
+      "mode": "verify",
+      "scope": "devDependencies"
+    },
+    {
+      "consumer": "reylo",
+      "file": "examples/hcl/package.json",
+      "kind": "npm",
+      "artifact": "@totto2727/reylo",
+      "reference": "link:../../dist/reylo",
+      "mode": "verify",
+      "scope": "dependencies"
+    },
+    {
+      "consumer": "reylo",
+      "file": "examples/hcl/package.json",
+      "kind": "npm",
+      "artifact": "@totto2727/reylo-sqlite",
+      "reference": "link:../../dist/sqlite",
+      "mode": "verify",
+      "scope": "devDependencies"
+    },
+    {
+      "consumer": "reylo",
+      "file": "examples/nub/package.json",
+      "kind": "npm",
+      "artifact": "@totto2727/reylo",
+      "reference": "link:../../dist/reylo",
+      "mode": "verify",
+      "scope": "dependencies"
+    },
+    {
+      "consumer": "reylo",
+      "file": "examples/nub/package.json",
+      "kind": "npm",
+      "artifact": "@totto2727/reylo-sqlite",
+      "reference": "link:../../dist/sqlite",
+      "mode": "verify",
+      "scope": "devDependencies"
+    },
+    {
+      "consumer": "reylo",
+      "file": "package.json",
+      "kind": "npm",
+      "artifact": "@totto2727/reylo-sqlite",
+      "reference": "link:packages/sqlite",
+      "mode": "verify",
+      "scope": "devDependencies"
+    },
+    {
+      "consumer": "reylo",
+      "file": "package.json",
+      "kind": "npm",
+      "artifact": "@totto2727/reylo-sqlite",
+      "reference": "0.7.1",
+      "mode": "pin",
+      "scope": "peerDependencies"
+    },
+    {
+      "consumer": "template-moonbit-simple",
+      "file": "flake.lock",
+      "kind": "nix",
+      "artifact": "moonbit-overlay",
+      "reference": {
+        "source": {
+          "owner": "moonbit-community",
+          "repo": "moonbit-overlay",
+          "type": "github"
+        },
+        "rev": "654060dff5fc865113bfc98cdd08b955f94b9535"
+      },
+      "mode": "pin"
+    },
+    {
+      "consumer": "tui.mbt",
+      "file": "examples/command-launcher/moon.mod",
+      "kind": "mooncakes",
+      "artifact": "mizchi/tui",
+      "reference": "0.10.2",
+      "mode": "pin"
+    },
+    {
+      "consumer": "tui.mbt",
+      "file": "examples/completion/moon.mod",
+      "kind": "mooncakes",
+      "artifact": "mizchi/tui",
+      "reference": "0.10.2",
+      "mode": "pin"
+    },
+    {
+      "consumer": "tui.mbt",
+      "file": "examples/components/moon.mod",
+      "kind": "mooncakes",
+      "artifact": "mizchi/tui",
+      "reference": "0.10.2",
+      "mode": "pin"
+    },
+    {
+      "consumer": "tui.mbt",
+      "file": "examples/editor/moon.mod",
+      "kind": "mooncakes",
+      "artifact": "mizchi/tui",
+      "reference": "0.10.2",
+      "mode": "pin"
+    },
+    {
+      "consumer": "tui.mbt",
+      "file": "examples/form/moon.mod",
+      "kind": "mooncakes",
+      "artifact": "mizchi/tui",
+      "reference": "0.10.2",
+      "mode": "pin"
+    },
+    {
+      "consumer": "tui.mbt",
+      "file": "examples/grid-area/moon.mod",
+      "kind": "mooncakes",
+      "artifact": "mizchi/tui",
+      "reference": "0.10.2",
+      "mode": "pin"
+    },
+    {
+      "consumer": "tui.mbt",
+      "file": "examples/grid-layout/moon.mod",
+      "kind": "mooncakes",
+      "artifact": "mizchi/tui",
+      "reference": "0.10.2",
+      "mode": "pin"
+    },
+    {
+      "consumer": "tui.mbt",
+      "file": "examples/kitty-graphics/moon.mod",
+      "kind": "mooncakes",
+      "artifact": "mizchi/tui",
+      "reference": "0.10.2",
+      "mode": "pin"
+    },
+    {
+      "consumer": "tui.mbt",
+      "file": "examples/lint/moon.mod",
+      "kind": "mooncakes",
+      "artifact": "mizchi/tui",
+      "reference": "0.10.2",
+      "mode": "pin"
+    },
+    {
+      "consumer": "tui.mbt",
+      "file": "examples/popup/moon.mod",
+      "kind": "mooncakes",
+      "artifact": "mizchi/tui",
+      "reference": "0.10.2",
+      "mode": "pin"
+    },
+    {
+      "consumer": "tui.mbt",
+      "file": "examples/roguelike/moon.mod",
+      "kind": "mooncakes",
+      "artifact": "mizchi/tui",
+      "reference": "0.10.2",
+      "mode": "pin"
+    },
+    {
+      "consumer": "tui.mbt",
+      "file": "examples/simple/moon.mod",
+      "kind": "mooncakes",
+      "artifact": "mizchi/tui",
+      "reference": "0.10.2",
+      "mode": "pin"
+    },
+    {
+      "consumer": "tui.mbt",
+      "file": "examples/snapshot-ansi/moon.mod",
+      "kind": "mooncakes",
+      "artifact": "mizchi/tui",
+      "reference": "0.10.2",
+      "mode": "pin"
+    },
+    {
+      "consumer": "tui.mbt",
+      "file": "examples/snapshot/moon.mod",
+      "kind": "mooncakes",
+      "artifact": "mizchi/tui",
+      "reference": "0.10.2",
+      "mode": "pin"
+    },
+    {
+      "consumer": "tui.mbt",
+      "file": "examples/toadlike/moon.mod",
+      "kind": "mooncakes",
+      "artifact": "mizchi/tui",
+      "reference": "0.10.2",
+      "mode": "pin"
+    },
+    {
+      "consumer": "tui.mbt",
+      "file": "examples/wizard/moon.mod",
+      "kind": "mooncakes",
+      "artifact": "mizchi/tui",
+      "reference": "0.10.2",
+      "mode": "pin"
+    },
+    {
+      "consumer": "tui.mbt",
+      "file": "experiments/eval_ui/moon.mod",
+      "kind": "mooncakes",
+      "artifact": "mizchi/tui",
+      "reference": "0.10.2",
+      "mode": "pin"
+    },
+    {
+      "consumer": "tui.mbt",
+      "file": "moon.mod",
+      "kind": "mooncakes",
+      "artifact": "mizchi/tui-terminal-buffer",
+      "reference": "0.1.4",
+      "mode": "pin"
+    },
+    {
+      "consumer": "tui.mbt",
+      "file": "moon.mod",
+      "kind": "mooncakes",
+      "artifact": "mizchi/syntree",
+      "reference": "0.2.4",
+      "mode": "pin"
+    },
+    {
+      "consumer": "workgraph",
+      "file": "flake.lock",
+      "kind": "nix",
+      "artifact": "moonbit-overlay",
+      "reference": {
+        "source": {
+          "owner": "moonbit-community",
+          "repo": "moonbit-overlay",
+          "type": "github"
+        },
+        "rev": "c53b82559bb57d9a3393c3b02165efbac045ad96"
+      },
+      "mode": "pin"
+    },
+    {
+      "consumer": "x",
+      "file": "flake.lock",
+      "kind": "nix",
+      "artifact": "moonbit-overlay",
+      "reference": {
+        "source": {
+          "owner": "moonbit-community",
+          "repo": "moonbit-overlay",
+          "type": "github"
+        },
+        "rev": "c53b82559bb57d9a3393c3b02165efbac045ad96"
+      },
+      "mode": "pin"
+    }
+  ]
+}

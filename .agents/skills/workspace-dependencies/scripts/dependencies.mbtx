@@ -1,0 +1,255 @@
+---
+import {
+  "moonbitlang/core/debug",
+  "moonbitlang/core/env",
+  "moonbitlang/core/json",
+  "moonbitlang/x@0.5.7/fs",
+  "moonbitlang/x@0.5.7/sys",
+}
+---
+
+#derive(FromJson)
+struct Repository {
+  path : String
+  status : String
+}
+
+#derive(FromJson, ToJson)
+struct Evidence {
+  file : String
+  kind : String
+  artifact : String
+  reference : Json
+  mode : String
+  scope : String?
+}
+
+#derive(FromJson, ToJson)
+struct Edge {
+  provider : String
+  consumer : String
+  evidence : Array[Evidence]
+}
+
+#derive(FromJson)
+struct Graph {
+  schema_version : Int
+  repositories : Map[String, Repository]
+  edges : Array[Edge]
+}
+
+#derive(ToJson)
+struct Impact {
+  provider : String
+  artifact : String?
+  direct : Array[Edge]
+  candidate_waves : Array[Array[String]]
+  blocked_by_cycle : Array[String]
+}
+
+#derive(Debug)
+suberror InvalidGraph {
+  InvalidGraph(String)
+}
+
+fn Graph::validate(self : Graph) -> Unit raise InvalidGraph {
+  guard self.schema_version == 1 else { raise InvalidGraph("未対応の schema_version") }
+  let seen : Set[(String, String)] = Set([])
+  for edge in self.edges {
+    let pair = (edge.provider, edge.consumer)
+    guard edge.provider != edge.consumer &&
+      self.repositories.contains(edge.provider) &&
+      self.repositories.contains(edge.consumer) && !seen.contains(pair) &&
+      !edge.evidence.is_empty() else {
+      raise InvalidGraph("不正または重複した辺: \{edge.provider} → \{edge.consumer}")
+    }
+    seen.add(pair)
+    for row in edge.evidence {
+      guard row.mode == "pin" || row.mode == "verify" || row.mode == "review" else {
+        raise InvalidGraph("未知の関係: \{row.mode} (\{row.file})")
+      }
+      guard row.file != "" && row.artifact != "" else {
+        raise InvalidGraph("根拠ファイルまたは成果物が空: \{edge.consumer}")
+      }
+    }
+  }
+}
+
+fn Graph::markdown(self : Graph) -> String {
+  let ids = self.repositories.keys().collect()
+  ids.sort()
+  let number : Map[String, Int] = Map([])
+  ids.eachi((i, id) => number[id] = i)
+  let lines = [
+    "# Workspace のリポジトリ間依存",
+    "",
+    "証拠の正本は [dependencies.json](dependencies.json)。[更新手順](maintenance.md) に従い、MoonBit スクリプトでこの図表を再生成する。",
+    "",
+    "\{ids.length()} リポジトリ、\{self.edges.length()} 組の依存。矢印は提供元 → 利用側。実線は固定参照の更新候補、点線は検証または運用確認。",
+    "",
+    "## パッケージ・ツール・運用上の関係",
+    "",
+    "```mermaid",
+    "flowchart LR",
+  ]
+  for edge in self.edges {
+    let rows = edge.evidence.filter(row => row.scope != Some("ci"))
+    if rows.is_empty() { continue }
+    let arrow = if rows.any(row => row.mode == "pin") { "-->" } else { "-.->" }
+    let p = edge.provider
+    let c = edge.consumer
+    lines.push("    n\{number[p]}[\"\{p}\"] \{arrow} n\{number[c]}[\"\{c}\"]")
+  }
+  lines.append([
+    "```", "", "共通 CI は下表と JSON に含める。同じ組に複数の関係がある場合、図では固定参照を優先する。", "",
+    "## 提供元と利用側", "", "| 提供元 | 利用側 | 関係 | 根拠ファイル |", "| --- | --- | --- | --- |",
+  ])
+  for edge in self.edges {
+    let modes = Set([])
+    let sources = Set([])
+    for row in edge.evidence {
+      modes.add("\{row.kind}: \{row.mode}")
+      sources.add("`\{row.file}`")
+    }
+    let kinds = modes.iter().collect()
+    let files = sources.iter().collect()
+    kinds.sort()
+    files.sort()
+    let kinds = kinds.join(", ")
+    let files = files.join(", ")
+    lines.push("| `\{edge.provider}` | `\{edge.consumer}` | \{kinds} | \{files} |")
+  }
+  lines.append([
+    "", "根拠ファイルは利用側リポジトリからの相対パス。参照値と同定できなかった依存は JSON を参照。", "",
+    "## 対象リポジトリ", "", "| ID | workspace 内のパス | 状態 |", "| --- | --- | --- |",
+  ])
+  for id in ids {
+    let repo = self.repositories[id]
+    lines.push("| `\{id}` | `\{repo.path}` | \{repo.status} |")
+  }
+  lines.push("")
+  lines.join("\n")
+}
+
+fn Graph::impact(self : Graph, start : String, artifact : String?) -> Impact raise InvalidGraph {
+  guard self.repositories.contains(start) else { raise InvalidGraph("未登録のリポジトリ: \{start}") }
+  let downstream : Map[String, Array[Edge]] = Map([])
+  for edge in self.edges {
+    let rows = match artifact {
+      Some(name) if edge.provider == start => edge.evidence.filter(row => row.artifact == name)
+      _ => edge.evidence
+    }
+    if !rows.is_empty() {
+      downstream.get_or_init(edge.provider, () => []).push({ ..edge, evidence: rows })
+    }
+  }
+  let direct = downstream.get(start).unwrap_or([])
+  guard artifact is None || !direct.is_empty() else {
+    raise InvalidGraph("起点 \{start} から指定した成果物への記録がない。成果物名と最新の宣言を確認する。")
+  }
+  let pending = Set([start])
+  let work = [start]
+  let needs : Map[String, Set[String]] = Map([])
+  for i = 0; i < work.length(); i = i + 1 {
+    let provider = work[i]
+    for edge in downstream.get(provider).unwrap_or([]) {
+      if edge.evidence.any(row => row.mode == "pin") {
+        needs.get_or_init(edge.consumer, () => Set([])).add(provider)
+        if !pending.contains(edge.consumer) {
+          pending.add(edge.consumer)
+          work.push(edge.consumer)
+        }
+      }
+    }
+  }
+  let waves = []
+  while !pending.is_empty() {
+    let ready = pending.iter().filter(id => {
+      match needs.get(id) {
+        Some(prereqs) => !prereqs.iter().any(p => pending.contains(p))
+        None => true
+      }
+    }).collect()
+    if ready.is_empty() { break }
+    ready.sort()
+    for id in ready { pending.remove(id) }
+    if ready != [start] { waves.push(ready) }
+  }
+  let blocked = pending.iter().collect()
+  blocked.sort()
+  {
+    provider: start,
+    artifact,
+    direct,
+    candidate_waves: waves,
+    blocked_by_cycle: blocked,
+  }
+}
+
+fn read_graph(path : String) -> Graph raise {
+  let graph : Graph = @json.from_json(@json.parse(@fs.read_file_to_string(path)))
+  graph.validate()
+  graph
+}
+
+fn run(args : ArrayView[String]) -> Unit raise {
+  match args {
+    ["render", graph, markdown] => {
+      guard markdown.has_suffix(".md") else { raise InvalidGraph("図表の出力先に .md を指定する。") }
+      @fs.write_string_to_file(markdown, read_graph(graph).markdown())
+    }
+    ["check", graph, markdown] => {
+      guard read_graph(graph).markdown() == @fs.read_file_to_string(markdown) else {
+        raise InvalidGraph("図表が古い。render を実行する。")
+      }
+    }
+    ["impact", graph, provider] => println(ToJson::to_json(read_graph(graph).impact(provider, None)).stringify(indent=2))
+    ["impact", graph, provider, "--artifact", artifact] => {
+      println(ToJson::to_json(read_graph(graph).impact(provider, Some(artifact))).stringify(indent=2))
+    }
+    _ => raise InvalidGraph("render GRAPH MARKDOWN | check GRAPH MARKDOWN | impact GRAPH PROVIDER [--artifact NAME]")
+  }
+}
+
+fn main {
+  try run(@env.args()[1:]) catch {
+    InvalidGraph(message) => { println(message); @sys.exit(1) }
+    other => { @debug.debug(other); @sys.exit(1) }
+  }
+}
+
+fn example_graph(edges : Array[(String, String, String, String)]) -> Graph {
+  let repositories = Map([])
+  for id in ["a", "b", "c", "d"] {
+    repositories[id] = { path: id, status: "mapped" }
+  }
+  {
+    schema_version: 1,
+    repositories,
+    edges: edges.map(row => {
+      let (provider, consumer, artifact, mode) = row
+      { provider, consumer, evidence: [{ file: "moon.mod", kind: "mooncakes", artifact, reference: Json::null(), mode, scope: None }] }
+    }),
+  }
+}
+
+test "filter by the starting artifact without treating verification as a pin" {
+  let graph = example_graph([
+    ("a", "b", "sdk", "pin"), ("a", "c", "sdk", "verify"),
+    ("a", "d", "other", "pin"), ("b", "d", "client", "pin"),
+  ])
+  let impact = graph.impact("a", Some("sdk"))
+  assert_true(impact.direct.map(edge => edge.consumer) == ["b", "c"])
+  assert_true(impact.candidate_waves == [["b"], ["d"]])
+  assert_true(impact.blocked_by_cycle.is_empty())
+}
+
+test "report a pin cycle and consumers blocked by it rather than guessing an order" {
+  let graph = example_graph([
+    ("a", "b", "sdk", "pin"), ("b", "a", "client", "pin"),
+    ("b", "d", "client", "pin"),
+  ])
+  let impact = graph.impact("a", None)
+  assert_true(impact.candidate_waves.is_empty())
+  assert_true(impact.blocked_by_cycle == ["a", "b", "d"])
+}
