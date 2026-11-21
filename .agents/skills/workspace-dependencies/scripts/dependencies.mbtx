@@ -1,0 +1,315 @@
+---
+import {
+  "moonbitlang/async@0.22.9",
+  "moonbitlang/core/debug",
+  "moonbitlang/core/json",
+  "moonbitlang/x@0.5.7/fs",
+  "moonbitlang/x@0.5.7/sys",
+  "moonbitstack/moonmd@0.2.1",
+  "totto2727/admiral@0.7.0",
+}
+---
+
+#derive(FromJson)
+struct Repository {
+  path : String
+  status : String
+}
+
+#derive(FromJson, ToJson)
+struct Evidence {
+  file : String
+  kind : String
+  artifact : String
+  reference : Json
+  mode : String
+  scope : String?
+}
+
+#derive(FromJson, ToJson)
+struct Edge {
+  provider : String
+  consumer : String
+  evidence : Array[Evidence]
+}
+
+#derive(FromJson)
+struct Graph {
+  schema_version : Int
+  repositories : Map[String, Repository]
+  edges : Array[Edge]
+}
+
+#derive(ToJson)
+struct Impact {
+  provider : String
+  artifact : String?
+  direct : Array[Edge]
+  candidate_waves : Array[Array[String]]
+  blocked_by_cycle : Array[String]
+}
+
+#derive(Debug)
+suberror InvalidGraph {
+  InvalidGraph(String)
+}
+
+fn Graph::validate(self : Graph) -> Unit raise InvalidGraph {
+  guard self.schema_version == 1 else { raise InvalidGraph("Unsupported schema_version") }
+  let seen : Set[(String, String)] = Set([])
+  for edge in self.edges {
+    let pair = (edge.provider, edge.consumer)
+    guard edge.provider != edge.consumer &&
+      self.repositories.contains(edge.provider) &&
+      self.repositories.contains(edge.consumer) && !seen.contains(pair) &&
+      !edge.evidence.is_empty() else {
+      raise InvalidGraph("Invalid or duplicate relationship: \{edge.provider} -> \{edge.consumer}")
+    }
+    seen.add(pair)
+    for row in edge.evidence {
+      guard row.mode == "pin" || row.mode == "verify" || row.mode == "review" else {
+        raise InvalidGraph("Unknown relationship mode: \{row.mode} (\{row.file})")
+      }
+      guard row.file != "" && row.artifact != "" else {
+        raise InvalidGraph("Missing evidence file or artifact: \{edge.consumer}")
+      }
+    }
+  }
+}
+
+fn heading(level : Int, text : String) -> @moonmd.Block {
+  @moonmd.Block::Heading({ level, content: [Text(text)] })
+}
+
+fn table(headers : Array[String], body : Array[Array[Array[@moonmd.Inline]]]) -> @moonmd.Block {
+  @moonmd.Block::Table({
+    align: headers.map(_ => @moonmd.Align::Default),
+    head: headers.map(text => [Text(text)]),
+    body,
+  })
+}
+
+fn Graph::markdown(self : Graph) -> String {
+  let ids = self.repositories.keys().collect()
+  ids.sort()
+  let number : Map[String, Int] = Map([])
+  ids.eachi((i, id) => number[id] = i)
+  let diagram = ["flowchart LR"]
+  for edge in self.edges {
+    let rows = edge.evidence.filter(row => row.scope != Some("ci"))
+    if rows.is_empty() { continue }
+    let arrow = if rows.any(row => row.mode == "pin") { "-->" } else { "-.->" }
+    let p = edge.provider
+    let c = edge.consumer
+    diagram.push("    n\{number[p]}[\"\{p}\"] \{arrow} n\{number[c]}[\"\{c}\"]")
+  }
+  let relationships : Array[Array[Array[@moonmd.Inline]]] = self.edges.map(edge => {
+    let modes = Set([])
+    let sources = Set([])
+    for row in edge.evidence {
+      modes.add("\{row.kind}: \{row.mode}")
+      sources.add(row.file)
+    }
+    let kinds = modes.iter().collect()
+    let files = sources.iter().collect()
+    kinds.sort()
+    files.sort()
+    let evidence : Array[@moonmd.Inline] = []
+    files.eachi((i, file) => {
+      if i > 0 { evidence.push(Text(", ")) }
+      evidence.push(Code(file))
+    })
+    [[Code(edge.provider)], [Code(edge.consumer)], [Text(kinds.join(", "))], evidence]
+  })
+  let repositories : Array[Array[Array[@moonmd.Inline]]] = ids.map(id => {
+    let repo = self.repositories[id]
+    [[Code(id)], [Code(repo.path)], [Text(repo.status)]]
+  })
+  let blocks : Array[@moonmd.Block] = [
+    heading(1, "Workspace repository dependencies"),
+    Paragraph([
+      Link({ dest: "dependencies.json", title: "", content: [Text("dependencies.json")] }),
+      Text(" contains the source evidence. Follow the "),
+      Link({ dest: "maintenance.md", title: "", content: [Text("maintenance procedure")] }),
+      Text(" to regenerate this diagram and table with the MoonBit script."),
+    ]),
+    Paragraph([Text("\{ids.length()} repositories, \{self.edges.length()} dependency pairs. Arrows point from the provider to the consumer. Solid arrows show pinned references that may need an update. Dotted arrows show relationships to verify or review.")]),
+    heading(2, "Package, tool, and operational relationships"),
+    Code({ info: "mermaid", text: diagram.join("\n"), fenced: true }),
+    Paragraph([Text("Shared CI dependencies appear only in the table and JSON. If a pair has more than one relationship, the diagram uses a solid arrow when any displayed relationship is pinned.")]),
+    heading(2, "Providers and consumers"),
+    table(["Provider", "Consumer", "Relationship", "Evidence files"], relationships),
+    Paragraph([Text("Evidence paths are relative to the consumer repository. See the JSON inventory for reference values and unresolved dependencies.")]),
+    heading(2, "Repositories"),
+    table(["ID", "Workspace path", "Status"], repositories),
+  ]
+  @moonmd.Document::of_blocks(blocks, flavor=@moonmd.gfm).markdown()
+}
+
+fn Graph::impact(self : Graph, start : String, artifact : String?) -> Impact raise InvalidGraph {
+  guard self.repositories.contains(start) else { raise InvalidGraph("Repository not in the inventory: \{start}") }
+  let downstream : Map[String, Array[Edge]] = Map([])
+  for edge in self.edges {
+    let rows = match artifact {
+      Some(name) if edge.provider == start => edge.evidence.filter(row => row.artifact == name)
+      _ => edge.evidence
+    }
+    if !rows.is_empty() {
+      downstream.get_or_init(edge.provider, () => []).push({ ..edge, evidence: rows })
+    }
+  }
+  let direct = downstream.get(start).unwrap_or([])
+  guard artifact is None || !direct.is_empty() else {
+    raise InvalidGraph("No match for the specified artifact from \{start}. Check the artifact name and current declarations.")
+  }
+  let pending = Set([start])
+  let work = [start]
+  let needs : Map[String, Set[String]] = Map([])
+  for i = 0; i < work.length(); i = i + 1 {
+    let provider = work[i]
+    for edge in downstream.get(provider).unwrap_or([]) {
+      if edge.evidence.any(row => row.mode == "pin") {
+        needs.get_or_init(edge.consumer, () => Set([])).add(provider)
+        if !pending.contains(edge.consumer) {
+          pending.add(edge.consumer)
+          work.push(edge.consumer)
+        }
+      }
+    }
+  }
+  let waves = []
+  while !pending.is_empty() {
+    let ready = pending.iter().filter(id => {
+      match needs.get(id) {
+        Some(prereqs) => !prereqs.iter().any(p => pending.contains(p))
+        None => true
+      }
+    }).collect()
+    if ready.is_empty() { break }
+    ready.sort()
+    for id in ready { pending.remove(id) }
+    if ready != [start] { waves.push(ready) }
+  }
+  let blocked = pending.iter().collect()
+  blocked.sort()
+  {
+    provider: start,
+    artifact,
+    direct,
+    candidate_waves: waves,
+    blocked_by_cycle: blocked,
+  }
+}
+
+fn read_graph(path : String) -> Graph raise {
+  let graph : Graph = @json.from_json(@json.parse(@fs.read_file_to_string(path)))
+  graph.validate()
+  graph
+}
+
+fn cli() -> @admiral.CliApp {
+  let graph = @admiral.position_string("graph", description="Path to the JSON inventory", required=true)
+  let markdown = @admiral.position_string("markdown", description="Path to the generated Markdown", required=true)
+  let provider = @admiral.position_string("provider", description="ID of the repository that provides the artifact", required=true)
+  let artifact = @admiral.string("artifact", description="Match this exact artifact name at the starting repository")
+  @admiral.CliApp::CliApp(
+    name="dependencies",
+    description="Render the workspace dependency report or find consumers of a changed artifact.",
+    commands=[
+      @admiral.CommandDef::CommandDef(
+        name="render",
+        description="Generate the Markdown report from the JSON inventory.",
+        positionals=[graph, markdown],
+        run=Some(ctx => {
+          let output = ctx.get_string_required(markdown)
+          guard output.has_suffix(".md") else { raise InvalidGraph("Specify a .md output path.") }
+          @fs.write_string_to_file(output, read_graph(ctx.get_string_required(graph)).markdown())
+        }),
+      ),
+      @admiral.CommandDef::CommandDef(
+        name="check",
+        description="Check that the Markdown report matches the inventory.",
+        positionals=[graph, markdown],
+        run=Some(ctx => {
+          let expected = read_graph(ctx.get_string_required(graph)).markdown()
+          guard expected == @fs.read_file_to_string(ctx.get_string_required(markdown)) else {
+            raise InvalidGraph("The diagram and table are out of date. Run render.")
+          }
+        }),
+      ),
+      @admiral.CommandDef::CommandDef(
+        name="impact",
+        description="List direct consumers and conditional update waves as JSON.",
+        positionals=[graph, provider],
+        options=[artifact],
+        run=Some(ctx => {
+          let impact = read_graph(ctx.get_string_required(graph)).impact(ctx.get_string_required(provider), ctx.get_string(artifact))
+          println(ToJson::to_json(impact).stringify(indent=2))
+        }),
+      ),
+    ],
+  )
+}
+
+async fn main {
+  try cli().run() catch {
+    InvalidGraph(message) => { println(message); @sys.exit(1) }
+    other => { @debug.debug(other); @sys.exit(1) }
+  }
+}
+
+fn example_graph(edges : Array[(String, String, String, String)]) -> Graph {
+  let repositories = Map([])
+  for id in ["a", "b", "c", "d"] {
+    repositories[id] = { path: id, status: "mapped" }
+  }
+  {
+    schema_version: 1,
+    repositories,
+    edges: edges.map(row => {
+      let (provider, consumer, artifact, mode) = row
+      { provider, consumer, evidence: [{ file: "moon.mod", kind: "mooncakes", artifact, reference: Json::null(), mode, scope: None }] }
+    }),
+  }
+}
+
+test "filter by the starting artifact without treating verification as a pin" {
+  let graph = example_graph([
+    ("a", "b", "sdk", "pin"), ("a", "c", "sdk", "verify"),
+    ("a", "d", "other", "pin"), ("b", "d", "client", "pin"),
+  ])
+  let impact = graph.impact("a", Some("sdk"))
+  assert_true(impact.direct.map(edge => edge.consumer) == ["b", "c"])
+  assert_true(impact.candidate_waves == [["b"], ["d"]])
+  assert_true(impact.blocked_by_cycle.is_empty())
+}
+
+test "report a pin cycle and consumers blocked by it rather than guessing an order" {
+  let graph = example_graph([
+    ("a", "b", "sdk", "pin"), ("b", "a", "client", "pin"),
+    ("b", "d", "client", "pin"),
+  ])
+  let impact = graph.impact("a", None)
+  assert_true(impact.candidate_waves.is_empty())
+  assert_true(impact.blocked_by_cycle == ["a", "b", "d"])
+}
+
+test "render a Mermaid fence and preserve the evidence cell in the GFM table" {
+  let graph = example_graph([("a", "b", "sdk", "pin")])
+  let edge = graph.edges[0]
+  edge.evidence[0] = { ..edge.evidence[0], file: "file|part.mbt" }
+  let markdown = graph.markdown()
+  assert_true(markdown.contains("```mermaid\nflowchart LR\n    n0[\"a\"] --> n1[\"b\"]\n```"))
+  assert_true(markdown.contains("| `a` | `b` | mooncakes: pin | `file\\|part.mbt` |"))
+  let document = @moonmd.parse(markdown[:])
+  let tables = document.blocks().filter_map(block => match block {
+    @moonmd.Block::Table(value) => Some(value)
+    _ => None
+  })
+  assert_eq(tables.length(), 2)
+  assert_eq(tables[0].body[0].length(), 4)
+  match tables[0].body[0][3] {
+    [Code(file)] => assert_eq(file, "file|part.mbt")
+    _ => fail("Expected one evidence path in the fourth table cell")
+  }
+}

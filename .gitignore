@@ -38,14 +38,24 @@
 /toolchain/moonbit-overlay/
 /package/workgraph/
 
-# Local temporary files and linked worktrees
+# Local linked worktrees
+/worktree/
+
+# Local temporary files
 /tmp/
 
 # macOS metadata
 .DS_Store
 
-# vpx skills
-.agents
+# Ignore installed skills. Track workspace-owned skills only.
+**/.agents/
+!/.agents/
+/.agents/*
+!/.agents/skills/
+/.agents/skills/*
+!/.agents/skills/workspace-dependencies/
+!/.agents/skills/repository-lifecycle/
+!/.agents/skills/workspace-repo/
 .claude
 
 # Effront package family
