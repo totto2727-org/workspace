@@ -276,6 +276,20 @@
       ]
     },
     {
+      "provider": "admiral",
+      "consumer": "workspace",
+      "evidence": [
+        {
+          "file": ".agents/skills/workspace-dependencies/scripts/dependencies.mbtx",
+          "kind": "mooncakes",
+          "artifact": "totto2727/admiral",
+          "reference": "0.7.0",
+          "mode": "pin",
+          "scope": "development"
+        }
+      ]
+    },
+    {
       "provider": "agent",
       "consumer": "workspace",
       "evidence": [

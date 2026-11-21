@@ -52,6 +52,7 @@
 /.agents/skills/*
 !/.agents/skills/workspace-dependencies/
 !/.agents/skills/repository-lifecycle/
+!/.agents/skills/workspace-repo/
 .claude
 
 # Effront package family

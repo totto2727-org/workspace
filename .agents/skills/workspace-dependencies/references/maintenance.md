@@ -18,6 +18,8 @@ git diff -- "$graph" "$view"
 
 5. Compare the diff with the source declarations. Run `impact` for a changed artifact and check that the result identifies the expected consumers. Review the inventory and generated diagram together in `workspace`.
 
+The script uses [Admiral](https://mooncakes.io/docs/totto2727/admiral) for commands, arguments, and help. Pass `--help` after the script's `--`, or use `impact --help` there to show the arguments for `impact`.
+
 The script validates the inventory and uses [moonmd](https://github.com/moonbitstack/moonmd) to write the GFM tables and the Mermaid code block. It does not discover child repositories or run Git commands. `check` confirms that the output matches the inventory. It does not confirm that the inventory is current.
 
 Use a version of [MoonBit script mode](https://docs.moonbitlang.com/en/stable/toolchain/moon/script-mode.html) that accepts imports between `---` delimiters at the start of an `.mbtx` file. The Wasm commands were verified with `moon 0.1.20261117`.
@@ -41,7 +43,7 @@ Report `Consumer | Artifact and reference | Update, verify only, or skip | Reaso
 
 ## Inventory scope and limits
 
-The inventory covers tracked `package.json`, `moon.mod`, `moon.mod.json`, `moon.work`, `go.mod`, `Cargo.toml`, `cabal.project`, direct inputs in `flake.lock`, active GitHub Actions, `skills-lock.json`, and confirmed operational references.
+The inventory covers tracked `package.json`, `moon.mod`, `moon.mod.json`, `moon.work`, `.mbtx` import declarations, `go.mod`, `Cargo.toml`, `cabal.project`, direct inputs in `flake.lock`, active GitHub Actions, `skills-lock.json`, and confirmed operational references.
 
 The first inventory used the Repository Map on `main` and committed declarations from local checkouts. Repositories outside the map are marked `local`. Record a rename from another branch only after it reaches `main`.
 

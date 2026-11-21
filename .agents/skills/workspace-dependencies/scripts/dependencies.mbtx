@@ -1,11 +1,12 @@
 ---
 import {
+  "moonbitlang/async@0.22.9",
   "moonbitlang/core/debug",
-  "moonbitlang/core/env",
   "moonbitlang/core/json",
   "moonbitlang/x@0.5.7/fs",
   "moonbitlang/x@0.5.7/sys",
   "moonbitstack/moonmd@0.2.1",
+  "totto2727/admiral@0.7.0",
 }
 ---
 
@@ -206,27 +207,52 @@ fn read_graph(path : String) -> Graph raise {
   graph
 }
 
-fn run(args : ArrayView[String]) -> Unit raise {
-  match args {
-    ["render", graph, markdown] => {
-      guard markdown.has_suffix(".md") else { raise InvalidGraph("Specify a .md output path.") }
-      @fs.write_string_to_file(markdown, read_graph(graph).markdown())
-    }
-    ["check", graph, markdown] => {
-      guard read_graph(graph).markdown() == @fs.read_file_to_string(markdown) else {
-        raise InvalidGraph("The diagram and table are out of date. Run render.")
-      }
-    }
-    ["impact", graph, provider] => println(ToJson::to_json(read_graph(graph).impact(provider, None)).stringify(indent=2))
-    ["impact", graph, provider, "--artifact", artifact] => {
-      println(ToJson::to_json(read_graph(graph).impact(provider, Some(artifact))).stringify(indent=2))
-    }
-    _ => raise InvalidGraph("render GRAPH MARKDOWN | check GRAPH MARKDOWN | impact GRAPH PROVIDER [--artifact NAME]")
-  }
+fn cli() -> @admiral.CliApp {
+  let graph = @admiral.position_string("graph", description="Path to the JSON inventory", required=true)
+  let markdown = @admiral.position_string("markdown", description="Path to the generated Markdown", required=true)
+  let provider = @admiral.position_string("provider", description="ID of the repository that provides the artifact", required=true)
+  let artifact = @admiral.string("artifact", description="Match this exact artifact name at the starting repository")
+  @admiral.CliApp::CliApp(
+    name="dependencies",
+    description="Render the workspace dependency report or find consumers of a changed artifact.",
+    commands=[
+      @admiral.CommandDef::CommandDef(
+        name="render",
+        description="Generate the Markdown report from the JSON inventory.",
+        positionals=[graph, markdown],
+        run=Some(ctx => {
+          let output = ctx.get_string_required(markdown)
+          guard output.has_suffix(".md") else { raise InvalidGraph("Specify a .md output path.") }
+          @fs.write_string_to_file(output, read_graph(ctx.get_string_required(graph)).markdown())
+        }),
+      ),
+      @admiral.CommandDef::CommandDef(
+        name="check",
+        description="Check that the Markdown report matches the inventory.",
+        positionals=[graph, markdown],
+        run=Some(ctx => {
+          let expected = read_graph(ctx.get_string_required(graph)).markdown()
+          guard expected == @fs.read_file_to_string(ctx.get_string_required(markdown)) else {
+            raise InvalidGraph("The diagram and table are out of date. Run render.")
+          }
+        }),
+      ),
+      @admiral.CommandDef::CommandDef(
+        name="impact",
+        description="List direct consumers and conditional update waves as JSON.",
+        positionals=[graph, provider],
+        options=[artifact],
+        run=Some(ctx => {
+          let impact = read_graph(ctx.get_string_required(graph)).impact(ctx.get_string_required(provider), ctx.get_string(artifact))
+          println(ToJson::to_json(impact).stringify(indent=2))
+        }),
+      ),
+    ],
+  )
 }
 
-fn main {
-  try run(@env.args()[1:]) catch {
+async fn main {
+  try cli().run() catch {
     InvalidGraph(message) => { println(message); @sys.exit(1) }
     other => { @debug.debug(other); @sys.exit(1) }
   }

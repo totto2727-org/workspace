@@ -2,7 +2,7 @@
 
 [dependencies.json](dependencies.json) contains the source evidence. Follow the [maintenance procedure](maintenance.md) to regenerate this diagram and table with the MoonBit script.
 
-46 repositories, 74 dependency pairs. Arrows point from the provider to the consumer. Solid arrows show pinned references that may need an update. Dotted arrows show relationships to verify or review.
+46 repositories, 75 dependency pairs. Arrows point from the provider to the consumer. Solid arrows show pinned references that may need an update. Dotted arrows show relationships to verify or review.
 
 ## Package, tool, and operational relationships
 
@@ -10,6 +10,7 @@
 flowchart LR
     n13["admiral"] --> n16["c-plugin"]
     n13["admiral"] --> n11["serde"]
+    n13["admiral"] --> n25["workspace"]
     n8["agent"] --> n25["workspace"]
     n32["agent-core-sdk"] --> n21["codex-sdk"]
     n32["agent-core-sdk"] --> n31["opencode-sdk"]
@@ -57,6 +58,7 @@ Shared CI dependencies appear only in the table and JSON. If a pair has more tha
 | --- | --- | --- | --- |
 | `admiral` | `c-plugin` | mooncakes: pin | `moon.mod` |
 | `admiral` | `serde` | nix: pin, mooncakes: pin | `flake.lock`, `src/cmd/serde-gen/moon.mod` |
+| `admiral` | `workspace` | mooncakes: pin | `.agents/skills/workspace-dependencies/scripts/dependencies.mbtx` |
 | `agent` | `workspace` | skills: pin | `skills-lock.json` |
 | `agent-core-sdk` | `codex-sdk` | mooncakes: pin | `moon.mod` |
 | `agent-core-sdk` | `opencode-sdk` | mooncakes: pin | `moon.mod` |
