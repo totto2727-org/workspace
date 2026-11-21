@@ -2,16 +2,7 @@
 
 Use the primary workspace root for the Repository Map, mapped clones, and task worktrees. If you started inside a linked worktree, identify the primary workspace root before you resolve paths. `git rev-parse --show-toplevel` gives the root of your current checkout, not necessarily the primary workspace root.
 
-## Initialize a mapped clone
-
-If a clone is missing, confirm its URL and path in the Repository Map. Clone only the repository you need. Do not overwrite an existing directory. For example, from the primary workspace root:
-
-```sh
-mkdir -p package/agent-sdk
-git clone https://github.com/totto2727-org/agent-sdk.git package/agent-sdk/agent-sdk
-```
-
-The mapped path is the primary clone. For a fork, keep `origin` pointed at the workspace fork and `upstream` at the original repository.
+If a mapped clone is missing, follow the [primary checkout procedure](checkouts.md) to initialize it first.
 
 ## Start or resume a task
 

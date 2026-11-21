@@ -17,7 +17,7 @@ Follow the child repository's `AGENTS.md` and run its checks, commits, and relea
 
 Write workspace-owned skills, their references, and user-facing script output in English.
 
-- [workspace-repo](.agents/skills/workspace-repo/SKILL.md): Initialize a mapped clone, create or retire a linked worktree, or use `just repo list` and `just repo sync`.
+- [workspace-repo](.agents/skills/workspace-repo/SKILL.md): Initialize, inspect, or update a mapped clone. Create, resume, or remove a linked worktree.
 - [repository-lifecycle](.agents/skills/repository-lifecycle/SKILL.md): Create, register, or archive a repository. Update both the Repository Map and root `.gitignore` when you add or move a repository. Register new managed GitHub repositories in both `infra` and `workspace`.
 - [workspace-dependencies](.agents/skills/workspace-dependencies/SKILL.md): Inspect or refresh the dependency inventory, then decide which consumers need to update, verify only, or take no action.
 
