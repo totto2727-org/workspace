@@ -25,7 +25,7 @@ Check `git -C "$path" remote get-url origin` against the mapped URL and inspect 
 
 ## Update a primary checkout only on request
 
-Apply this procedure separately to each requested checkout. Determine the intended `origin` branch before starting. Use the remote default branch if the request does not name one, and confirm that default if `origin/HEAD` is missing or stale. Do not switch the branch or change its upstream to make the checkout eligible.
+Primary checkouts are for people. A task request does not authorize changing their branches or working files. Use this procedure only when the user explicitly asks to update those checkouts. Apply it separately to each requested checkout. Determine the intended `origin` branch before starting. Use the remote default branch if the request does not name one, and confirm that default if `origin/HEAD` is missing or stale. Do not switch the branch or change its upstream to make the checkout eligible.
 
 Set `path` to the mapped checkout path and `branch` to the confirmed branch name. Verify that `origin` points to the intended repository before running this check and update:
 
@@ -42,6 +42,8 @@ then
 fi
 ```
 
-Skip missing, detached, dirty, or differently tracked checkouts. If the ancestry check fails because local commits are ahead or the histories diverged, keep the local checkout unchanged. Do not stash, reset, force, or push. After each attempt, inspect the branch and commit again. Summarize which repositories updated, were already current, were skipped and why, or failed.
+Skip missing, detached, dirty, or differently tracked checkouts. If the ancestry check fails because local commits are ahead or the histories diverged, keep the local checkout unchanged. Do not stash, reset, force, or push. After each attempt, inspect the branch and commit again.
+
+Report each repository as updated, already current, skipped, or failed. For a branch mismatch, show the current and intended branches. For a dirty checkout, report that it has local changes, including untracked files if present. Report both reasons if both apply. Inspect skipped checkouts as needed because the command above stops at the first failed precondition.
 
 See [Git status](https://git-scm.com/docs/git-status) and [Git merge](https://git-scm.com/docs/git-merge) for command options.
