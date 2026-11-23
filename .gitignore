@@ -55,6 +55,7 @@
 /.agents/skills/*
 !/.agents/skills/workspace-dependencies/
 !/.agents/skills/repository-lifecycle/
+!/.agents/skills/visual-explainer-ja/
 !/.agents/skills/workspace-repo/
 .claude
 

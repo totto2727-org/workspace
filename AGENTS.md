@@ -19,7 +19,24 @@ Write workspace-owned skills, their references, and user-facing script output in
 
 - [workspace-repo](.agents/skills/workspace-repo/SKILL.md): Initialize, inspect, or update a mapped clone. Create, resume, or remove a linked worktree.
 - [repository-lifecycle](.agents/skills/repository-lifecycle/SKILL.md): Create, register, or archive a repository. Update both the Repository Map and root `.gitignore` when you add or move a repository. Register new managed GitHub repositories in both `infra` and `workspace`.
+- [visual-explainer-ja](.agents/skills/visual-explainer-ja/SKILL.md): Present visual HTML reports in Japanese with a fixed dark theme based on the Digital Agency Design System.
 - [workspace-dependencies](.agents/skills/workspace-dependencies/SKILL.md): Inspect or refresh the dependency inventory, then decide which consumers need to update, verify only, or take no action.
+
+### Visual reports
+
+- Use the appropriate pstack skill for analysis, evidence, and drafting. Keep its normal output unless the user requests an HTML deliverable or a visual report needs a standalone page.
+- For those pages, use `visual-explainer` for the layout, figures, and rendering. Load `visual-explainer-ja` for Japanese text and the shared dark theme. Carry over findings, sources, and caveats from the draft.
+- For a TLA+ state model, keep pstack `statechart` as the source of the verified statechart and counterexamples. Visual Explainer only presents the results.
+- Use Visual Explainer's built-in figures by default. Consider [Diagram Design](https://github.com/cathrynlavery/diagram-design) only for specialized standalone diagrams, redraws of existing diagram files, or standalone SVG or PNG export. If you use it for these reports, [onboard from local tokens](https://github.com/cathrynlavery/diagram-design/blob/main/skills/diagram-design/references/onboarding.md) and match the shared theme instead of using its default skin.
+
+Install both skills at user scope if you need this workflow in other repositories:
+
+```sh
+vpx skills add https://github.com/nicobailon/visual-explainer --skill visual-explainer --global --agent codex claude-code --yes
+vpx skills add ./.agents/skills/visual-explainer-ja --skill visual-explainer-ja --global --agent codex claude-code --yes
+```
+
+Run the second command from the workspace checkout that contains the theme. Re-run it after updating the workspace to refresh the global copy in `~/.agents/skills/`.
 
 ## Repository Map
 
