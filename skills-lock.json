@@ -1,53 +1,117 @@
 {
-  "version": 1,
+  "version": 2,
   "skills": {
     "cloudflare-ai": {
       "source": "totto2727-org/agent",
+      "ref": "docs/coding-principles",
+      "commit": "6002d1e1e967bf7c545d038c93a157ff48d1e790",
       "sourceType": "github",
-      "skillPath": "plugins/external-information/skills/cloudflare-ai/SKILL.md",
-      "computedHash": "322b02be5bc8bff640a6e9ad573e819df7f07e27f265422b6caf93e0c72be27e"
+      "skillPath": "plugins/totto2727-external-information/skills/cloudflare-ai/SKILL.md",
+      "computedHash": "d441a2ccfe5198ecbae08dfbdeb2d16f0cd384cce7a84fbc1ae4aae08380123b"
     },
     "decision-model": {
       "source": "totto2727-org/agent",
+      "ref": "docs/coding-principles",
+      "commit": "6002d1e1e967bf7c545d038c93a157ff48d1e790",
       "sourceType": "github",
-      "skillPath": "plugins/external-information/skills/decision-model/SKILL.md",
-      "computedHash": "48fa6516ac1b06168abf3a7b872f551d40aa03d6a4a8bff49ad0c36ca4cdfdc1"
+      "skillPath": "plugins/totto2727-external-information/skills/decision-model/SKILL.md",
+      "computedHash": "bf7ec33d7d42ff36e2a6d5ddafe9e81f8f6f404461d93d27a6b49c0f95176fa5"
+    },
+    "doc-search": {
+      "source": "totto2727-org/agent",
+      "ref": "docs/coding-principles",
+      "commit": "6002d1e1e967bf7c545d038c93a157ff48d1e790",
+      "sourceType": "github",
+      "skillPath": "plugins/totto2727-external-information/skills/doc-search/SKILL.md",
+      "computedHash": "c2305aa88cebaed30ca4296cdb5afe955e856d083d0a99e49ba618f5c46f59e1"
     },
     "documentation-principles": {
       "source": "totto2727-org/agent",
+      "ref": "docs/coding-principles",
+      "commit": "6002d1e1e967bf7c545d038c93a157ff48d1e790",
       "sourceType": "github",
-      "skillPath": "plugins/totto2727-coding/skills/documentation-principles/SKILL.md",
-      "computedHash": "67ffa8a5b7c6fbeafa5aad251b5e4b9c7f32feff71f97f244f69dcfa84ed546d"
+      "skillPath": "plugins/totto2727-principle/skills/documentation-principles/SKILL.md",
+      "computedHash": "79cdab0ac0dcea324977d6cba6478f7d31b31d4eb1066034b942b0993986b904"
     },
     "documentation-quality": {
       "source": "totto2727-org/agent",
+      "ref": "docs/coding-principles",
+      "commit": "6002d1e1e967bf7c545d038c93a157ff48d1e790",
       "sourceType": "github",
-      "skillPath": "plugins/totto2727-coding/skills/documentation-quality/SKILL.md",
-      "computedHash": "f0b5a53023384e7d24256b16fda6e9c841013a6a5e8d448f31b20bc1e0c40233"
+      "skillPath": "plugins/totto2727-documentation/skills/documentation-quality/SKILL.md",
+      "computedHash": "8f5c5f92331978d3493aa50550e2fb370519f596e755400595cd3a3567375f9c"
+    },
+    "go-stack": {
+      "source": "totto2727-org/agent",
+      "ref": "docs/coding-principles",
+      "commit": "6002d1e1e967bf7c545d038c93a157ff48d1e790",
+      "sourceType": "github",
+      "skillPath": "plugins/totto2727-go/skills/go-stack/SKILL.md",
+      "computedHash": "2345101f1ca77da50576029bceb39bec28468380ff82345d34c701cebfd0c318"
+    },
+    "haskell-stack": {
+      "source": "totto2727-org/agent",
+      "ref": "docs/coding-principles",
+      "commit": "6002d1e1e967bf7c545d038c93a157ff48d1e790",
+      "sourceType": "github",
+      "skillPath": "plugins/totto2727-haskell/skills/haskell-stack/SKILL.md",
+      "computedHash": "873405a5952af000a2b6fc9f0119c515c09abef6956be02fcf5eb0ba1a664b8a"
     },
     "js-coding": {
       "source": "totto2727-org/agent",
+      "ref": "docs/coding-principles",
+      "commit": "6002d1e1e967bf7c545d038c93a157ff48d1e790",
       "sourceType": "github",
-      "skillPath": "plugins/totto2727-coding/skills/js-coding/SKILL.md",
-      "computedHash": "39e4c1bd10b9e1988538f057b6e29432c7fbc0e720c4b2f29e35a4c3840381fc"
+      "skillPath": "plugins/totto2727-js/skills/js-coding/SKILL.md",
+      "computedHash": "441bff5df27100fa03dac632b57e99fece2603a3393e792c5ebd2ff457671028"
+    },
+    "js-stack": {
+      "source": "totto2727-org/agent",
+      "ref": "docs/coding-principles",
+      "commit": "6002d1e1e967bf7c545d038c93a157ff48d1e790",
+      "sourceType": "github",
+      "skillPath": "plugins/totto2727-js/skills/js-stack/SKILL.md",
+      "computedHash": "1a680f04d9c7a01b8dd1f85486c080c22388ff2e394d2f7bf1ef37cc7849edc7"
     },
     "js-test": {
       "source": "totto2727-org/agent",
+      "ref": "docs/coding-principles",
+      "commit": "6002d1e1e967bf7c545d038c93a157ff48d1e790",
       "sourceType": "github",
-      "skillPath": "plugins/totto2727-coding/skills/js-test/SKILL.md",
-      "computedHash": "7ec0e3188bb65406139bd76edf3dae0686460973b1c14efa1cf4993876a05e1d"
+      "skillPath": "plugins/totto2727-js/skills/js-test/SKILL.md",
+      "computedHash": "0f4dabe6a153edac2790692a82affc18b43c531edc9ca88b76aa9f451da9f6ff"
     },
     "mbt-coding": {
       "source": "totto2727-org/agent",
+      "ref": "docs/coding-principles",
+      "commit": "6002d1e1e967bf7c545d038c93a157ff48d1e790",
       "sourceType": "github",
-      "skillPath": "plugins/totto2727-coding/skills/mbt-coding/SKILL.md",
-      "computedHash": "9a7b27de164d6d2595bab4ff6eacffd00ca0b738103bd4013e5cc2aa4a879693"
+      "skillPath": "plugins/totto2727-mbt/skills/mbt-coding/SKILL.md",
+      "computedHash": "1243add3e63fb2fba5ff38c784b661b7833a2bdb1097545353d9c3cb328a6631"
+    },
+    "mbt-stack": {
+      "source": "totto2727-org/agent",
+      "ref": "docs/coding-principles",
+      "commit": "6002d1e1e967bf7c545d038c93a157ff48d1e790",
+      "sourceType": "github",
+      "skillPath": "plugins/totto2727-mbt/skills/mbt-stack/SKILL.md",
+      "computedHash": "36d1ee390b474ef06da3e1f66a9793b471e1e273e795550fd88df2ae01bb4baf"
     },
     "mbt-test": {
       "source": "totto2727-org/agent",
+      "ref": "docs/coding-principles",
+      "commit": "6002d1e1e967bf7c545d038c93a157ff48d1e790",
       "sourceType": "github",
-      "skillPath": "plugins/totto2727-coding/skills/mbt-test/SKILL.md",
-      "computedHash": "ce3dcc999fcb7e1f75d00314021fbcf8ecf4becef29cc9533ec62ca37b79d122"
+      "skillPath": "plugins/totto2727-mbt/skills/mbt-test/SKILL.md",
+      "computedHash": "f013d701a04fb93d7373e448eb812c7541ac8d56626729e12eb3c58047a601cc"
+    },
+    "monid": {
+      "source": "totto2727-org/agent",
+      "ref": "docs/coding-principles",
+      "commit": "6002d1e1e967bf7c545d038c93a157ff48d1e790",
+      "sourceType": "github",
+      "skillPath": "plugins/totto2727-external-information/skills/monid/SKILL.md",
+      "computedHash": "027c859c9736dbb37292440c928533f97f23800f3dbfffc0319dfd0c3b5b7ede"
     },
     "moonbit-orientation": {
       "source": "moonbitlang/skills",
@@ -55,53 +119,131 @@
       "skillPath": "skills/moonbit-orientation/SKILL.md",
       "computedHash": "5d5a7d84813fc0e63022253242b3d7f9dfadf5efc2a0173be1fafd47f01ac682"
     },
+    "nix-stack": {
+      "source": "totto2727-org/agent",
+      "ref": "docs/coding-principles",
+      "commit": "6002d1e1e967bf7c545d038c93a157ff48d1e790",
+      "sourceType": "github",
+      "skillPath": "plugins/totto2727-nix/skills/nix-stack/SKILL.md",
+      "computedHash": "4e5494d39fc70958962c21a019767293d1240492e49fcf9ba36d85fe3b5bde49"
+    },
+    "open-connector": {
+      "source": "totto2727-org/agent",
+      "ref": "docs/coding-principles",
+      "commit": "6002d1e1e967bf7c545d038c93a157ff48d1e790",
+      "sourceType": "github",
+      "skillPath": "plugins/totto2727-external-information/skills/open-connector/SKILL.md",
+      "computedHash": "6aec7d5e51405df05b840b03b6748dbc99f3c63c9cc69d60604a6f5f63b66575"
+    },
+    "oxlint": {
+      "source": "totto2727-org/agent",
+      "ref": "docs/coding-principles",
+      "commit": "6002d1e1e967bf7c545d038c93a157ff48d1e790",
+      "sourceType": "github",
+      "skillPath": "plugins/totto2727-js/skills/oxlint/SKILL.md",
+      "computedHash": "852d7bc5b330fc51903905282f2596b25d79142f667cbd2f153c65349aaa250d"
+    },
+    "projektor": {
+      "source": "totto2727-org/agent",
+      "ref": "docs/coding-principles",
+      "commit": "6002d1e1e967bf7c545d038c93a157ff48d1e790",
+      "sourceType": "github",
+      "skillPath": "plugins/totto2727-external-information/skills/projektor/SKILL.md",
+      "computedHash": "c086ba1d15c6fc699d1b5113a52c45274786fa3d406ed6d15cd5927d3cb86630"
+    },
+    "realpath": {
+      "source": "totto2727-org/agent",
+      "ref": "docs/coding-principles",
+      "commit": "6002d1e1e967bf7c545d038c93a157ff48d1e790",
+      "sourceType": "github",
+      "skillPath": "plugins/totto2727-tools/skills/realpath/SKILL.md",
+      "computedHash": "770ff788b05b1b36f5e44224f4395566e7a13d41b50c0cda82284792e70ab343"
+    },
     "rust-coding": {
       "source": "totto2727-org/agent",
+      "ref": "docs/coding-principles",
+      "commit": "6002d1e1e967bf7c545d038c93a157ff48d1e790",
       "sourceType": "github",
-      "skillPath": "plugins/totto2727-coding/skills/rust-coding/SKILL.md",
-      "computedHash": "e8e855949a1be59d7415aee1326982f58a01a115eccb2f9ada18d1eb929ae63b"
+      "skillPath": "plugins/totto2727-rust/skills/rust-coding/SKILL.md",
+      "computedHash": "4a2fd1bb2224ce854ca97094d6ace4e1da4483afa6fd5914b36f510feb7fd2f0"
+    },
+    "rust-stack": {
+      "source": "totto2727-org/agent",
+      "ref": "docs/coding-principles",
+      "commit": "6002d1e1e967bf7c545d038c93a157ff48d1e790",
+      "sourceType": "github",
+      "skillPath": "plugins/totto2727-rust/skills/rust-stack/SKILL.md",
+      "computedHash": "3c0c3660aa6ecee80e958342cbb31a1213d44f3963069188e1206c8c29129e8c"
     },
     "rust-test": {
       "source": "totto2727-org/agent",
+      "ref": "docs/coding-principles",
+      "commit": "6002d1e1e967bf7c545d038c93a157ff48d1e790",
       "sourceType": "github",
-      "skillPath": "plugins/totto2727-coding/skills/rust-test/SKILL.md",
-      "computedHash": "b2f56307e0b156ac5b674f182d08e1518850827ceef40dcdf4980f94aa27190f"
+      "skillPath": "plugins/totto2727-rust/skills/rust-test/SKILL.md",
+      "computedHash": "e76611c209bd3942cd9c70442df7c91386c686000a75d013bd83cd72ee2b9fa3"
     },
     "share-artifact": {
       "source": "totto2727-org/agent",
+      "ref": "docs/coding-principles",
+      "commit": "6002d1e1e967bf7c545d038c93a157ff48d1e790",
       "sourceType": "github",
-      "skillPath": "plugins/totto2727-coding/skills/share-artifact/SKILL.md",
-      "computedHash": "2b281e80b560fd60ca16a4332dc8f8b10d2acee51ae0d771664bdf752602b2d3"
+      "skillPath": "plugins/totto2727-documentation/skills/share-artifact/SKILL.md",
+      "computedHash": "81d66659c69632b903da5acf691ea291296a2ab89efdb6bd0ea12b98cdd50ce8"
     },
     "share-coding": {
       "source": "totto2727-org/agent",
+      "ref": "docs/coding-principles",
+      "commit": "6002d1e1e967bf7c545d038c93a157ff48d1e790",
       "sourceType": "github",
-      "skillPath": "plugins/totto2727-coding/skills/share-coding/SKILL.md",
-      "computedHash": "fef8a423539db133ceb6c24803d98bd6cd3bd904520e2914c6e19bc47a777ed3"
+      "skillPath": "plugins/totto2727-principle/skills/share-coding/SKILL.md",
+      "computedHash": "6481fbd908d9860f2be4b9c09afe4dcf9bbee2435d22da01efe8010411086576"
+    },
+    "share-stack": {
+      "source": "totto2727-org/agent",
+      "ref": "docs/coding-principles",
+      "commit": "6002d1e1e967bf7c545d038c93a157ff48d1e790",
+      "sourceType": "github",
+      "skillPath": "plugins/totto2727-principle/skills/share-stack/SKILL.md",
+      "computedHash": "0d7903089b6552f60e6a2c69db9ca9d63960fd35d8aa1ea207b7f5a47606e392"
     },
     "share-test": {
       "source": "totto2727-org/agent",
+      "ref": "docs/coding-principles",
+      "commit": "6002d1e1e967bf7c545d038c93a157ff48d1e790",
       "sourceType": "github",
-      "skillPath": "plugins/totto2727-coding/skills/share-test/SKILL.md",
-      "computedHash": "a0a75669cf34b88256f9617a60625c9db7564d7057425502c0a51c3ee72c4f48"
+      "skillPath": "plugins/totto2727-principle/skills/share-test/SKILL.md",
+      "computedHash": "5a318726ebd53842258b88ba630bb5ca45fcce455c37e2cf58c16c3b4558af78"
     },
     "share-test-design": {
       "source": "totto2727-org/agent",
+      "ref": "docs/coding-principles",
+      "commit": "6002d1e1e967bf7c545d038c93a157ff48d1e790",
       "sourceType": "github",
-      "skillPath": "plugins/totto2727-coding/skills/share-test-design/SKILL.md",
-      "computedHash": "d16af5e7d966c8b1a4a5f4233e394557cbb2d8a64b6d2591d45d14ce8d02f99d"
+      "skillPath": "plugins/totto2727-principle/skills/share-test-design/SKILL.md",
+      "computedHash": "59599868e2fc57aabe6fe4f6bd82924409fee22ed21558994ae75daa06072971"
     },
     "skill-reviewer": {
       "source": "totto2727-org/agent",
+      "ref": "docs/coding-principles",
+      "commit": "6002d1e1e967bf7c545d038c93a157ff48d1e790",
       "sourceType": "github",
-      "skillPath": "plugins/totto2727-coding/skills/skill-reviewer/SKILL.md",
-      "computedHash": "17da0867fdd478a5801bd6e46d5d59d92c70a56ad57ebdbf392d8b83353f256a"
+      "skillPath": "plugins/totto2727-documentation/skills/skill-reviewer/SKILL.md",
+      "computedHash": "52b2a129434af63973f3b026774c381a4c2887ef569c1c637121c809429ef83a"
     },
     "typesafe-ai": {
       "source": "typesafe-ai/skills",
       "sourceType": "github",
       "skillPath": "skills/typesafe-ai/SKILL.md",
       "computedHash": "15e077333436b1e63e526c7c7559202816f4848dabefd3aa3d4c91988fd181b5"
+    },
+    "web-search": {
+      "source": "totto2727-org/agent",
+      "ref": "docs/coding-principles",
+      "commit": "6002d1e1e967bf7c545d038c93a157ff48d1e790",
+      "sourceType": "github",
+      "skillPath": "plugins/totto2727-external-information/skills/web-search/SKILL.md",
+      "computedHash": "0a4e6fcd420bb2cba14068955641e07a38149a60b8162e0f90e542b808c322ec"
     }
   }
 }
