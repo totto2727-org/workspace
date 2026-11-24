@@ -4,7 +4,7 @@
     "architect": {
       "source": "totto2727-org/agent",
       "ref": "feat/pstack-orca",
-      "commit": "c70ddd32d78215a179f574bdf29db63d536a7d0a",
+      "commit": "5f0d605895c80f8b31e4da75c16eba79394bc282",
       "sourceType": "github",
       "skillPath": "plugins/totto2727-engineering/skills/architect/SKILL.md",
       "computedHash": "d920958d2afa56e753faab91955b1ec2fca679c2c235b9280f04de4d0fad512f",
@@ -13,7 +13,7 @@
     "arena": {
       "source": "totto2727-org/agent",
       "ref": "feat/pstack-orca",
-      "commit": "c70ddd32d78215a179f574bdf29db63d536a7d0a",
+      "commit": "5f0d605895c80f8b31e4da75c16eba79394bc282",
       "sourceType": "github",
       "skillPath": "plugins/totto2727-engineering/skills/arena/SKILL.md",
       "computedHash": "624cf27d7bd88ef035f6fd13aaf4de546a61738516782b191f77535d96b20315",
@@ -22,7 +22,7 @@
     "automate-me": {
       "source": "totto2727-org/agent",
       "ref": "feat/pstack-orca",
-      "commit": "c70ddd32d78215a179f574bdf29db63d536a7d0a",
+      "commit": "5f0d605895c80f8b31e4da75c16eba79394bc282",
       "sourceType": "github",
       "skillPath": "plugins/totto2727-workflow/skills/automate-me/SKILL.md",
       "computedHash": "a36b08605f03d78cbff2ac58453468c167c255cabb1a1141b7a72c035bd8011e",
@@ -31,7 +31,7 @@
     "benchmark-checklist": {
       "source": "totto2727-org/agent",
       "ref": "feat/pstack-orca",
-      "commit": "c70ddd32d78215a179f574bdf29db63d536a7d0a",
+      "commit": "5f0d605895c80f8b31e4da75c16eba79394bc282",
       "sourceType": "github",
       "skillPath": "plugins/totto2727-verification/skills/benchmark-checklist/SKILL.md",
       "computedHash": "33c568e2582c284e22bd9c4f59d58c6765b9bd1951df28fdfdad7688a123ced1",
@@ -40,7 +40,7 @@
     "blast-radius": {
       "source": "totto2727-org/agent",
       "ref": "feat/pstack-orca",
-      "commit": "c70ddd32d78215a179f574bdf29db63d536a7d0a",
+      "commit": "5f0d605895c80f8b31e4da75c16eba79394bc282",
       "sourceType": "github",
       "skillPath": "plugins/totto2727-engineering/skills/blast-radius/SKILL.md",
       "computedHash": "ec9ac31e7474a70226efd556617432c94e5e37b2df2b36e762ad28b51af116db",
@@ -49,7 +49,7 @@
     "bro": {
       "source": "totto2727-org/agent",
       "ref": "feat/pstack-orca",
-      "commit": "c70ddd32d78215a179f574bdf29db63d536a7d0a",
+      "commit": "5f0d605895c80f8b31e4da75c16eba79394bc282",
       "sourceType": "github",
       "skillPath": "plugins/totto2727-communication/skills/bro/SKILL.md",
       "computedHash": "f5d52f340b5c8e4c2c8c9c0530b3966a28599bb3bdc656fe4d1d631a8ac9419c",
@@ -58,7 +58,7 @@
     "cloudflare-ai": {
       "source": "totto2727-org/agent",
       "ref": "feat/pstack-orca",
-      "commit": "c70ddd32d78215a179f574bdf29db63d536a7d0a",
+      "commit": "5f0d605895c80f8b31e4da75c16eba79394bc282",
       "sourceType": "github",
       "skillPath": "plugins/totto2727-external-information/skills/cloudflare-ai/SKILL.md",
       "computedHash": "d441a2ccfe5198ecbae08dfbdeb2d16f0cd384cce7a84fbc1ae4aae08380123b",
@@ -67,7 +67,7 @@
     "correct": {
       "source": "totto2727-org/agent",
       "ref": "feat/pstack-orca",
-      "commit": "c70ddd32d78215a179f574bdf29db63d536a7d0a",
+      "commit": "5f0d605895c80f8b31e4da75c16eba79394bc282",
       "sourceType": "github",
       "skillPath": "plugins/totto2727-engineering/skills/correct/SKILL.md",
       "computedHash": "16ae2b84f6a6220cc41f6a67cfe5aa50dbffe5b8abeb78b915ee40e8b7bf3955",
@@ -76,7 +76,7 @@
     "create-formal-verification-skill": {
       "source": "totto2727-org/agent",
       "ref": "feat/pstack-orca",
-      "commit": "c70ddd32d78215a179f574bdf29db63d536a7d0a",
+      "commit": "5f0d605895c80f8b31e4da75c16eba79394bc282",
       "sourceType": "github",
       "skillPath": "plugins/totto2727-verification/skills/create-formal-verification-skill/SKILL.md",
       "computedHash": "18fa9e85d218d7d5e9925c99f7888004a644d5f41071e978d58309f3ffd96e32",
@@ -85,7 +85,7 @@
     "create-verification-skill": {
       "source": "totto2727-org/agent",
       "ref": "feat/pstack-orca",
-      "commit": "c70ddd32d78215a179f574bdf29db63d536a7d0a",
+      "commit": "5f0d605895c80f8b31e4da75c16eba79394bc282",
       "sourceType": "github",
       "skillPath": "plugins/totto2727-verification/skills/create-verification-skill/SKILL.md",
       "computedHash": "2fc9b9b2757b9d774468a90e17fe7a0b17084e7379af50fc28bb969397bc3660",
@@ -94,16 +94,25 @@
     "decision-model": {
       "source": "totto2727-org/agent",
       "ref": "feat/pstack-orca",
-      "commit": "c70ddd32d78215a179f574bdf29db63d536a7d0a",
+      "commit": "5f0d605895c80f8b31e4da75c16eba79394bc282",
       "sourceType": "github",
       "skillPath": "plugins/totto2727-external-information/skills/decision-model/SKILL.md",
       "computedHash": "bf7ec33d7d42ff36e2a6d5ddafe9e81f8f6f404461d93d27a6b49c0f95176fa5",
       "installMode": "copy"
     },
+    "diagram-design": {
+      "source": "cathrynlavery/diagram-design",
+      "ref": "0eeda75a708f419560d5e032693618bb9954f17b",
+      "commit": "0eeda75a708f419560d5e032693618bb9954f17b",
+      "sourceType": "github",
+      "skillPath": "skills/diagram-design/SKILL.md",
+      "computedHash": "f5f88973e37f06c0f73afed09341205aa7175c45e41dac1259868428e77bf6bb",
+      "installMode": "copy"
+    },
     "doc-search": {
       "source": "totto2727-org/agent",
       "ref": "feat/pstack-orca",
-      "commit": "c70ddd32d78215a179f574bdf29db63d536a7d0a",
+      "commit": "5f0d605895c80f8b31e4da75c16eba79394bc282",
       "sourceType": "github",
       "skillPath": "plugins/totto2727-external-information/skills/doc-search/SKILL.md",
       "computedHash": "c2305aa88cebaed30ca4296cdb5afe955e856d083d0a99e49ba618f5c46f59e1",
@@ -112,7 +121,7 @@
     "documentation-principles": {
       "source": "totto2727-org/agent",
       "ref": "feat/pstack-orca",
-      "commit": "c70ddd32d78215a179f574bdf29db63d536a7d0a",
+      "commit": "5f0d605895c80f8b31e4da75c16eba79394bc282",
       "sourceType": "github",
       "skillPath": "plugins/totto2727-principle/skills/documentation-principles/SKILL.md",
       "computedHash": "7aa8e91e8fec3445f2ee11f45ca12da5d9fe10548afbcf4b2917c84c225a877e",
@@ -121,7 +130,7 @@
     "documentation-quality": {
       "source": "totto2727-org/agent",
       "ref": "feat/pstack-orca",
-      "commit": "c70ddd32d78215a179f574bdf29db63d536a7d0a",
+      "commit": "5f0d605895c80f8b31e4da75c16eba79394bc282",
       "sourceType": "github",
       "skillPath": "plugins/totto2727-documentation/skills/documentation-quality/SKILL.md",
       "computedHash": "8f5c5f92331978d3493aa50550e2fb370519f596e755400595cd3a3567375f9c",
@@ -130,7 +139,7 @@
     "figure-it-out": {
       "source": "totto2727-org/agent",
       "ref": "feat/pstack-orca",
-      "commit": "c70ddd32d78215a179f574bdf29db63d536a7d0a",
+      "commit": "5f0d605895c80f8b31e4da75c16eba79394bc282",
       "sourceType": "github",
       "skillPath": "plugins/totto2727-engineering/skills/figure-it-out/SKILL.md",
       "computedHash": "e36c57123d44420b5d6cff5e3fe6f663dab009a0534995898c30ce6e25d65b91",
@@ -139,7 +148,7 @@
     "go-stack": {
       "source": "totto2727-org/agent",
       "ref": "feat/pstack-orca",
-      "commit": "c70ddd32d78215a179f574bdf29db63d536a7d0a",
+      "commit": "5f0d605895c80f8b31e4da75c16eba79394bc282",
       "sourceType": "github",
       "skillPath": "plugins/totto2727-go/skills/go-stack/SKILL.md",
       "computedHash": "2345101f1ca77da50576029bceb39bec28468380ff82345d34c701cebfd0c318",
@@ -148,7 +157,7 @@
     "haskell-stack": {
       "source": "totto2727-org/agent",
       "ref": "feat/pstack-orca",
-      "commit": "c70ddd32d78215a179f574bdf29db63d536a7d0a",
+      "commit": "5f0d605895c80f8b31e4da75c16eba79394bc282",
       "sourceType": "github",
       "skillPath": "plugins/totto2727-haskell/skills/haskell-stack/SKILL.md",
       "computedHash": "873405a5952af000a2b6fc9f0119c515c09abef6956be02fcf5eb0ba1a664b8a",
@@ -157,7 +166,7 @@
     "how": {
       "source": "totto2727-org/agent",
       "ref": "feat/pstack-orca",
-      "commit": "c70ddd32d78215a179f574bdf29db63d536a7d0a",
+      "commit": "5f0d605895c80f8b31e4da75c16eba79394bc282",
       "sourceType": "github",
       "skillPath": "plugins/totto2727-communication/skills/how/SKILL.md",
       "computedHash": "c732889091ac89cc58890aab9329039033e49dca1983ca6842864830062f81d6",
@@ -166,7 +175,7 @@
     "in-your-own-words": {
       "source": "totto2727-org/agent",
       "ref": "feat/pstack-orca",
-      "commit": "c70ddd32d78215a179f574bdf29db63d536a7d0a",
+      "commit": "5f0d605895c80f8b31e4da75c16eba79394bc282",
       "sourceType": "github",
       "skillPath": "plugins/totto2727-communication/skills/in-your-own-words/SKILL.md",
       "computedHash": "77b02e93dbc5b24cc96b1968692d2efbf4e9ae3f9ca657207e64e6bbc7a31362",
@@ -175,7 +184,7 @@
     "interrogate": {
       "source": "totto2727-org/agent",
       "ref": "feat/pstack-orca",
-      "commit": "c70ddd32d78215a179f574bdf29db63d536a7d0a",
+      "commit": "5f0d605895c80f8b31e4da75c16eba79394bc282",
       "sourceType": "github",
       "skillPath": "plugins/totto2727-engineering/skills/interrogate/SKILL.md",
       "computedHash": "a8b7809d2ae8a7a565bdd0d1ed07e2fca5af7adbee2e859de05cb0bc04271841",
@@ -184,7 +193,7 @@
     "js-coding": {
       "source": "totto2727-org/agent",
       "ref": "feat/pstack-orca",
-      "commit": "c70ddd32d78215a179f574bdf29db63d536a7d0a",
+      "commit": "5f0d605895c80f8b31e4da75c16eba79394bc282",
       "sourceType": "github",
       "skillPath": "plugins/totto2727-js/skills/js-coding/SKILL.md",
       "computedHash": "844a467a18d8a297215324665502b16df6ac9077e59e6e8d5de666b11e65f086",
@@ -193,7 +202,7 @@
     "js-stack": {
       "source": "totto2727-org/agent",
       "ref": "feat/pstack-orca",
-      "commit": "c70ddd32d78215a179f574bdf29db63d536a7d0a",
+      "commit": "5f0d605895c80f8b31e4da75c16eba79394bc282",
       "sourceType": "github",
       "skillPath": "plugins/totto2727-js/skills/js-stack/SKILL.md",
       "computedHash": "1a680f04d9c7a01b8dd1f85486c080c22388ff2e394d2f7bf1ef37cc7849edc7",
@@ -202,7 +211,7 @@
     "js-test": {
       "source": "totto2727-org/agent",
       "ref": "feat/pstack-orca",
-      "commit": "c70ddd32d78215a179f574bdf29db63d536a7d0a",
+      "commit": "5f0d605895c80f8b31e4da75c16eba79394bc282",
       "sourceType": "github",
       "skillPath": "plugins/totto2727-js/skills/js-test/SKILL.md",
       "computedHash": "0f4dabe6a153edac2790692a82affc18b43c531edc9ca88b76aa9f451da9f6ff",
@@ -211,7 +220,7 @@
     "ketchup": {
       "source": "totto2727-org/agent",
       "ref": "feat/pstack-orca",
-      "commit": "c70ddd32d78215a179f574bdf29db63d536a7d0a",
+      "commit": "5f0d605895c80f8b31e4da75c16eba79394bc282",
       "sourceType": "github",
       "skillPath": "plugins/totto2727-communication/skills/ketchup/SKILL.md",
       "computedHash": "783fac59e7641881933b0ad160acaf9c942118878d57d440032ddf8aa27992ef",
@@ -220,16 +229,25 @@
     "ketchup-video": {
       "source": "totto2727-org/agent",
       "ref": "feat/pstack-orca",
-      "commit": "c70ddd32d78215a179f574bdf29db63d536a7d0a",
+      "commit": "5f0d605895c80f8b31e4da75c16eba79394bc282",
       "sourceType": "github",
       "skillPath": "plugins/totto2727-communication/skills/ketchup-video/SKILL.md",
       "computedHash": "4b1b5b64f20ffd84d12832e798b5e5ea9a3db749a47d4f3d99ce0be6c22dddd0",
       "installMode": "copy"
     },
+    "lens": {
+      "source": "totto2727-org/lens",
+      "ref": "8530273ac759cd18a80a7b47862b9c6b0faa2de3",
+      "commit": "8530273ac759cd18a80a7b47862b9c6b0faa2de3",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/lens/SKILL.md",
+      "computedHash": "b25c2fd113cf57bbed7b65a643441ed66c5bf86986bb0f96f8e962f643956bc5",
+      "installMode": "copy"
+    },
     "maintain-formal-verification-skill": {
       "source": "totto2727-org/agent",
       "ref": "feat/pstack-orca",
-      "commit": "c70ddd32d78215a179f574bdf29db63d536a7d0a",
+      "commit": "5f0d605895c80f8b31e4da75c16eba79394bc282",
       "sourceType": "github",
       "skillPath": "plugins/totto2727-verification/skills/maintain-formal-verification-skill/SKILL.md",
       "computedHash": "1a2fd53435940bfd9e5eadd6d34213da82286abdebb44ac91b2471151491daa4",
@@ -238,7 +256,7 @@
     "maintain-verification-skill": {
       "source": "totto2727-org/agent",
       "ref": "feat/pstack-orca",
-      "commit": "c70ddd32d78215a179f574bdf29db63d536a7d0a",
+      "commit": "5f0d605895c80f8b31e4da75c16eba79394bc282",
       "sourceType": "github",
       "skillPath": "plugins/totto2727-verification/skills/maintain-verification-skill/SKILL.md",
       "computedHash": "9b2b8e5bc1986baf0294ae94a926938b75bbdd92b749a49da730a457a1222b22",
@@ -247,7 +265,7 @@
     "make-bot-ui": {
       "source": "totto2727-org/agent",
       "ref": "feat/pstack-orca",
-      "commit": "c70ddd32d78215a179f574bdf29db63d536a7d0a",
+      "commit": "5f0d605895c80f8b31e4da75c16eba79394bc282",
       "sourceType": "github",
       "skillPath": "plugins/totto2727-workflow/skills/make-bot-ui/SKILL.md",
       "computedHash": "c5b7c14d24cc7c206bb0ddecc3eab61afcedd68d18274f3389c40ebacc5cf0d5",
@@ -256,7 +274,7 @@
     "mbt-coding": {
       "source": "totto2727-org/agent",
       "ref": "feat/pstack-orca",
-      "commit": "c70ddd32d78215a179f574bdf29db63d536a7d0a",
+      "commit": "5f0d605895c80f8b31e4da75c16eba79394bc282",
       "sourceType": "github",
       "skillPath": "plugins/totto2727-mbt/skills/mbt-coding/SKILL.md",
       "computedHash": "1243add3e63fb2fba5ff38c784b661b7833a2bdb1097545353d9c3cb328a6631",
@@ -265,7 +283,7 @@
     "mbt-stack": {
       "source": "totto2727-org/agent",
       "ref": "feat/pstack-orca",
-      "commit": "c70ddd32d78215a179f574bdf29db63d536a7d0a",
+      "commit": "5f0d605895c80f8b31e4da75c16eba79394bc282",
       "sourceType": "github",
       "skillPath": "plugins/totto2727-mbt/skills/mbt-stack/SKILL.md",
       "computedHash": "36d1ee390b474ef06da3e1f66a9793b471e1e273e795550fd88df2ae01bb4baf",
@@ -274,16 +292,25 @@
     "mbt-test": {
       "source": "totto2727-org/agent",
       "ref": "feat/pstack-orca",
-      "commit": "c70ddd32d78215a179f574bdf29db63d536a7d0a",
+      "commit": "5f0d605895c80f8b31e4da75c16eba79394bc282",
       "sourceType": "github",
       "skillPath": "plugins/totto2727-mbt/skills/mbt-test/SKILL.md",
       "computedHash": "f013d701a04fb93d7373e448eb812c7541ac8d56626729e12eb3c58047a601cc",
       "installMode": "copy"
     },
+    "modern-web-guidance": {
+      "source": "GoogleChrome/modern-web-guidance",
+      "ref": "56c61c9ee79a8df1a98822309c04847a57f56000",
+      "commit": "56c61c9ee79a8df1a98822309c04847a57f56000",
+      "sourceType": "github",
+      "skillPath": "skills/modern-web-guidance/SKILL.md",
+      "computedHash": "a8260e05c849d839d4195f2711d6f552563f841c3cc052f2a8d93d980717d987",
+      "installMode": "copy"
+    },
     "monid": {
       "source": "totto2727-org/agent",
       "ref": "feat/pstack-orca",
-      "commit": "c70ddd32d78215a179f574bdf29db63d536a7d0a",
+      "commit": "5f0d605895c80f8b31e4da75c16eba79394bc282",
       "sourceType": "github",
       "skillPath": "plugins/totto2727-external-information/skills/monid/SKILL.md",
       "computedHash": "027c859c9736dbb37292440c928533f97f23800f3dbfffc0319dfd0c3b5b7ede",
@@ -299,7 +326,7 @@
     "nix-stack": {
       "source": "totto2727-org/agent",
       "ref": "feat/pstack-orca",
-      "commit": "c70ddd32d78215a179f574bdf29db63d536a7d0a",
+      "commit": "5f0d605895c80f8b31e4da75c16eba79394bc282",
       "sourceType": "github",
       "skillPath": "plugins/totto2727-nix/skills/nix-stack/SKILL.md",
       "computedHash": "4e5494d39fc70958962c21a019767293d1240492e49fcf9ba36d85fe3b5bde49",
@@ -308,7 +335,7 @@
     "no-comments": {
       "source": "totto2727-org/agent",
       "ref": "feat/pstack-orca",
-      "commit": "c70ddd32d78215a179f574bdf29db63d536a7d0a",
+      "commit": "5f0d605895c80f8b31e4da75c16eba79394bc282",
       "sourceType": "github",
       "skillPath": "plugins/totto2727-engineering/skills/no-comments/SKILL.md",
       "computedHash": "f69a8d06a9ae8bd0097f7afb9fe0f92f8df528d97ce7156762011a5b6d3ad929",
@@ -317,16 +344,34 @@
     "open-connector": {
       "source": "totto2727-org/agent",
       "ref": "feat/pstack-orca",
-      "commit": "c70ddd32d78215a179f574bdf29db63d536a7d0a",
+      "commit": "5f0d605895c80f8b31e4da75c16eba79394bc282",
       "sourceType": "github",
       "skillPath": "plugins/totto2727-external-information/skills/open-connector/SKILL.md",
       "computedHash": "6aec7d5e51405df05b840b03b6748dbc99f3c63c9cc69d60604a6f5f63b66575",
       "installMode": "copy"
     },
+    "orca-cli": {
+      "source": "stablyai/orca",
+      "ref": "6272306c5a5a59ed1c6b604896610bfadde180cc",
+      "commit": "6272306c5a5a59ed1c6b604896610bfadde180cc",
+      "sourceType": "github",
+      "skillPath": "skills/orca-cli/SKILL.md",
+      "computedHash": "0ac62f8c6c46d3709400e78688324b692b71d9740fe320caa8fd2fa018ef07ce",
+      "installMode": "copy"
+    },
+    "orchestration": {
+      "source": "stablyai/orca",
+      "ref": "6272306c5a5a59ed1c6b604896610bfadde180cc",
+      "commit": "6272306c5a5a59ed1c6b604896610bfadde180cc",
+      "sourceType": "github",
+      "skillPath": "skills/orchestration/SKILL.md",
+      "computedHash": "e36cdd7d88c889d43d2257390051a0d1ded6a3e3a513d4de571fe9dfb90b2555",
+      "installMode": "copy"
+    },
     "oxlint": {
       "source": "totto2727-org/agent",
       "ref": "feat/pstack-orca",
-      "commit": "c70ddd32d78215a179f574bdf29db63d536a7d0a",
+      "commit": "5f0d605895c80f8b31e4da75c16eba79394bc282",
       "sourceType": "github",
       "skillPath": "plugins/totto2727-js/skills/oxlint/SKILL.md",
       "computedHash": "852d7bc5b330fc51903905282f2596b25d79142f667cbd2f153c65349aaa250d",
@@ -335,7 +380,7 @@
     "poteto-help": {
       "source": "totto2727-org/agent",
       "ref": "feat/pstack-orca",
-      "commit": "c70ddd32d78215a179f574bdf29db63d536a7d0a",
+      "commit": "5f0d605895c80f8b31e4da75c16eba79394bc282",
       "sourceType": "github",
       "skillPath": "plugins/totto2727-workflow/skills/poteto-help/SKILL.md",
       "computedHash": "eca91ec0f3dca5bd5c95c667fec8b82b95f1adb9b3f12fda52adad957687776c",
@@ -344,7 +389,7 @@
     "poteto-mode": {
       "source": "totto2727-org/agent",
       "ref": "feat/pstack-orca",
-      "commit": "c70ddd32d78215a179f574bdf29db63d536a7d0a",
+      "commit": "5f0d605895c80f8b31e4da75c16eba79394bc282",
       "sourceType": "github",
       "skillPath": "plugins/totto2727-workflow/skills/poteto-mode/SKILL.md",
       "computedHash": "f86cd0fe87ed1c2ee5c2161ded0929445160019451dfb3fcc226a59b657aec02",
@@ -353,7 +398,7 @@
     "principle-attack-the-premise": {
       "source": "totto2727-org/agent",
       "ref": "feat/pstack-orca",
-      "commit": "c70ddd32d78215a179f574bdf29db63d536a7d0a",
+      "commit": "5f0d605895c80f8b31e4da75c16eba79394bc282",
       "sourceType": "github",
       "skillPath": "plugins/totto2727-principle/skills/principle-attack-the-premise/SKILL.md",
       "computedHash": "3230cd7df5e67c3e005e5dc92d4c0948c87baf9b3d2129340f9c5aa7f56411ba",
@@ -362,7 +407,7 @@
     "principle-boundary-discipline": {
       "source": "totto2727-org/agent",
       "ref": "feat/pstack-orca",
-      "commit": "c70ddd32d78215a179f574bdf29db63d536a7d0a",
+      "commit": "5f0d605895c80f8b31e4da75c16eba79394bc282",
       "sourceType": "github",
       "skillPath": "plugins/totto2727-principle/skills/principle-boundary-discipline/SKILL.md",
       "computedHash": "15e519edd798caffcf6704cbf9989251d37d8ece3dd1de32b3729b99fa896715",
@@ -371,7 +416,7 @@
     "principle-build-the-lever": {
       "source": "totto2727-org/agent",
       "ref": "feat/pstack-orca",
-      "commit": "c70ddd32d78215a179f574bdf29db63d536a7d0a",
+      "commit": "5f0d605895c80f8b31e4da75c16eba79394bc282",
       "sourceType": "github",
       "skillPath": "plugins/totto2727-principle/skills/principle-build-the-lever/SKILL.md",
       "computedHash": "fe61ad53a5ee2b0a29dc54abd4b7bb5cd7890db8bf853439ec4901ecefe1a919",
@@ -380,7 +425,7 @@
     "principle-encode-lessons-in-structure": {
       "source": "totto2727-org/agent",
       "ref": "feat/pstack-orca",
-      "commit": "c70ddd32d78215a179f574bdf29db63d536a7d0a",
+      "commit": "5f0d605895c80f8b31e4da75c16eba79394bc282",
       "sourceType": "github",
       "skillPath": "plugins/totto2727-principle/skills/principle-encode-lessons-in-structure/SKILL.md",
       "computedHash": "8ee06c5d7000250328af04ec86aba2627bac6efbd47b7dcaa36ca41227c1c510",
@@ -389,7 +434,7 @@
     "principle-exhaust-the-design-space": {
       "source": "totto2727-org/agent",
       "ref": "feat/pstack-orca",
-      "commit": "c70ddd32d78215a179f574bdf29db63d536a7d0a",
+      "commit": "5f0d605895c80f8b31e4da75c16eba79394bc282",
       "sourceType": "github",
       "skillPath": "plugins/totto2727-principle/skills/principle-exhaust-the-design-space/SKILL.md",
       "computedHash": "0956ff4b8738c4bc0300774e9c69de4f860c05f99abaf4436363c99e49cbcae8",
@@ -398,7 +443,7 @@
     "principle-experience-first": {
       "source": "totto2727-org/agent",
       "ref": "feat/pstack-orca",
-      "commit": "c70ddd32d78215a179f574bdf29db63d536a7d0a",
+      "commit": "5f0d605895c80f8b31e4da75c16eba79394bc282",
       "sourceType": "github",
       "skillPath": "plugins/totto2727-principle/skills/principle-experience-first/SKILL.md",
       "computedHash": "0e48c74404ab6134830150ca1c5eda71422b38b271eea16482fb233ff2bfe4bf",
@@ -407,7 +452,7 @@
     "principle-explain-the-number": {
       "source": "totto2727-org/agent",
       "ref": "feat/pstack-orca",
-      "commit": "c70ddd32d78215a179f574bdf29db63d536a7d0a",
+      "commit": "5f0d605895c80f8b31e4da75c16eba79394bc282",
       "sourceType": "github",
       "skillPath": "plugins/totto2727-principle/skills/principle-explain-the-number/SKILL.md",
       "computedHash": "eebe616c12f787938f456c9d13f2336eb2b86ef5d56e30aa126567c3b2684d50",
@@ -416,7 +461,7 @@
     "principle-fix-root-causes": {
       "source": "totto2727-org/agent",
       "ref": "feat/pstack-orca",
-      "commit": "c70ddd32d78215a179f574bdf29db63d536a7d0a",
+      "commit": "5f0d605895c80f8b31e4da75c16eba79394bc282",
       "sourceType": "github",
       "skillPath": "plugins/totto2727-principle/skills/principle-fix-root-causes/SKILL.md",
       "computedHash": "020ed8aaead63df37cb205babc5b81a584f273f48bcaaa7e81f5e1db1fb3dd22",
@@ -425,7 +470,7 @@
     "principle-foundational-thinking": {
       "source": "totto2727-org/agent",
       "ref": "feat/pstack-orca",
-      "commit": "c70ddd32d78215a179f574bdf29db63d536a7d0a",
+      "commit": "5f0d605895c80f8b31e4da75c16eba79394bc282",
       "sourceType": "github",
       "skillPath": "plugins/totto2727-principle/skills/principle-foundational-thinking/SKILL.md",
       "computedHash": "6195b25926c7638d37db292d8a448648d614a11704bb86b5f65688b1743cbc1f",
@@ -434,7 +479,7 @@
     "principle-guard-the-context-window": {
       "source": "totto2727-org/agent",
       "ref": "feat/pstack-orca",
-      "commit": "c70ddd32d78215a179f574bdf29db63d536a7d0a",
+      "commit": "5f0d605895c80f8b31e4da75c16eba79394bc282",
       "sourceType": "github",
       "skillPath": "plugins/totto2727-principle/skills/principle-guard-the-context-window/SKILL.md",
       "computedHash": "ca56f90bdba614f2acfc6fb6eeee80ca51a101fffd6a24204acc4e88a045e626",
@@ -443,7 +488,7 @@
     "principle-laziness-protocol": {
       "source": "totto2727-org/agent",
       "ref": "feat/pstack-orca",
-      "commit": "c70ddd32d78215a179f574bdf29db63d536a7d0a",
+      "commit": "5f0d605895c80f8b31e4da75c16eba79394bc282",
       "sourceType": "github",
       "skillPath": "plugins/totto2727-principle/skills/principle-laziness-protocol/SKILL.md",
       "computedHash": "83227e0db064c3cbff580385feb6a0c53ad6bcc7ca80d126c55bba05cdb15d59",
@@ -452,7 +497,7 @@
     "principle-make-operations-idempotent": {
       "source": "totto2727-org/agent",
       "ref": "feat/pstack-orca",
-      "commit": "c70ddd32d78215a179f574bdf29db63d536a7d0a",
+      "commit": "5f0d605895c80f8b31e4da75c16eba79394bc282",
       "sourceType": "github",
       "skillPath": "plugins/totto2727-principle/skills/principle-make-operations-idempotent/SKILL.md",
       "computedHash": "df42ef2a50271ae2c08c7eb45a74a2a450687ae17021570fb0c600fa40297942",
@@ -461,7 +506,7 @@
     "principle-migrate-callers-then-delete-legacy-apis": {
       "source": "totto2727-org/agent",
       "ref": "feat/pstack-orca",
-      "commit": "c70ddd32d78215a179f574bdf29db63d536a7d0a",
+      "commit": "5f0d605895c80f8b31e4da75c16eba79394bc282",
       "sourceType": "github",
       "skillPath": "plugins/totto2727-principle/skills/principle-migrate-callers-then-delete-legacy-apis/SKILL.md",
       "computedHash": "0b04173cb40180911bfeb90697bd368bbfc36d015cee7747970bb27d95aaedae",
@@ -470,7 +515,7 @@
     "principle-minimize-reader-load": {
       "source": "totto2727-org/agent",
       "ref": "feat/pstack-orca",
-      "commit": "c70ddd32d78215a179f574bdf29db63d536a7d0a",
+      "commit": "5f0d605895c80f8b31e4da75c16eba79394bc282",
       "sourceType": "github",
       "skillPath": "plugins/totto2727-principle/skills/principle-minimize-reader-load/SKILL.md",
       "computedHash": "d30d885aba37ddfeea7623af491ad121fa73e469da200adb688a0e07b5dfd3d0",
@@ -479,7 +524,7 @@
     "principle-model-the-domain": {
       "source": "totto2727-org/agent",
       "ref": "feat/pstack-orca",
-      "commit": "c70ddd32d78215a179f574bdf29db63d536a7d0a",
+      "commit": "5f0d605895c80f8b31e4da75c16eba79394bc282",
       "sourceType": "github",
       "skillPath": "plugins/totto2727-principle/skills/principle-model-the-domain/SKILL.md",
       "computedHash": "2780a45d8169494f850b146ab6f5481f74fd6aacb7f4401c5e0eddac70e8fd73",
@@ -488,7 +533,7 @@
     "principle-never-block-on-the-human": {
       "source": "totto2727-org/agent",
       "ref": "feat/pstack-orca",
-      "commit": "c70ddd32d78215a179f574bdf29db63d536a7d0a",
+      "commit": "5f0d605895c80f8b31e4da75c16eba79394bc282",
       "sourceType": "github",
       "skillPath": "plugins/totto2727-principle/skills/principle-never-block-on-the-human/SKILL.md",
       "computedHash": "f4d60165761b3b8b53a83b3bd1e80c6cf59e57dc51166cba50bd62382630b68c",
@@ -497,7 +542,7 @@
     "principle-outcome-oriented-execution": {
       "source": "totto2727-org/agent",
       "ref": "feat/pstack-orca",
-      "commit": "c70ddd32d78215a179f574bdf29db63d536a7d0a",
+      "commit": "5f0d605895c80f8b31e4da75c16eba79394bc282",
       "sourceType": "github",
       "skillPath": "plugins/totto2727-principle/skills/principle-outcome-oriented-execution/SKILL.md",
       "computedHash": "3991faba42aab2f361d1a6debe051e333476360c65986a57d3d511a5a407c434",
@@ -506,7 +551,7 @@
     "principle-prove-it-works": {
       "source": "totto2727-org/agent",
       "ref": "feat/pstack-orca",
-      "commit": "c70ddd32d78215a179f574bdf29db63d536a7d0a",
+      "commit": "5f0d605895c80f8b31e4da75c16eba79394bc282",
       "sourceType": "github",
       "skillPath": "plugins/totto2727-principle/skills/principle-prove-it-works/SKILL.md",
       "computedHash": "c5d1fb164fd57a39f8d63f19ba7b691f137af41661837b6368c27b3090a63d88",
@@ -515,7 +560,7 @@
     "principle-redesign-from-first-principles": {
       "source": "totto2727-org/agent",
       "ref": "feat/pstack-orca",
-      "commit": "c70ddd32d78215a179f574bdf29db63d536a7d0a",
+      "commit": "5f0d605895c80f8b31e4da75c16eba79394bc282",
       "sourceType": "github",
       "skillPath": "plugins/totto2727-principle/skills/principle-redesign-from-first-principles/SKILL.md",
       "computedHash": "7ccaa6f0056153f5d0566286e7cf2e32a455ab7c68a64e1160521d3d4fd00754",
@@ -524,7 +569,7 @@
     "principle-separate-before-serializing-shared-state": {
       "source": "totto2727-org/agent",
       "ref": "feat/pstack-orca",
-      "commit": "c70ddd32d78215a179f574bdf29db63d536a7d0a",
+      "commit": "5f0d605895c80f8b31e4da75c16eba79394bc282",
       "sourceType": "github",
       "skillPath": "plugins/totto2727-principle/skills/principle-separate-before-serializing-shared-state/SKILL.md",
       "computedHash": "baa19e21e5e7299efdc57a4f5145094d453c9b99d4a7141243422b17c5662dd8",
@@ -533,7 +578,7 @@
     "principle-sequence-verifiable-units": {
       "source": "totto2727-org/agent",
       "ref": "feat/pstack-orca",
-      "commit": "c70ddd32d78215a179f574bdf29db63d536a7d0a",
+      "commit": "5f0d605895c80f8b31e4da75c16eba79394bc282",
       "sourceType": "github",
       "skillPath": "plugins/totto2727-principle/skills/principle-sequence-verifiable-units/SKILL.md",
       "computedHash": "86bc947d43cb72fbfa4031ffc24c9647c61c932020a39cc830b96ce7dab198ad",
@@ -542,7 +587,7 @@
     "principle-subtract-before-you-add": {
       "source": "totto2727-org/agent",
       "ref": "feat/pstack-orca",
-      "commit": "c70ddd32d78215a179f574bdf29db63d536a7d0a",
+      "commit": "5f0d605895c80f8b31e4da75c16eba79394bc282",
       "sourceType": "github",
       "skillPath": "plugins/totto2727-principle/skills/principle-subtract-before-you-add/SKILL.md",
       "computedHash": "d364893774af77994aad4eb33f61d936aa4838790c34534c6e38bb7da3983e23",
@@ -551,7 +596,7 @@
     "principle-test-behavior-not-implementation": {
       "source": "totto2727-org/agent",
       "ref": "feat/pstack-orca",
-      "commit": "c70ddd32d78215a179f574bdf29db63d536a7d0a",
+      "commit": "5f0d605895c80f8b31e4da75c16eba79394bc282",
       "sourceType": "github",
       "skillPath": "plugins/totto2727-principle/skills/principle-test-behavior-not-implementation/SKILL.md",
       "computedHash": "f14163744ba3b806c366ce53506335eeed8c48d9b5c9d972e0f11b24bbe61ea2",
@@ -560,7 +605,7 @@
     "principle-type-system-discipline": {
       "source": "totto2727-org/agent",
       "ref": "feat/pstack-orca",
-      "commit": "c70ddd32d78215a179f574bdf29db63d536a7d0a",
+      "commit": "5f0d605895c80f8b31e4da75c16eba79394bc282",
       "sourceType": "github",
       "skillPath": "plugins/totto2727-principle/skills/principle-type-system-discipline/SKILL.md",
       "computedHash": "38615ca84d9e7d9b112d29fcda422406a01ff55e7ffcfc37dd5ebaf1acdf1ccb",
@@ -569,7 +614,7 @@
     "projektor": {
       "source": "totto2727-org/agent",
       "ref": "feat/pstack-orca",
-      "commit": "c70ddd32d78215a179f574bdf29db63d536a7d0a",
+      "commit": "5f0d605895c80f8b31e4da75c16eba79394bc282",
       "sourceType": "github",
       "skillPath": "plugins/totto2727-external-information/skills/projektor/SKILL.md",
       "computedHash": "de602654ff13698edd23e1f9373b0de33063fadd4d0715f9f9f9bada8074b77b",
@@ -578,7 +623,7 @@
     "realpath": {
       "source": "totto2727-org/agent",
       "ref": "feat/pstack-orca",
-      "commit": "c70ddd32d78215a179f574bdf29db63d536a7d0a",
+      "commit": "5f0d605895c80f8b31e4da75c16eba79394bc282",
       "sourceType": "github",
       "skillPath": "plugins/totto2727-tools/skills/realpath/SKILL.md",
       "computedHash": "770ff788b05b1b36f5e44224f4395566e7a13d41b50c0cda82284792e70ab343",
@@ -587,7 +632,7 @@
     "recall": {
       "source": "totto2727-org/agent",
       "ref": "feat/pstack-orca",
-      "commit": "c70ddd32d78215a179f574bdf29db63d536a7d0a",
+      "commit": "5f0d605895c80f8b31e4da75c16eba79394bc282",
       "sourceType": "github",
       "skillPath": "plugins/totto2727-workflow/skills/recall/SKILL.md",
       "computedHash": "c89445c611358b4cf44f078ffd2aac24f235d919ec5fdc09ec2c4b9f0e879915",
@@ -596,7 +641,7 @@
     "reflect": {
       "source": "totto2727-org/agent",
       "ref": "feat/pstack-orca",
-      "commit": "c70ddd32d78215a179f574bdf29db63d536a7d0a",
+      "commit": "5f0d605895c80f8b31e4da75c16eba79394bc282",
       "sourceType": "github",
       "skillPath": "plugins/totto2727-workflow/skills/reflect/SKILL.md",
       "computedHash": "576d35e648cefa2dce97cdb58e0f8596f3609e29445f24a1d57d83223e8f57cd",
@@ -605,7 +650,7 @@
     "reframe": {
       "source": "totto2727-org/agent",
       "ref": "feat/pstack-orca",
-      "commit": "c70ddd32d78215a179f574bdf29db63d536a7d0a",
+      "commit": "5f0d605895c80f8b31e4da75c16eba79394bc282",
       "sourceType": "github",
       "skillPath": "plugins/totto2727-communication/skills/reframe/SKILL.md",
       "computedHash": "c977761d03b8c13d13e44001eb5b75ee8e527b847a3e790917b5da8723498f26",
@@ -614,7 +659,7 @@
     "rust-coding": {
       "source": "totto2727-org/agent",
       "ref": "feat/pstack-orca",
-      "commit": "c70ddd32d78215a179f574bdf29db63d536a7d0a",
+      "commit": "5f0d605895c80f8b31e4da75c16eba79394bc282",
       "sourceType": "github",
       "skillPath": "plugins/totto2727-rust/skills/rust-coding/SKILL.md",
       "computedHash": "4a2fd1bb2224ce854ca97094d6ace4e1da4483afa6fd5914b36f510feb7fd2f0",
@@ -623,7 +668,7 @@
     "rust-stack": {
       "source": "totto2727-org/agent",
       "ref": "feat/pstack-orca",
-      "commit": "c70ddd32d78215a179f574bdf29db63d536a7d0a",
+      "commit": "5f0d605895c80f8b31e4da75c16eba79394bc282",
       "sourceType": "github",
       "skillPath": "plugins/totto2727-rust/skills/rust-stack/SKILL.md",
       "computedHash": "3c0c3660aa6ecee80e958342cbb31a1213d44f3963069188e1206c8c29129e8c",
@@ -632,7 +677,7 @@
     "rust-test": {
       "source": "totto2727-org/agent",
       "ref": "feat/pstack-orca",
-      "commit": "c70ddd32d78215a179f574bdf29db63d536a7d0a",
+      "commit": "5f0d605895c80f8b31e4da75c16eba79394bc282",
       "sourceType": "github",
       "skillPath": "plugins/totto2727-rust/skills/rust-test/SKILL.md",
       "computedHash": "e76611c209bd3942cd9c70442df7c91386c686000a75d013bd83cd72ee2b9fa3",
@@ -641,7 +686,7 @@
     "setup-pstack": {
       "source": "totto2727-org/agent",
       "ref": "feat/pstack-orca",
-      "commit": "c70ddd32d78215a179f574bdf29db63d536a7d0a",
+      "commit": "5f0d605895c80f8b31e4da75c16eba79394bc282",
       "sourceType": "github",
       "skillPath": "plugins/totto2727-workflow/skills/setup-pstack/SKILL.md",
       "computedHash": "c3139787909059ac9b12ea32ca6a1432a4c9f06b986a5eef382862fb8a7e4495",
@@ -650,7 +695,7 @@
     "share-artifact": {
       "source": "totto2727-org/agent",
       "ref": "feat/pstack-orca",
-      "commit": "c70ddd32d78215a179f574bdf29db63d536a7d0a",
+      "commit": "5f0d605895c80f8b31e4da75c16eba79394bc282",
       "sourceType": "github",
       "skillPath": "plugins/totto2727-documentation/skills/share-artifact/SKILL.md",
       "computedHash": "81d66659c69632b903da5acf691ea291296a2ab89efdb6bd0ea12b98cdd50ce8",
@@ -659,7 +704,7 @@
     "share-coding": {
       "source": "totto2727-org/agent",
       "ref": "feat/pstack-orca",
-      "commit": "c70ddd32d78215a179f574bdf29db63d536a7d0a",
+      "commit": "5f0d605895c80f8b31e4da75c16eba79394bc282",
       "sourceType": "github",
       "skillPath": "plugins/totto2727-principle/skills/share-coding/SKILL.md",
       "computedHash": "5fe0da2007db5de1bbb7f69b30e57d1e90ad895754ad79c3538cd4cc734f57b3",
@@ -668,7 +713,7 @@
     "share-stack": {
       "source": "totto2727-org/agent",
       "ref": "feat/pstack-orca",
-      "commit": "c70ddd32d78215a179f574bdf29db63d536a7d0a",
+      "commit": "5f0d605895c80f8b31e4da75c16eba79394bc282",
       "sourceType": "github",
       "skillPath": "plugins/totto2727-principle/skills/share-stack/SKILL.md",
       "computedHash": "a4c2de92b0f6e775deaa8a050fbd3fa8cb0e0421f44b2c2ac837410986b326a6",
@@ -677,7 +722,7 @@
     "share-test": {
       "source": "totto2727-org/agent",
       "ref": "feat/pstack-orca",
-      "commit": "c70ddd32d78215a179f574bdf29db63d536a7d0a",
+      "commit": "5f0d605895c80f8b31e4da75c16eba79394bc282",
       "sourceType": "github",
       "skillPath": "plugins/totto2727-principle/skills/share-test/SKILL.md",
       "computedHash": "c7a67d8334246c1d0bd274fc1fc1912fe1af0b8270041c14ebf7b0648879ee5a",
@@ -686,7 +731,7 @@
     "share-test-design": {
       "source": "totto2727-org/agent",
       "ref": "feat/pstack-orca",
-      "commit": "c70ddd32d78215a179f574bdf29db63d536a7d0a",
+      "commit": "5f0d605895c80f8b31e4da75c16eba79394bc282",
       "sourceType": "github",
       "skillPath": "plugins/totto2727-principle/skills/share-test-design/SKILL.md",
       "computedHash": "59599868e2fc57aabe6fe4f6bd82924409fee22ed21558994ae75daa06072971",
@@ -695,7 +740,7 @@
     "sharpen": {
       "source": "totto2727-org/agent",
       "ref": "feat/pstack-orca",
-      "commit": "c70ddd32d78215a179f574bdf29db63d536a7d0a",
+      "commit": "5f0d605895c80f8b31e4da75c16eba79394bc282",
       "sourceType": "github",
       "skillPath": "plugins/totto2727-communication/skills/sharpen/SKILL.md",
       "computedHash": "ffebd0ab800644f063423f739ede4632d0ef07700e8900eab5264e0a12f8010a",
@@ -704,7 +749,7 @@
     "show-me-your-work": {
       "source": "totto2727-org/agent",
       "ref": "feat/pstack-orca",
-      "commit": "c70ddd32d78215a179f574bdf29db63d536a7d0a",
+      "commit": "5f0d605895c80f8b31e4da75c16eba79394bc282",
       "sourceType": "github",
       "skillPath": "plugins/totto2727-workflow/skills/show-me-your-work/SKILL.md",
       "computedHash": "25b96673e56b97a25497c91c0d807b84b19c53dc91d10cab49f6c3cc9ad99f84",
@@ -713,7 +758,7 @@
     "skill-reviewer": {
       "source": "totto2727-org/agent",
       "ref": "feat/pstack-orca",
-      "commit": "c70ddd32d78215a179f574bdf29db63d536a7d0a",
+      "commit": "5f0d605895c80f8b31e4da75c16eba79394bc282",
       "sourceType": "github",
       "skillPath": "plugins/totto2727-documentation/skills/skill-reviewer/SKILL.md",
       "computedHash": "52b2a129434af63973f3b026774c381a4c2887ef569c1c637121c809429ef83a",
@@ -722,7 +767,7 @@
     "statechart": {
       "source": "totto2727-org/agent",
       "ref": "feat/pstack-orca",
-      "commit": "c70ddd32d78215a179f574bdf29db63d536a7d0a",
+      "commit": "5f0d605895c80f8b31e4da75c16eba79394bc282",
       "sourceType": "github",
       "skillPath": "plugins/totto2727-verification/skills/statechart/SKILL.md",
       "computedHash": "f4cc558f2874e751cc1b5c5b34e0da04452bb288fea5510f114172fb1ce071a8",
@@ -731,7 +776,7 @@
     "swarm": {
       "source": "totto2727-org/agent",
       "ref": "feat/pstack-orca",
-      "commit": "c70ddd32d78215a179f574bdf29db63d536a7d0a",
+      "commit": "5f0d605895c80f8b31e4da75c16eba79394bc282",
       "sourceType": "github",
       "skillPath": "plugins/totto2727-engineering/skills/swarm/SKILL.md",
       "computedHash": "e0e71a53c7479c82a67953114a5526deda54a125108df8b6caddc878d94663bd",
@@ -740,7 +785,7 @@
     "tdd": {
       "source": "totto2727-org/agent",
       "ref": "feat/pstack-orca",
-      "commit": "c70ddd32d78215a179f574bdf29db63d536a7d0a",
+      "commit": "5f0d605895c80f8b31e4da75c16eba79394bc282",
       "sourceType": "github",
       "skillPath": "plugins/totto2727-verification/skills/tdd/SKILL.md",
       "computedHash": "072e32b04b7a39d8ef9d3d49bae0f87af8be1f538cb0e36685b0294208c561ca",
@@ -749,7 +794,7 @@
     "teach": {
       "source": "totto2727-org/agent",
       "ref": "feat/pstack-orca",
-      "commit": "c70ddd32d78215a179f574bdf29db63d536a7d0a",
+      "commit": "5f0d605895c80f8b31e4da75c16eba79394bc282",
       "sourceType": "github",
       "skillPath": "plugins/totto2727-communication/skills/teach/SKILL.md",
       "computedHash": "7c7772e7fdce850b9aa74e1b6df508676ebd9003cdeb65b8af3226537a72da88",
@@ -758,7 +803,7 @@
     "technical-writing": {
       "source": "totto2727-org/agent",
       "ref": "feat/pstack-orca",
-      "commit": "c70ddd32d78215a179f574bdf29db63d536a7d0a",
+      "commit": "5f0d605895c80f8b31e4da75c16eba79394bc282",
       "sourceType": "github",
       "skillPath": "plugins/totto2727-documentation/skills/technical-writing/SKILL.md",
       "computedHash": "ceeafc1282193854b8ae98f1d9e99f6311ae8524ff84c6626cc6dc34806ec366",
@@ -767,10 +812,19 @@
     "totto2727-profile": {
       "source": "totto2727-org/agent",
       "ref": "feat/pstack-orca",
-      "commit": "c70ddd32d78215a179f574bdf29db63d536a7d0a",
+      "commit": "5f0d605895c80f8b31e4da75c16eba79394bc282",
       "sourceType": "github",
       "skillPath": "plugins/totto2727-profile/skills/totto2727-profile/SKILL.md",
       "computedHash": "d551f6976a74fdc364a0ccab43e681e376579c9a94d412ef6d0cb9f61aa983ce",
+      "installMode": "copy"
+    },
+    "totto2727-setup": {
+      "source": "totto2727-org/agent",
+      "ref": "feat/pstack-orca",
+      "commit": "5f0d605895c80f8b31e4da75c16eba79394bc282",
+      "sourceType": "github",
+      "skillPath": "plugins/totto2727-tools/skills/totto2727-setup/SKILL.md",
+      "computedHash": "8cf27342142d20022ed84d37a41e198989d1da057f83dba2890d9bfe44ba3653",
       "installMode": "copy"
     },
     "typesafe-ai": {
@@ -783,7 +837,7 @@
     "typescript-best-practices": {
       "source": "totto2727-org/agent",
       "ref": "feat/pstack-orca",
-      "commit": "c70ddd32d78215a179f574bdf29db63d536a7d0a",
+      "commit": "5f0d605895c80f8b31e4da75c16eba79394bc282",
       "sourceType": "github",
       "skillPath": "plugins/totto2727-js/skills/typescript-best-practices/SKILL.md",
       "computedHash": "b3844bed540e516154034b413eb2a0f5e3d28a552e8ddbbcc02b85efaecb1d21",
@@ -792,16 +846,25 @@
     "unslop": {
       "source": "totto2727-org/agent",
       "ref": "feat/pstack-orca",
-      "commit": "c70ddd32d78215a179f574bdf29db63d536a7d0a",
+      "commit": "5f0d605895c80f8b31e4da75c16eba79394bc282",
       "sourceType": "github",
       "skillPath": "plugins/totto2727-documentation/skills/unslop/SKILL.md",
       "computedHash": "53444806d267e0c3fac0732e176d203e97eae7af7ac29a13f6c84db2d1a11f9e",
       "installMode": "copy"
     },
+    "visual-explainer": {
+      "source": "nicobailon/visual-explainer",
+      "ref": "9d5f880b7e8e0a9a80c890b8e1bb6918b68481ad",
+      "commit": "9d5f880b7e8e0a9a80c890b8e1bb6918b68481ad",
+      "sourceType": "github",
+      "skillPath": "plugins/visual-explainer/SKILL.md",
+      "computedHash": "305dcaef5f5ee1cd49083609b3ab182b9c55293590d4fbeeb625b2b5c30eab91",
+      "installMode": "copy"
+    },
     "visual-explainer-ja": {
       "source": "totto2727-org/agent",
       "ref": "feat/pstack-orca",
-      "commit": "c70ddd32d78215a179f574bdf29db63d536a7d0a",
+      "commit": "5f0d605895c80f8b31e4da75c16eba79394bc282",
       "sourceType": "github",
       "skillPath": "plugins/totto2727-documentation/skills/visual-explainer-ja/SKILL.md",
       "computedHash": "0eb5890f2dad1c6f700fb978640660b63e71b0a21f299f6a08cfcc671e141f51",
@@ -810,7 +873,7 @@
     "web-search": {
       "source": "totto2727-org/agent",
       "ref": "feat/pstack-orca",
-      "commit": "c70ddd32d78215a179f574bdf29db63d536a7d0a",
+      "commit": "5f0d605895c80f8b31e4da75c16eba79394bc282",
       "sourceType": "github",
       "skillPath": "plugins/totto2727-external-information/skills/web-search/SKILL.md",
       "computedHash": "0a4e6fcd420bb2cba14068955641e07a38149a60b8162e0f90e542b808c322ec",
@@ -819,7 +882,7 @@
     "why": {
       "source": "totto2727-org/agent",
       "ref": "feat/pstack-orca",
-      "commit": "c70ddd32d78215a179f574bdf29db63d536a7d0a",
+      "commit": "5f0d605895c80f8b31e4da75c16eba79394bc282",
       "sourceType": "github",
       "skillPath": "plugins/totto2727-communication/skills/why/SKILL.md",
       "computedHash": "aac6444f7c0db6cd632b505dea89c3ccee4e667b9e359e09cd0615c6784c0781",
