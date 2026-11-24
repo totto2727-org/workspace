@@ -291,9 +291,10 @@
     },
     "moonbit-orientation": {
       "source": "moonbitlang/skills",
+      "commit": "cc5435cb236fb92b144ccd46773adfe5502a42c6",
       "sourceType": "github",
       "skillPath": "skills/moonbit-orientation/SKILL.md",
-      "computedHash": "5d5a7d84813fc0e63022253242b3d7f9dfadf5efc2a0173be1fafd47f01ac682"
+      "computedHash": "0ccf3edf51f719e382429f0c35255b6edfbb35ff971886a8fc73db2733becd2a"
     },
     "nix-stack": {
       "source": "totto2727-org/agent",
@@ -774,9 +775,10 @@
     },
     "typesafe-ai": {
       "source": "typesafe-ai/skills",
+      "commit": "302eea662c54bca6730873fe245bec1d69ebc23d",
       "sourceType": "github",
       "skillPath": "skills/typesafe-ai/SKILL.md",
-      "computedHash": "15e077333436b1e63e526c7c7559202816f4848dabefd3aa3d4c91988fd181b5"
+      "computedHash": "a6d55f954bdee91ffcb208c42fe31cfba71594bc4d6bf63c0fed22bdb81df3d9"
     },
     "typescript-best-practices": {
       "source": "totto2727-org/agent",
