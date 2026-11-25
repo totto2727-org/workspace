@@ -42,6 +42,11 @@
       "github": "totto2727-org/codex-sdk",
       "status": "mapped"
     },
+    "decision-kit": {
+      "path": "package/decision-kit",
+      "github": "totto2727-org/decision-kit",
+      "status": "mapped"
+    },
     "e2e": {
       "path": "package/e2e",
       "github": "totto2727-org/e2e",
@@ -105,6 +110,11 @@
     "llm-profiles": {
       "path": "package/llm-profiles",
       "github": "totto2727-org/llm-profiles",
+      "status": "mapped"
+    },
+    "mbtlint": {
+      "path": "package/mbtlint",
+      "github": "totto2727-org/mbtlint",
       "status": "mapped"
     },
     "mdts": {
@@ -243,6 +253,19 @@
           "kind": "mooncakes",
           "artifact": "totto2727/admiral",
           "reference": "0.6.5",
+          "mode": "pin"
+        }
+      ]
+    },
+    {
+      "provider": "admiral",
+      "consumer": "mbtlint",
+      "evidence": [
+        {
+          "file": "moon.mod",
+          "kind": "mooncakes",
+          "artifact": "totto2727/admiral",
+          "reference": "0.7.0",
           "mode": "pin"
         }
       ]
@@ -2283,6 +2306,20 @@
           "artifact": "totto2727/opencode-sdk",
           "reference": "0.4.2",
           "mode": "pin"
+        }
+      ]
+    },
+    {
+      "provider": "oxlint",
+      "consumer": "decision-kit",
+      "evidence": [
+        {
+          "file": "package.json",
+          "kind": "npm",
+          "artifact": "@totto2727/oxlint",
+          "reference": "^0.2.0",
+          "mode": "pin",
+          "scope": "devDependencies"
         }
       ]
     },

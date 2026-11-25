@@ -2,52 +2,54 @@
 
 [dependencies.json](dependencies.json) contains the source evidence. Follow the [maintenance procedure](maintenance.md) to regenerate this diagram and table with the MoonBit script.
 
-46 repositories, 75 dependency pairs. Arrows point from the provider to the consumer. Solid arrows show pinned references that may need an update. Dotted arrows show relationships to verify or review.
+48 repositories, 77 dependency pairs. Arrows point from the provider to the consumer. Solid arrows show pinned references that may need an update. Dotted arrows show relationships to verify or review.
 
 ## Package, tool, and operational relationships
 
 ```mermaid
 flowchart LR
-    n13["admiral"] --> n16["c-plugin"]
+    n13["admiral"] --> n17["c-plugin"]
+    n13["admiral"] --> n15["mbtlint"]
     n13["admiral"] --> n11["serde"]
-    n13["admiral"] --> n25["workspace"]
-    n8["agent"] --> n25["workspace"]
-    n32["agent-core-sdk"] --> n21["codex-sdk"]
-    n32["agent-core-sdk"] --> n31["opencode-sdk"]
-    n20["agent-sdk"] --> n24["workgraph"]
-    n21["codex-sdk"] --> n20["agent-sdk"]
-    n21["codex-sdk"] --> n24["workgraph"]
-    n1["e2e"] -.-> n16["c-plugin"]
-    n14["effront"] --> n28["oxlint-docs"]
-    n14["effront"] --> n23["projektor"]
-    n17["flowdeck"] --> n4["nix"]
-    n38["gitignore-patterns"] --> n41["cloudflare-os-starter"]
-    n38["gitignore-patterns"] --> n1["e2e"]
-    n38["gitignore-patterns"] --> n27["effect-http"]
-    n38["gitignore-patterns"] --> n35["effect-identify"]
-    n38["gitignore-patterns"] --> n14["effront"]
-    n38["gitignore-patterns"] --> n26["glossshift"]
-    n38["gitignore-patterns"] --> n9["infra"]
-    n38["gitignore-patterns"] --> n18["monorepo"]
-    n38["gitignore-patterns"] --> n22["nix-cache"]
-    n38["gitignore-patterns"] --> n12["oxlint"]
-    n38["gitignore-patterns"] --> n28["oxlint-docs"]
-    n38["gitignore-patterns"] --> n23["projektor"]
-    n38["gitignore-patterns"] --> n42["template-vite-plus-app"]
-    n38["gitignore-patterns"] --> n43["template-vite-plus-lib"]
-    n26["glossshift"] -.-> n17["flowdeck"]
-    n26["glossshift"] --> n4["nix"]
-    n3["llm"] --> n24["workgraph"]
-    n19["moon-nix"] --> n11["serde"]
-    n19["moon-nix"] --> n45["template-moonbit-simple"]
-    n33["open-connector"] -.-> n4["nix"]
-    n31["opencode-sdk"] --> n20["agent-sdk"]
-    n31["opencode-sdk"] --> n24["workgraph"]
-    n12["oxlint"] -.-> n28["oxlint-docs"]
-    n11["serde"] --> n21["codex-sdk"]
-    n11["serde"] --> n31["opencode-sdk"]
-    n0["x"] --> n21["codex-sdk"]
-    n0["x"] --> n24["workgraph"]
+    n13["admiral"] --> n26["workspace"]
+    n8["agent"] --> n26["workspace"]
+    n34["agent-core-sdk"] --> n22["codex-sdk"]
+    n34["agent-core-sdk"] --> n33["opencode-sdk"]
+    n21["agent-sdk"] --> n25["workgraph"]
+    n22["codex-sdk"] --> n21["agent-sdk"]
+    n22["codex-sdk"] --> n25["workgraph"]
+    n1["e2e"] -.-> n17["c-plugin"]
+    n14["effront"] --> n29["oxlint-docs"]
+    n14["effront"] --> n24["projektor"]
+    n18["flowdeck"] --> n4["nix"]
+    n40["gitignore-patterns"] --> n43["cloudflare-os-starter"]
+    n40["gitignore-patterns"] --> n1["e2e"]
+    n40["gitignore-patterns"] --> n28["effect-http"]
+    n40["gitignore-patterns"] --> n37["effect-identify"]
+    n40["gitignore-patterns"] --> n14["effront"]
+    n40["gitignore-patterns"] --> n27["glossshift"]
+    n40["gitignore-patterns"] --> n9["infra"]
+    n40["gitignore-patterns"] --> n19["monorepo"]
+    n40["gitignore-patterns"] --> n23["nix-cache"]
+    n40["gitignore-patterns"] --> n12["oxlint"]
+    n40["gitignore-patterns"] --> n29["oxlint-docs"]
+    n40["gitignore-patterns"] --> n24["projektor"]
+    n40["gitignore-patterns"] --> n44["template-vite-plus-app"]
+    n40["gitignore-patterns"] --> n45["template-vite-plus-lib"]
+    n27["glossshift"] -.-> n18["flowdeck"]
+    n27["glossshift"] --> n4["nix"]
+    n3["llm"] --> n25["workgraph"]
+    n20["moon-nix"] --> n11["serde"]
+    n20["moon-nix"] --> n47["template-moonbit-simple"]
+    n35["open-connector"] -.-> n4["nix"]
+    n33["opencode-sdk"] --> n21["agent-sdk"]
+    n33["opencode-sdk"] --> n25["workgraph"]
+    n12["oxlint"] --> n31["decision-kit"]
+    n12["oxlint"] -.-> n29["oxlint-docs"]
+    n11["serde"] --> n22["codex-sdk"]
+    n11["serde"] --> n33["opencode-sdk"]
+    n0["x"] --> n22["codex-sdk"]
+    n0["x"] --> n25["workgraph"]
 ```
 
 Shared CI dependencies appear only in the table and JSON. If a pair has more than one relationship, the diagram uses a solid arrow when any displayed relationship is pinned.
@@ -57,6 +59,7 @@ Shared CI dependencies appear only in the table and JSON. If a pair has more tha
 | Provider | Consumer | Relationship | Evidence files |
 | --- | --- | --- | --- |
 | `admiral` | `c-plugin` | mooncakes: pin | `moon.mod` |
+| `admiral` | `mbtlint` | mooncakes: pin | `moon.mod` |
 | `admiral` | `serde` | nix: pin, mooncakes: pin | `flake.lock`, `src/cmd/serde-gen/moon.mod` |
 | `admiral` | `workspace` | mooncakes: pin | `.agents/skills/workspace-dependencies/scripts/dependencies.mbtx` |
 | `agent` | `workspace` | skills: pin | `skills-lock.json` |
@@ -126,6 +129,7 @@ Shared CI dependencies appear only in the table and JSON. If a pair has more tha
 | `open-connector` | `nix` | contract: review | `share/packages-scripts.nix` |
 | `opencode-sdk` | `agent-sdk` | mooncakes: pin | `moon.mod` |
 | `opencode-sdk` | `workgraph` | mooncakes: pin | `package/workgraph-opencode-cli/moon.mod` |
+| `oxlint` | `decision-kit` | npm: pin | `package.json` |
 | `oxlint` | `oxlint-docs` | contract: review | `README.md` |
 | `serde` | `codex-sdk` | mooncakes: pin | `moon.mod` |
 | `serde` | `opencode-sdk` | mooncakes: pin | `moon.mod` |
@@ -153,6 +157,7 @@ Evidence paths are relative to the consumer repository. See the JSON inventory f
 | `oxlint` | `package/oxlint` | mapped |
 | `admiral` | `package/admiral` | mapped |
 | `effront` | `package/effront` | mapped |
+| `mbtlint` | `package/mbtlint` | mapped |
 | `tui.mbt` | `fork/package/tui.mbt` | mapped |
 | `c-plugin` | `app/c-plugin` | mapped |
 | `flowdeck` | `app/flowdeck` | mapped |
@@ -168,6 +173,7 @@ Evidence paths are relative to the consumer repository. See the JSON inventory f
 | `effect-http` | `package/effect-http` | mapped |
 | `oxlint-docs` | `app/oxlint-docs` | mapped |
 | `syntree.mbt` | `fork/package/syntree.mbt` | mapped |
+| `decision-kit` | `package/decision-kit` | mapped |
 | `llm-profiles` | `package/llm-profiles` | mapped |
 | `opencode-sdk` | `package/agent-sdk/opencode-sdk` | mapped |
 | `agent-core-sdk` | `package/agent-sdk/agent-core-sdk` | mapped |
