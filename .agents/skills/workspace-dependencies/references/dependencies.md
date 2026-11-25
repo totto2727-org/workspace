@@ -2,7 +2,7 @@
 
 [dependencies.json](dependencies.json) contains the source evidence. Follow the [maintenance procedure](maintenance.md) to regenerate this diagram and table with the MoonBit script.
 
-48 repositories, 77 dependency pairs. Arrows point from the provider to the consumer. Solid arrows show pinned references that may need an update. Dotted arrows show relationships to verify or review.
+48 repositories, 80 dependency pairs. Arrows point from the provider to the consumer. Solid arrows show pinned references that may need an update. Dotted arrows show relationships to verify or review.
 
 ## Package, tool, and operational relationships
 
@@ -23,6 +23,7 @@ flowchart LR
     n14["effront"] --> n24["projektor"]
     n18["flowdeck"] --> n4["nix"]
     n40["gitignore-patterns"] --> n43["cloudflare-os-starter"]
+    n40["gitignore-patterns"] --> n31["decision-kit"]
     n40["gitignore-patterns"] --> n1["e2e"]
     n40["gitignore-patterns"] --> n28["effect-http"]
     n40["gitignore-patterns"] --> n37["effect-identify"]
@@ -73,6 +74,7 @@ Shared CI dependencies appear only in the table and JSON. If a pair has more tha
 | `effront` | `projektor` | npm: pin | `package.json` |
 | `flowdeck` | `nix` | nix: pin | `share/my/flake.lock` |
 | `gitignore-patterns` | `cloudflare-os-starter` | npm: pin | `package.json` |
+| `gitignore-patterns` | `decision-kit` | npm: pin | `package.json` |
 | `gitignore-patterns` | `e2e` | npm: pin | `package.json` |
 | `gitignore-patterns` | `effect-http` | npm: pin | `package.json` |
 | `gitignore-patterns` | `effect-identify` | npm: pin | `package.json` |
@@ -96,6 +98,7 @@ Shared CI dependencies appear only in the table and JSON. If a pair has more tha
 | `monorepo` | `atlas-to-kysely` | github-actions: verify | `.github/workflows/ci.yml`, `.github/workflows/flakehub-publish-rolling.yml` |
 | `monorepo` | `c-plugin` | github-actions: verify | `.github/workflows/ci.yml` |
 | `monorepo` | `codex-sdk` | github-actions: verify | `.github/workflows/ci.yml`, `.github/workflows/publish.yml` |
+| `monorepo` | `decision-kit` | github-actions: verify | `.github/workflows/ci.yml` |
 | `monorepo` | `e2e` | github-actions: verify | `.github/workflows/ci.yml`, `.github/workflows/publish.yml` |
 | `monorepo` | `effect-http` | github-actions: verify | `.github/workflows/ci.yml`, `.github/workflows/publish.yml` |
 | `monorepo` | `effect-identify` | github-actions: verify | `.github/workflows/ci.yml`, `.github/workflows/publish.yml` |
@@ -108,6 +111,7 @@ Shared CI dependencies appear only in the table and JSON. If a pair has more tha
 | `monorepo` | `lens` | github-actions: verify | `.github/workflows/ci.yml`, `.github/workflows/publish.yml` |
 | `monorepo` | `llm` | github-actions: verify | `.github/workflows/ci.yml`, `.github/workflows/publish.yml`, `.github/workflows/copilot-setup-steps.yml` |
 | `monorepo` | `llm-profiles` | github-actions: verify | `.github/workflows/ci.yml`, `.github/workflows/publish.yml` |
+| `monorepo` | `mbtlint` | github-actions: verify | `.github/workflows/ci.yml` |
 | `monorepo` | `serde` | github-actions: verify | `.github/workflows/ci.yml` |
 | `monorepo` | `moonbit-overlay` | github-actions: verify | `.github/workflows/flakehub-publish-rolling.yml` |
 | `monorepo` | `nix-cache` | github-actions: verify | `.github/workflows/ci.yml` |

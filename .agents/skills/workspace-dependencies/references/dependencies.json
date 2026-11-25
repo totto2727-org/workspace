@@ -649,6 +649,20 @@
     },
     {
       "provider": "gitignore-patterns",
+      "consumer": "decision-kit",
+      "evidence": [
+        {
+          "file": "package.json",
+          "kind": "npm",
+          "artifact": "@totto2727/gitignore-patterns",
+          "reference": "^0.1.0",
+          "mode": "pin",
+          "scope": "devDependencies"
+        }
+      ]
+    },
+    {
+      "provider": "gitignore-patterns",
       "consumer": "e2e",
       "evidence": [
         {
@@ -1206,6 +1220,28 @@
     },
     {
       "provider": "monorepo",
+      "consumer": "decision-kit",
+      "evidence": [
+        {
+          "file": ".github/workflows/ci.yml",
+          "kind": "github-actions",
+          "artifact": ".github/actions/setup-nix",
+          "reference": "main",
+          "mode": "verify",
+          "scope": "ci"
+        },
+        {
+          "file": ".github/workflows/ci.yml",
+          "kind": "github-actions",
+          "artifact": ".github/actions/setup-typescript",
+          "reference": "main",
+          "mode": "verify",
+          "scope": "ci"
+        }
+      ]
+    },
+    {
+      "provider": "monorepo",
       "consumer": "e2e",
       "evidence": [
         {
@@ -1734,6 +1770,36 @@
           "file": ".github/workflows/publish.yml",
           "kind": "github-actions",
           "artifact": ".github/actions/publish-crate",
+          "reference": "main",
+          "mode": "verify",
+          "scope": "ci"
+        }
+      ]
+    },
+    {
+      "provider": "monorepo",
+      "consumer": "mbtlint",
+      "evidence": [
+        {
+          "file": ".github/workflows/ci.yml",
+          "kind": "github-actions",
+          "artifact": ".github/actions/setup-nix",
+          "reference": "main",
+          "mode": "verify",
+          "scope": "ci"
+        },
+        {
+          "file": ".github/workflows/ci.yml",
+          "kind": "github-actions",
+          "artifact": ".github/actions/setup-moonbit",
+          "reference": "main",
+          "mode": "verify",
+          "scope": "ci"
+        },
+        {
+          "file": ".github/workflows/ci.yml",
+          "kind": "github-actions",
+          "artifact": ".github/actions/check-moonbit",
           "reference": "main",
           "mode": "verify",
           "scope": "ci"
