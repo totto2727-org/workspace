@@ -98,7 +98,7 @@ Shared CI dependencies appear only in the table and JSON. If a pair has more tha
 | `monorepo` | `atlas-to-kysely` | github-actions: verify | `.github/workflows/ci.yml`, `.github/workflows/flakehub-publish-rolling.yml` |
 | `monorepo` | `c-plugin` | github-actions: verify | `.github/workflows/ci.yml` |
 | `monorepo` | `codex-sdk` | github-actions: verify | `.github/workflows/ci.yml`, `.github/workflows/publish.yml` |
-| `monorepo` | `decision-kit` | github-actions: verify | `.github/workflows/ci.yml` |
+| `monorepo` | `decision-kit` | github-actions: verify | `.github/workflows/ci.yml`, `.github/workflows/publish.yml` |
 | `monorepo` | `e2e` | github-actions: verify | `.github/workflows/ci.yml`, `.github/workflows/publish.yml` |
 | `monorepo` | `effect-http` | github-actions: verify | `.github/workflows/ci.yml`, `.github/workflows/publish.yml` |
 | `monorepo` | `effect-identify` | github-actions: verify | `.github/workflows/ci.yml`, `.github/workflows/publish.yml` |
@@ -111,7 +111,7 @@ Shared CI dependencies appear only in the table and JSON. If a pair has more tha
 | `monorepo` | `lens` | github-actions: verify | `.github/workflows/ci.yml`, `.github/workflows/publish.yml` |
 | `monorepo` | `llm` | github-actions: verify | `.github/workflows/ci.yml`, `.github/workflows/publish.yml`, `.github/workflows/copilot-setup-steps.yml` |
 | `monorepo` | `llm-profiles` | github-actions: verify | `.github/workflows/ci.yml`, `.github/workflows/publish.yml` |
-| `monorepo` | `mbtlint` | github-actions: verify | `.github/workflows/ci.yml` |
+| `monorepo` | `mbtlint` | github-actions: verify | `.github/workflows/ci.yml`, `.github/workflows/publish.yml` |
 | `monorepo` | `serde` | github-actions: verify | `.github/workflows/ci.yml` |
 | `monorepo` | `moonbit-overlay` | github-actions: verify | `.github/workflows/flakehub-publish-rolling.yml` |
 | `monorepo` | `nix-cache` | github-actions: verify | `.github/workflows/ci.yml` |
