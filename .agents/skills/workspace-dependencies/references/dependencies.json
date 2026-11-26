@@ -1237,6 +1237,54 @@
           "reference": "main",
           "mode": "verify",
           "scope": "ci"
+        },
+        {
+          "file": ".github/workflows/ci.yml",
+          "kind": "github-actions",
+          "artifact": ".github/actions/setup-moonbit",
+          "reference": "main",
+          "mode": "verify",
+          "scope": "ci"
+        },
+        {
+          "file": ".github/workflows/ci.yml",
+          "kind": "github-actions",
+          "artifact": ".github/actions/check-moonbit",
+          "reference": "main",
+          "mode": "verify",
+          "scope": "ci"
+        },
+        {
+          "file": ".github/workflows/publish.yml",
+          "kind": "github-actions",
+          "artifact": ".github/actions/setup-nix",
+          "reference": "main",
+          "mode": "verify",
+          "scope": "ci"
+        },
+        {
+          "file": ".github/workflows/publish.yml",
+          "kind": "github-actions",
+          "artifact": ".github/actions/setup-typescript",
+          "reference": "main",
+          "mode": "verify",
+          "scope": "ci"
+        },
+        {
+          "file": ".github/workflows/publish.yml",
+          "kind": "github-actions",
+          "artifact": ".github/actions/publish-npm",
+          "reference": "main",
+          "mode": "verify",
+          "scope": "ci"
+        },
+        {
+          "file": ".github/workflows/publish.yml",
+          "kind": "github-actions",
+          "artifact": ".github/actions/publish-moonbit",
+          "reference": "main",
+          "mode": "verify",
+          "scope": "ci"
         }
       ]
     },
@@ -1800,6 +1848,22 @@
           "file": ".github/workflows/ci.yml",
           "kind": "github-actions",
           "artifact": ".github/actions/check-moonbit",
+          "reference": "main",
+          "mode": "verify",
+          "scope": "ci"
+        },
+        {
+          "file": ".github/workflows/publish.yml",
+          "kind": "github-actions",
+          "artifact": ".github/actions/setup-nix",
+          "reference": "main",
+          "mode": "verify",
+          "scope": "ci"
+        },
+        {
+          "file": ".github/workflows/publish.yml",
+          "kind": "github-actions",
+          "artifact": ".github/actions/publish-moonbit",
           "reference": "main",
           "mode": "verify",
           "scope": "ci"
