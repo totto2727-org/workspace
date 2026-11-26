@@ -22,7 +22,9 @@
 /fork/package/syntree.mbt/
 /fork/package/tui.mbt/
 /package/admiral/
+/package/decision-kit/
 /package/llm-profiles/
+/package/mbtlint/
 /package/e2e/
 /package/geo/
 /package/gitignore-patterns/

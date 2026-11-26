@@ -48,7 +48,9 @@ Write workspace-owned skills, their references, and user-facing script output in
 | syntree.mbt | https://github.com/totto2727-org/syntree.mbt.git | `fork/package/syntree.mbt/` |
 | tui.mbt | https://github.com/totto2727-org/tui.mbt.git | `fork/package/tui.mbt/` |
 | admiral | https://github.com/totto2727-org/admiral.git | `package/admiral/` |
+| decision-kit | https://github.com/totto2727-org/decision-kit.git | `package/decision-kit/` |
 | llm-profiles | https://github.com/totto2727-org/llm-profiles.git | `package/llm-profiles/` |
+| mbtlint | https://github.com/totto2727-org/mbtlint.git | `package/mbtlint/` |
 | oxlint | https://github.com/totto2727-org/oxlint.git | `package/oxlint/` |
 | oxlint-docs | https://github.com/totto2727-org/oxlint-docs.git | `app/oxlint-docs/` |
 | effront | https://github.com/totto2727-org/effront.git | `package/effront/` |
