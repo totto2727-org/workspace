@@ -45,7 +45,9 @@ Report `Consumer | Artifact and reference | Update, verify only, or skip | Reaso
 
 The inventory covers tracked `package.json`, `moon.mod`, `moon.mod.json`, `moon.work`, `.mbtx` import declarations, `go.mod`, `Cargo.toml`, `cabal.project`, direct inputs in `flake.lock`, active GitHub Actions, `skills-lock.json`, and confirmed operational references.
 
-The first inventory used the Repository Map on `main` and committed declarations from local checkouts. Repositories outside the map are marked `local`. Record a rename from another branch only after it reaches `main`.
+Use the Repository Map and the workspace repository itself to select repositories for the inventory.
+Scan only those checkouts when auditing dependencies.
+Record a rename from another branch only after it reaches `main`.
 
 Link repositories only when the artifact identity is confirmed, for example, by matching the npm package or MoonBit module name. The diagram excludes dependencies within a repository, test fixtures, vendored code, submodules, disabled workflows, and transitive dependencies that only an external registry can resolve.
 
