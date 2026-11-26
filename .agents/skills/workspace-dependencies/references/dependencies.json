@@ -92,11 +92,6 @@
       "github": "totto2727-org/infra",
       "status": "mapped"
     },
-    "lapriere-website": {
-      "path": "app/lapriere-website",
-      "github": "totto2727-org/lapriere-website",
-      "status": "local"
-    },
     "lens": {
       "path": "package/lens",
       "github": "totto2727-org/lens",
@@ -231,11 +226,6 @@
       "path": ".",
       "github": "totto2727-org/workspace",
       "status": "root"
-    },
-    "www": {
-      "path": "app/www",
-      "github": "totto2727-org/www",
-      "status": "local"
     },
     "x": {
       "path": "package/x",
